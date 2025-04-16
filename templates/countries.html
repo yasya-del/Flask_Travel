@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set countries_list = ['Turkey', 'Spain', 'Egypt'] %}
+<div class="card-group">
+    {% for country in countries_list %}
+<div class="card" style="width: 18rem">
+  <img src="static/img/{{country}}.png" class="card-img-top" alt="картинка не нашлась(">
+  <div class="card-body">
+    <h5 class="card-title">{{country}}</h5>
+    <p class="card-text"></p>
+    <a href="country/{{country}}" class="btn btn-primary">Смотреть</a>
+  </div>
+</div>
+    {% endfor %}
+</div>
+{% endblock %}
