@@ -28,7 +28,7 @@ def login():
             return redirect("/")
         return render_template('login.html',
                                message="Неправильный логин или пароль",
-                               form=form)
+                               form=form, title='Авторизация')
     return render_template('login.html', title='Авторизация', form=form)
 
 
@@ -41,17 +41,17 @@ def logout():
 
 @app.route('/')
 def title():
-    return render_template('base.html')
+    return render_template('base.html',  title='Главная')
 
 
 @app.route('/countries')
 def choose_countries():
-    return render_template('countries.html')
+    return render_template('countries.html',  title='Страны')
 
 
 @app.route('/country/<name>')
 def country(name):
-    return render_template(f'{name}.html')
+    return render_template(f'{name}.html', title=str(name))
 
 
 @app.route('/register', methods=['GET', 'POST'])
