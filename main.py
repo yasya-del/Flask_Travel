@@ -53,6 +53,18 @@ def choose_countries():
 def country(name):
     return render_template(f'{name}.html', title=str(name))
 
+@app.route('/my_profile')
+def my_profile():
+    return 'Это профиль'
+
+@app.route('/my_plans')
+def my_plans():
+    return render_template('plans.html',  title='Маршруты')
+
+@app.route('/create_plan')
+def create_plan():
+    return 'Создаю маршрут'
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def reqister():
@@ -78,7 +90,6 @@ def reqister():
         db_sess.commit()
         return redirect('/login')
     return render_template('register.html', title='Регистрация', form=form)
-
 
 def main():
     db_session.global_init("db/mars_explorer.db")
