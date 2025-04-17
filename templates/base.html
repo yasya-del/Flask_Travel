@@ -22,24 +22,29 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">Главная <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="countries">Страны</a>
       </li>
-        {% if current_user.is_authenticated %}
-            <a class="navbar-brand" href="/logout">{{ current_user.name }}</a>
+        <li class="nav-item active">
+        <a class="nav-link" href="my_plans">Мои маршруты</a>
+      </li>
+    </ul>
+       {% if current_user.is_authenticated %}
+            <a class="navbar-brand pull-right" href="/logout">{{ current_user.name }}</a>
         {% else %}
             <p>
                 <a class="btn btn-primary " href="/register">Зарегистрироваться</a>
                 <a class="btn btn-success" href="/login">Войти</a>
             </p>
 {% endif %}
-    </ul>
+      <a class="navbar-brand pull-right" href="my_profile">
+            <img src="/static/img/profile.png" width="30" height="30" alt="">
+        </a>
 
     <form class="form-inline my-2 my-lg-0"></form>
   </div>
 </nav>
  </header>
- <!-- Begin page content -->
  <main role="main" class="container">
      {% block content %}{% endblock %}
  </main>
