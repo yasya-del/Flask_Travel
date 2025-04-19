@@ -1,11 +1,13 @@
+import datetime
 from flask import Flask, render_template, redirect
 from data import db_session
 from data.users import User
-from flask_login import LoginManager, login_user, login_required, logout_user
+from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from forms.user import RegisterForm, LoginForm
 
 
 app = Flask(__name__)
+app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(days=365)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -51,15 +53,20 @@ def choose_countries():
 
 @app.route('/country/<name>')
 def country(name):
-    return render_template(f'{name}.html', title=str(name))
+    print(name)
+    return render_template(f'{name}.html', title=name)
 
 @app.route('/my_profile')
 def my_profile():
-    return 'Это профиль'
+    if current_user.is_authenticated:
+        return 'Это профиль'
+    return redirect("/login")
 
 @app.route('/my_plans')
 def my_plans():
-    return render_template('plans.html',  title='Маршруты')
+    if current_user.is_authenticated:
+        return render_template('plans.html',  title='Маршруты')
+    return redirect("/login")
 
 @app.route('/create_plan')
 def create_plan():
