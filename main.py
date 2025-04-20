@@ -98,6 +98,16 @@ def reqister():
         return redirect('/login')
     return render_template('register.html', title='Регистрация', form=form)
 
+
+@app.route('/tourism')
+def tourism():
+    return 'Тут будет страничка с видами туризма'
+
+
+@app.route('/advices')
+def advices():
+    return 'Тут будет страничка с советами'
+
 def main():
     db_session.global_init("db/mars_explorer.db")
     app.run()
