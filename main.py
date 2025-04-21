@@ -53,8 +53,13 @@ def choose_countries():
 
 @app.route('/country/<name>')
 def country(name):
-    print(name)
     return render_template(f'{name}.html', title=name)
+
+@app.route('/country/map/<name>')
+def open_map(name):
+    from search import search_for_map
+    search_for_map(name)
+    return 'такая карта'
 
 @app.route('/my_profile')
 def my_profile():
