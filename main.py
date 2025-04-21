@@ -101,7 +101,7 @@ def reqister():
 
 @app.route('/tourism')
 def tourism():
-    return 'Тут будет страничка с видами туризма'
+    return render_template('tourism.html', title='Туризм')
 
 
 @app.route('/advices')
