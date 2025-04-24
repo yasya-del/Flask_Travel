@@ -59,18 +59,24 @@ def country(name):
 def open_map(name):
     from search import search_for_map
     search_for_map(name)
-    return 'такая карта'
+    return ''
 
 @app.route('/my_profile')
 def my_profile():
     if current_user.is_authenticated:
-        return 'Это профиль'
+        return render_template(f'profile.html', title='Мой профиль')
     return redirect("/login")
 
 @app.route('/my_plans')
 def my_plans():
     if current_user.is_authenticated:
         return render_template('plans.html',  title='Маршруты')
+    return redirect("/login")
+
+@app.route('/liked')
+def liked():
+    if current_user.is_authenticated:
+        return render_template('liked.html',  title='Маршруты')
     return redirect("/login")
 
 @app.route('/create_plan')

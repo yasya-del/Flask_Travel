@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<link rel="stylesheet" href="static/css/style_countries.css"/>
 {% set countries_list = ['Turkey', 'Spain', 'Egypt'] %}
 <div class="card-group">
     {% for country in countries_list %}
@@ -10,6 +11,7 @@
     <h5 class="card-title">{{country}}</h5>
     <p class="card-text"></p>
     <a href="country/{{country}}" class="btn btn-primary">Смотреть</a>
+      <button class="image-button" ></button>
   </div>
 </div>
     {% endfor %}
