@@ -117,10 +117,11 @@ def tourism():
 
 @app.route('/advices')
 def advices():
-    return 'Тут будет страничка с советами'
+    return render_template('advices.html')
+
 
 def main():
-    db_session.global_init("db/mars_explorer.db")
+    db_session.global_init("db/travel.db")
     app.run()
 
 
