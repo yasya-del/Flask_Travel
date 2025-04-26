@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-    <h1 align="center">У вас пока нет любимых стран(</h1>
+{% set countries_list = countries %}
+<div class="card-group">
+{% for country in countries_list %}
+<div class="card" style="width: 18rem">
+  <img src="static/img/{{country}}.png" class="card-img-top" alt="картинка не нашлась(">
+  <div class="card-body">
+    <h5 class="card-title">{{country}}</h5>
+    <p class="card-text"></p>
+    <a href="country/{{country}}" class="btn btn-primary">Смотреть</a>
+      <button class="image-button" ></button>
+  </div>
 </div>
-<a class="btn btn-primary" href="countries">Посмотреть страны</a>
+    {% endfor %}
+</div>
 {% endblock %}
