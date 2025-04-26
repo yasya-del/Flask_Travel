@@ -17,13 +17,11 @@ login_manager.init_app(app)
 def add_cities():
     cities = [['Москва', 'Москва — город федерального значения.', 'Культурный'],
               ['Санкт-Петербург', 'Санкт-Петербург — город федерального значения.', 'Культурный'],
-              ['Казань', 'Республика Татарстан', 'Культурный'],
-              ['Сочи', 'Краснодарский край', 'Рекреационный, активный'],
+              ['Казань', 'Республика Татарстан', 'Культурный'], ['Сочи', 'Краснодарский край', 'Рекреационный, активный'],
               ['Карелия', 'Республика Карелия', 'Активный'], ['Камчатка', 'Камчатский край', 'Активный'],
               ['Кисловодск', 'Ставропольский край', 'Рекреационный'], ['Кавказ', '-', 'Активный'],
               ['Крым', 'Республика Крым', 'Рекрационный'], ['Владивосток', 'Приморский край', 'Культурный'],
-              ['Калининград', 'Калининградская область', 'Культурный'],
-              ['Дербент', 'Республика Дагестан', 'Рекреационный']]
+              ['Калининград', 'Калининградская область', 'Культурный'], ['Дербент', 'Республика Дагестан', 'Рекреационный']]
     db_sess = db_session.create_session()
     c = db_sess.query(City).all()
     print(c)
@@ -100,17 +98,7 @@ def my_plans():
 @app.route('/liked')
 def liked():
     if current_user.is_authenticated:
-        db_sess = db_session.create_session()
-        users = db_sess.query(User).all()
-        liked_countries = None
-        for el in users:
-            if el == current_user:
-                liked_countries = el.liked
-        if not liked_countries:
-            return render_template('no_liked.html', title='Избранное')
-        li = liked_countries.split(', ')
-        print(li)
-        return render_template('liked.html', title='Избранное', countries=li)
+        return render_template('liked.html',  title='Маршруты')
     return redirect("/login")
 
 @app.route('/create_plan')
@@ -152,11 +140,6 @@ def tourism():
 @app.route('/advices')
 def advices():
     return render_template('advices.html')
-
-@app.route('/add_to_liked')
-def add_to_liked():
-    return 'Hello'
-
 
 def main():
     db_session.global_init("db/mars_explorer.db")
