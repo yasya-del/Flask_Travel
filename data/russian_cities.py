@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
 
-class Cities(SqlAlchemyBase, UserMixin):
+class City(SqlAlchemyBase, UserMixin):
     __tablename__ = 'russian_cities'
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
