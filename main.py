@@ -98,8 +98,18 @@ def my_plans():
 @app.route('/liked')
 def liked():
     if current_user.is_authenticated:
-        return render_template('liked.html',  title='Маршруты')
-    return redirect("/login")
+        db_sess = db_session.create_session()
+        users = db_sess.query(User).all()
+        liked_countries = None
+        for el in users:
+            if el == current_user:
+                liked_countries = el.liked
+                break
+        if not liked_countries:
+            return render_template('no_liked.html', title='Избранное')
+        li = liked_countries.split(', ')
+        return render_template('liked.html', title='Избранное', countries=li)
+    return redirect('/login')
 
 @app.route('/create_plan')
 def create_plan():
@@ -141,8 +151,47 @@ def tourism():
 def advices():
     return render_template('advices.html')
 
+
+@app.route('/add_to_liked/<country>')
+def add_to_liked(country):
+    db_sess = db_session.create_session()
+    users = db_sess.query(User).all()
+    liked_countries = None
+    for el in users:
+        if el == current_user:
+            liked_countries = el.liked
+            break
+    if not liked_countries:
+        liked_countries = country
+    else:
+        if country not in liked_countries:
+            liked_countries += f', {country}'
+    current_user.liked = liked_countries
+    db_sess.merge(current_user)
+    db_sess.commit()
+    return redirect('/countries')
+
+
+@app.route('/remove_from_liked/<country>')
+def remove_from_liked(country):
+    db_sess = db_session.create_session()
+    users = db_sess.query(User).all()
+    liked_countries = None
+    for el in users:
+        if el == current_user:
+            liked_countries = el.liked
+            break
+    liked_countries = liked_countries.split(', ')
+    i = liked_countries.index(country)
+    del liked_countries[i]
+    current_user.liked = ', '.join(liked_countries)
+    db_sess.merge(current_user)
+    db_sess.commit()
+    return redirect('/liked')
+
+
 def main():
-    db_session.global_init("db/mars_explorer.db")
+    db_session.global_init("db/travel.db")
     add_cities()
     app.run()
 
