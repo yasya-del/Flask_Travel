@@ -2,7 +2,9 @@ import datetime
 from flask import Flask, render_template, redirect
 from data import db_session
 from data.users import User
-from data.russian_cities import City
+from data.russian_cities import RussianCity
+from data.cities import City
+from data.countries import Country
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from forms.user import RegisterForm, LoginForm
 
@@ -23,10 +25,10 @@ def add_cities():
               ['Крым', 'Республика Крым', 'Рекрационный'], ['Владивосток', 'Приморский край', 'Культурный'],
               ['Калининград', 'Калининградская область', 'Культурный'], ['Дербент', 'Республика Дагестан', 'Рекреационный']]
     db_sess = db_session.create_session()
-    c = db_sess.query(City).all()
+    c = db_sess.query(RussianCity).all()
     print(c)
     for city in cities:
-        city_bd = City(
+        city_bd = RussianCity(
             city=city[0],
             subject=city[1],
             tourism=city[2]
@@ -75,7 +77,10 @@ def choose_countries():
 
 @app.route('/country/<name>')
 def country(name):
-    return render_template(f'{name}.html', title=name)
+    db_sess = db_session.create_session()
+    li_cities = db_sess.query(Country).filter(Country.name == name).first()
+    li_cities = li_cities.cities.split(',')
+    return render_template(f'{name}.html', title=name, cities=li_cities)
 
 @app.route('/country/map/<name>')
 def open_map(name):
