@@ -1,9 +1,10 @@
 import datetime
+import logging
+import sqlite3
 from flask import Flask, render_template, redirect
 from data import db_session
 from data.users import User
 from data.russian_cities import RussianCity
-from data.cities import City
 from data.countries import Country
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from forms.user import RegisterForm, LoginForm
@@ -14,6 +15,10 @@ app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(days=365)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 login_manager = LoginManager()
 login_manager.init_app(app)
+logging.basicConfig(
+    filename='example.log',
+    format='%(asctime)s %(levelname)s %(name)s %(message)s',
+    level=logging.WARNING)
 
 
 def add_cities():
@@ -25,15 +30,18 @@ def add_cities():
               ['Крым', 'Республика Крым', 'Рекрационный'], ['Владивосток', 'Приморский край', 'Культурный'],
               ['Калининград', 'Калининградская область', 'Культурный'], ['Дербент', 'Республика Дагестан', 'Рекреационный']]
     db_sess = db_session.create_session()
-    c = db_sess.query(RussianCity).all()
-    print(c)
-    for city in cities:
-        city_bd = RussianCity(
-            city=city[0],
-            subject=city[1],
-            tourism=city[2]
-        )
-        db_sess.add(city_bd)
+    con = sqlite3.connect('db/travel.db')
+    cur = con.cursor()
+    result = cur.execute(f"""SELECT city FROM russian_cities""").fetchone()
+    con.close()
+    if not result:
+        for city in cities:
+            city_bd = RussianCity(
+                city=city[0],
+                subject=city[1],
+                tourism=city[2]
+            )
+            db_sess.add(city_bd)
     db_sess.commit()
 
 
@@ -41,6 +49,17 @@ def add_cities():
 def load_user(user_id):
     db_sess = db_session.create_session()
     return db_sess.query(User).get(user_id)
+
+
+@app.route('/russian_cities')
+def russian_cities():
+    con = sqlite3.connect('db/travel.db')
+    cur = con.cursor()
+    result = cur.execute(f"""SELECT city FROM russian_cities""").fetchall()
+    con.close()
+    cities = [i[0] for i in result]
+    print(cities)
+    return render_template('russian_cities.html', title='Города России', cities=cities)
 
 
 @app.route('/login', methods=['GET', 'POST'])
