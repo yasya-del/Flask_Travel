@@ -176,8 +176,8 @@ def advices():
     return render_template('advices.html')
 
 
-@app.route('/add_to_liked/<country>')
-def add_to_liked(country):
+@app.route('/add_to_liked/<word>/<country>')
+def add_to_liked(word, country):
     db_sess = db_session.create_session()
     users = db_sess.query(User).all()
     liked_countries = None
@@ -193,7 +193,7 @@ def add_to_liked(country):
     current_user.liked = liked_countries
     db_sess.merge(current_user)
     db_sess.commit()
-    return redirect('/countries')
+    return redirect(f'/{word}')
 
 
 @app.route('/remove_from_liked/<country>')
