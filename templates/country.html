@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+<a class="btn btn-primary" href="map/{{title}}">Посмотреть карту</a>
+<p></p>
+{% set relax = relax %}
+{% set culture = culture %}
+{% set active = active %}
+{% if relax %}
+  <div class="alert alert-info" role="alert">
+  РЕКРЕАЦИОННЫЙ ТУРИЗМ
+</div>
+<p></p>
+{% endif %}
+<div class="card-group">
+{% for city in relax %}
+<div class="card" style="width: 18rem">
+  <img src="static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
+  <div class="card-body">
+    <h5 class="card-title">{{city}}</h5>
+    <p class="card-text"></p>
+    <a  class="btn btn-primary">Добавить в маршрут</a>
+  </div>
+</div>
+    {% endfor %}
+</div>
+<p></p>
+{% if culture %}
+<div class="alert alert-info" role="alert">
+  КУЛЬТУРНО-ПОЗНАВАТЕЛЬНЫЙ ТУРИЗМ
+</div>
+<p></p>
+{% endif %}
+<div class="card-group">
+{% for city in culture %}
+<div class="card" style="width: 18rem">
+  <img src="static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
+  <div class="card-body">
+    <h5 class="card-title">{{city}}</h5>
+    <p class="card-text"></p>
+    <a  class="btn btn-primary">Добавить в маршрут</a>
+  </div>
+</div>
+    {% endfor %}
+</div>
+<p></p>
+{% if active %}
+<div class="alert alert-info" role="alert">
+  АКТИВНЫЙ ТУРИЗМ
+</div>
+<p></p>
+{% endif %}
+<div class="card-group">
+{% for city in active %}
+<div class="card" style="width: 18rem">
+  <img src="static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
+  <div class="card-body">
+    <h5 class="card-title">{{city}}</h5>
+    <p class="card-text"></p>
+    <a  class="btn btn-primary">Добавить в маршрут</a>
+  </div>
+</div>
+    {% endfor %}
+</div>
+{% endblock %}
