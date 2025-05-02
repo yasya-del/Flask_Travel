@@ -3,6 +3,7 @@ import logging
 import sqlite3
 from flask import Flask, render_template, redirect
 from data import db_session
+from data.cities import City
 from data.users import User
 from data.russian_cities import RussianCity
 from data.countries import Country
@@ -58,7 +59,6 @@ def russian_cities():
     result = cur.execute(f"""SELECT city FROM russian_cities""").fetchall()
     con.close()
     cities = [i[0] for i in result]
-    print(cities)
     return render_template('russian_cities.html', title='Города России', cities=cities)
 
 
@@ -94,12 +94,22 @@ def choose_countries():
     return render_template('countries.html',  title='Страны')
 
 
-@app.route('/country/<name>')
+@app.route(f'/country/<name>')
 def country(name):
     db_sess = db_session.create_session()
     li_cities = db_sess.query(Country).filter(Country.name == name).first()
     li_cities = li_cities.cities.split(',')
-    return render_template(f'{name}.html', title=name, cities=li_cities)
+    d = {}
+    for el in li_cities:
+        tourism = db_sess.query(City).filter(City.name == el).first().tourism
+        d[tourism] = d.get(tourism, []) + [el]
+    return render_template(f'country.html', title=name,
+                           relax=d.get('Рекреационный', []),
+                           culture=d.get('Культурный', ''),
+                           active=d.get('Активный', ''))
+
+
+
 
 
 @app.route('/country/map/<name>')
@@ -175,14 +185,26 @@ def reqister():
 def tourism():
     return render_template('tourism.html', title='Туризм')
 
+@app.route('/tourism/<word>')
+def tourism_word(word):
+    if word == 'beach':
+        type = 'Рекреационный'
+    elif word == 'active':
+        type = 'Активный'
+    else:
+        type = 'Культурный'
+    db_sess = db_session.create_session()
+    result = db_sess.query(City.name).filter(City.tourism == type).all()
+    cities = [x[0] for x in result]
+    return render_template('tourism_type.html', cities=cities)
 
 @app.route('/advices')
 def advices():
     return render_template('advices.html')
 
 
-@app.route('/add_to_liked/<country>')
-def add_to_liked(country):
+@app.route('/add_to_liked/<word>/<country>')
+def add_to_liked(word, country):
     db_sess = db_session.create_session()
     users = db_sess.query(User).all()
     liked_countries = None
@@ -198,8 +220,7 @@ def add_to_liked(country):
     current_user.liked = liked_countries
     db_sess.merge(current_user)
     db_sess.commit()
-    return redirect('/countries')
-
+    return redirect(f'/{word}')
 
 @app.route('/remove_from_liked/<country>')
 def remove_from_liked(country):
