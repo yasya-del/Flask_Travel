@@ -101,11 +101,13 @@ def country(name):
     li_cities = li_cities.cities.split(',')
     return render_template(f'{name}.html', title=name, cities=li_cities)
 
+
 @app.route('/country/map/<name>')
 def open_map(name):
     from search import search_for_map
     search_for_map(name)
     return ''
+
 
 @app.route('/my_profile')
 def my_profile():
@@ -113,11 +115,13 @@ def my_profile():
         return render_template(f'profile.html', title='Мой профиль')
     return redirect("/login")
 
+
 @app.route('/my_plans')
 def my_plans():
     if current_user.is_authenticated:
         return render_template('plans.html',  title='Маршруты')
     return redirect("/login")
+
 
 @app.route('/liked')
 def liked():
@@ -134,6 +138,7 @@ def liked():
         li = liked_countries.split(', ')
         return render_template('liked.html', title='Избранное', countries=li)
     return redirect('/login')
+
 
 @app.route('/create_plan')
 def create_plan():
