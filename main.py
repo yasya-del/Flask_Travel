@@ -1,7 +1,7 @@
 import datetime
 import logging
 import sqlite3
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 from data import db_session
 from data.cities import City
 from data.users import User
@@ -109,9 +109,6 @@ def country(name):
                            active=d.get('Активный', ''))
 
 
-
-
-
 @app.route('/country/map/<name>')
 def open_map(name):
     from search import search_for_map
@@ -119,17 +116,28 @@ def open_map(name):
     return ''
 
 
-@app.route('/my_profile')
+@app.route('/my_profile', methods=['POST', 'GET'])
 def my_profile():
     if current_user.is_authenticated:
-        return render_template(f'profile.html', title='Мой профиль')
+        return render_template('profile.html', title='Мой профиль')
     return redirect("/login")
 
 
 @app.route('/my_plans')
 def my_plans():
     if current_user.is_authenticated:
-        return render_template('plans.html',  title='Маршруты')
+        db_sess = db_session.create_session()
+        users = db_sess.query(User).all()
+        plans = None
+        for el in users:
+            if el == current_user:
+                plans = el.plans
+                break
+        print(plans)
+        if not plans:
+            return render_template('no_plans.html', title='Маршруты')
+        li = plans.split(', ')
+        return render_template('plans.html',  title='Маршруты', plans=li)
     return redirect("/login")
 
 
@@ -145,7 +153,7 @@ def liked():
                 break
         if not liked_countries:
             return render_template('no_liked.html', title='Избранное')
-        li = liked_countries.split(', ')
+        li = liked_countries.split(',')
         return render_template('liked.html', title='Избранное', countries=li)
     return redirect('/login')
 
@@ -221,7 +229,7 @@ def add_to_liked(word, country):
         liked_countries = country
     else:
         if country not in liked_countries:
-            liked_countries += f', {country}'
+            liked_countries += f',{country}'
     current_user.liked = liked_countries
     db_sess.merge(current_user)
     db_sess.commit()
@@ -237,10 +245,10 @@ def remove_from_liked(country):
         if el == current_user:
             liked_countries = el.liked
             break
-    liked_countries = liked_countries.split(', ')
+    liked_countries = liked_countries.split(',')
     i = liked_countries.index(country)
     del liked_countries[i]
-    current_user.liked = ', '.join(liked_countries)
+    current_user.liked = ','.join(liked_countries)
     db_sess.merge(current_user)
     db_sess.commit()
     return redirect('/liked')
