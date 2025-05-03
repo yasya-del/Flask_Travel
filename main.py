@@ -185,6 +185,7 @@ def reqister():
 def tourism():
     return render_template('tourism.html', title='Туризм')
 
+
 @app.route('/tourism/<word>')
 def tourism_word(word):
     if word == 'beach':
@@ -196,7 +197,11 @@ def tourism_word(word):
     db_sess = db_session.create_session()
     result = db_sess.query(City.name).filter(City.tourism == type).all()
     cities = [x[0] for x in result]
+    '''result_russian = db_sess.query(RussianCity.city).filter(RussianCity.tourism == type).all()
+    for el in result_russian:
+        cities.append(el[0])'''
     return render_template('tourism_type.html', cities=cities)
+
 
 @app.route('/advices')
 def advices():
@@ -221,6 +226,7 @@ def add_to_liked(word, country):
     db_sess.merge(current_user)
     db_sess.commit()
     return redirect(f'/{word}')
+
 
 @app.route('/remove_from_liked/<country>')
 def remove_from_liked(country):
