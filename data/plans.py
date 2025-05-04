@@ -4,7 +4,7 @@ from flask_login import UserMixin
 
 
 class Plan(SqlAlchemyBase, UserMixin):
-    __tablename__ = 'planns'
+    __tablename__ = 'plans'
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)

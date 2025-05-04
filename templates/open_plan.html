@@ -3,7 +3,6 @@
 {% block content %}
 {% set plans_list = plans %}
 {% for plan in plans_list %}
-<a class="btn btn-light" href="/plan/{{plan}}">{{plan}}</a>
-<p></p>
+<p>{{plan}}</p>
 {% endfor %}
 {% endblock %}

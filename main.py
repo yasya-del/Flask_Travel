@@ -4,6 +4,7 @@ import sqlite3
 from flask import Flask, render_template, redirect, request
 from data import db_session
 from data.cities import City
+from data.plans import Plan
 from data.users import User
 from data.russian_cities import RussianCity
 from data.countries import Country
@@ -138,12 +139,24 @@ def my_plans():
             if el == current_user:
                 plans = el.plans
                 break
-        print(plans)
         if not plans:
             return render_template('no_plans.html', title='Маршруты')
-        li = plans.split(', ')
+        li = plans.split(',')
         return render_template('plans.html',  title='Маршруты', plans=li)
     return redirect("/login")
+
+
+@app.route('/plan/<word>')
+def open_plan(word):
+    db_sess = db_session.create_session()
+    users = db_sess.query(User).all()
+    for el in users:
+        if el == current_user:
+            id = el.id
+            break
+    plans = db_sess.query(Plan.cities).filter(Plan.name == word, Plan.user_id == id).first()
+    plans = plans[0].split(',')
+    return render_template("open_plan.html", title=word, plans=plans)
 
 
 @app.route('/liked')
@@ -215,9 +228,6 @@ def tourism_word(word):
     con.close()
     result = result1 + result2
     cities = [x[0] for x in result]
-    '''result_russian = db_sess.query(RussianCity.city).filter(RussianCity.tourism == type).all()
-    for el in result_russian:
-        cities.append(el[0])'''
     return render_template('tourism_type.html', cities=cities)
 
 
