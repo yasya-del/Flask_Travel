@@ -44,6 +44,11 @@ def add_cities():
             )
             db_sess.add(city_bd)
     db_sess.commit()
+    con = sqlite3.connect('db/travel.db')
+    cur = con.cursor()
+    cur.execute(f"""DELETE FROM russian_cities WHERE id > 12""")
+    con.commit()
+    con.close()
 
 
 @login_manager.user_loader
@@ -203,7 +208,12 @@ def tourism_word(word):
     else:
         type = 'Культурный'
     db_sess = db_session.create_session()
-    result = db_sess.query(City.name).filter(City.tourism == type).all()
+    result1 = db_sess.query(City.name).filter(City.tourism == type).all()
+    con = sqlite3.connect('db/travel.db')
+    cur = con.cursor()
+    result2 = cur.execute(f"""SELECT city FROM russian_cities WHERE tourism = ?""", (type,)).fetchall()
+    con.close()
+    result = result1 + result2
     cities = [x[0] for x in result]
     '''result_russian = db_sess.query(RussianCity.city).filter(RussianCity.tourism == type).all()
     for el in result_russian:

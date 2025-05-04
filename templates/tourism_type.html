@@ -2,9 +2,14 @@
 {% block content %}
 {% set cities_list = cities %}
 <div class="card-group">
+  {% if len(cities_list) > 3 %}
+  {% set k = len(cities_list) //
+
+
+  {%else%}
 {% for city in cities_list %}
 <div class="card" style="width: 18rem">
-  <img src="static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
+  <img src="/static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
   <div class="card-body">
     <h5 class="card-title">{{city}}</h5>
     <p class="card-text"></p>
