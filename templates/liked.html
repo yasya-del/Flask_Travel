@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if countries %}
 {% set countries_list = countries %}
+<div class="alert alert-info" role="alert" align="center">
+  СТРАНЫ
+</div>
 <div class="card-group">
 {% for country in countries_list %}
 <div class="card" style="width: 18rem">
@@ -15,4 +19,25 @@
 </div>
     {% endfor %}
 </div>
+{% endif %}
+<p></p>
+{% if cities %}
+{% set cities_list = cities %}
+<div class="alert alert-info" role="alert" align="center">
+  ГОРОДА
+</div>
+<div class="card-group">
+{% for country in cities_list %}
+<div class="card" style="width: 18rem">
+  <img src="static/img/{{country}}.png" class="card-img-top" alt="картинка не нашлась(">
+  <div class="card-body">
+    <h5 class="card-title">{{country}}</h5>
+    <p class="card-text"></p>
+    <a  class="btn btn-primary">Смотреть</a>
+    <a href="/remove_from_liked/{{country}}" class="btn btn-outline-danger">Удалить из избранного</a>
+  </div>
+</div>
+    {% endfor %}
+</div>
+{% endif %}
 {% endblock %}

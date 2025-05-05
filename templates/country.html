@@ -6,7 +6,7 @@
 {% set culture = culture %}
 {% set active = active %}
 {% if relax %}
-  <div class="alert alert-info" role="alert">
+  <div class="alert alert-info" align="center" role="alert">
   РЕКРЕАЦИОННЫЙ ТУРИЗМ
 </div>
 <p></p>
@@ -19,13 +19,14 @@
     <h5 class="card-title">{{city}}</h5>
     <p class="card-text"></p>
     <a  class="btn btn-primary">Добавить в маршрут</a>
+    <a href="/add_to_liked_city/country/{{name}}/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
   </div>
 </div>
     {% endfor %}
 </div>
-<p></p>
+<p></p><p></p><p></p>
 {% if culture %}
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" align="center" role="alert">
   КУЛЬТУРНО-ПОЗНАВАТЕЛЬНЫЙ ТУРИЗМ
 </div>
 <p></p>
@@ -37,14 +38,15 @@
   <div class="card-body">
     <h5 class="card-title">{{city}}</h5>
     <p class="card-text"></p>
-    <a  class="btn btn-primary">Добавить в маршрут</a>
+    <a class="btn btn-primary">Добавить в маршрут</a>
+    <a href="/add_to_liked_city/country/{{name}}/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
   </div>
 </div>
     {% endfor %}
 </div>
-<p></p>
+<p></p><p></p><p></p>
 {% if active %}
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" align="center" role="alert">
   АКТИВНЫЙ ТУРИЗМ
 </div>
 <p></p>
@@ -57,6 +59,7 @@
     <h5 class="card-title">{{city}}</h5>
     <p class="card-text"></p>
     <a  class="btn btn-primary">Добавить в маршрут</a>
+    <a href="/add_to_liked_city/country/{{name}}/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
   </div>
 </div>
     {% endfor %}
