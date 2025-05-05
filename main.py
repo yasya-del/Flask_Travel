@@ -1,9 +1,10 @@
 import datetime
 import logging
 import sqlite3
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 from data import db_session
 from data.cities import City
+from data.plans import Plan
 from data.users import User
 from data.russian_cities import RussianCity
 from data.countries import Country
@@ -114,9 +115,6 @@ def country(name):
                            active=d.get('Активный', ''))
 
 
-
-
-
 @app.route('/country/map/<name>')
 def open_map(name):
     from search import search_for_map
@@ -124,18 +122,41 @@ def open_map(name):
     return ''
 
 
-@app.route('/my_profile')
+@app.route('/my_profile', methods=['POST', 'GET'])
 def my_profile():
     if current_user.is_authenticated:
-        return render_template(f'profile.html', title='Мой профиль')
+        return render_template('profile.html', title='Мой профиль')
     return redirect("/login")
 
 
 @app.route('/my_plans')
 def my_plans():
     if current_user.is_authenticated:
-        return render_template('plans.html',  title='Маршруты')
+        db_sess = db_session.create_session()
+        users = db_sess.query(User).all()
+        plans = None
+        for el in users:
+            if el == current_user:
+                plans = el.plans
+                break
+        if not plans:
+            return render_template('no_plans.html', title='Маршруты')
+        li = plans.split(',')
+        return render_template('plans.html',  title='Маршруты', plans=li)
     return redirect("/login")
+
+
+@app.route('/plan/<word>')
+def open_plan(word):
+    db_sess = db_session.create_session()
+    users = db_sess.query(User).all()
+    for el in users:
+        if el == current_user:
+            id = el.id
+            break
+    plans = db_sess.query(Plan.cities).filter(Plan.name == word, Plan.user_id == id).first()
+    plans = plans[0].split(',')
+    return render_template("open_plan.html", title=word, plans=plans)
 
 
 @app.route('/liked')
@@ -150,7 +171,7 @@ def liked():
                 break
         if not liked_countries:
             return render_template('no_liked.html', title='Избранное')
-        li = liked_countries.split(', ')
+        li = liked_countries.split(',')
         return render_template('liked.html', title='Избранное', countries=li)
     return redirect('/login')
 
@@ -207,9 +228,6 @@ def tourism_word(word):
     con.close()
     result = result1 + result2
     cities = [x[0] for x in result]
-    '''result_russian = db_sess.query(RussianCity.city).filter(RussianCity.tourism == type).all()
-    for el in result_russian:
-        cities.append(el[0])'''
     return render_template('tourism_type.html', cities=cities)
 
 
@@ -231,7 +249,7 @@ def add_to_liked(word, country):
         liked_countries = country
     else:
         if country not in liked_countries:
-            liked_countries += f', {country}'
+            liked_countries += f',{country}'
     current_user.liked = liked_countries
     db_sess.merge(current_user)
     db_sess.commit()
@@ -247,10 +265,10 @@ def remove_from_liked(country):
         if el == current_user:
             liked_countries = el.liked
             break
-    liked_countries = liked_countries.split(', ')
+    liked_countries = liked_countries.split(',')
     i = liked_countries.index(country)
     del liked_countries[i]
-    current_user.liked = ', '.join(liked_countries)
+    current_user.liked = ','.join(liked_countries)
     db_sess.merge(current_user)
     db_sess.commit()
     return redirect('/liked')
