@@ -228,7 +228,12 @@ def tourism_word(word):
     con.close()
     result = result1 + result2
     cities = [x[0] for x in result]
-    return render_template('tourism_type.html', cities=cities)
+    k = 0
+    if len(cities) > 3:
+        k = len(cities) // 3
+        if len(cities) % 3 != 0:
+            k += 1
+    return render_template('tourism_type.html', cities=cities, k=k)
 
 
 @app.route('/advices')

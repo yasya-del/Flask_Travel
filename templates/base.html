@@ -39,7 +39,7 @@
       </li>
     </ul>
        {% if current_user.is_authenticated %}
-            <a class="navbar-brand pull-right" href="/logout">{{ current_user.name }}</a>
+            <a class="navbar-brand pull-right">{{ current_user.name }}</a>
         {% else %}
             <p>
                 <a class="btn btn-primary " href="/register">Зарегистрироваться</a>

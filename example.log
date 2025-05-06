@@ -887,3 +887,803 @@ ValueError: 'Санкт-Петербург' is not in list
 2025-05-03 18:48:19,081 INFO werkzeug 127.0.0.1 - - [03/May/2025 18:48:19] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
 2025-05-03 18:48:19,084 INFO werkzeug 127.0.0.1 - - [03/May/2025 18:48:19] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
 2025-05-03 18:48:19,085 INFO werkzeug 127.0.0.1 - - [03/May/2025 18:48:19] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-05 17:16:04,463 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-05 17:16:04,463 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-05 17:16:12,393 ERROR main Exception on /tourism/beach [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 231, in tourism_word
+    return render_template('tourism_type.html', cities=cities)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 21, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'endif'. The innermost block that needs to be closed is 'if'.
+2025-05-05 17:16:12,402 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:16:12] "[35m[1mGET /tourism/beach HTTP/1.1[0m" 500 -
+2025-05-05 17:17:30,418 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-05 17:17:30,419 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-05 17:17:34,233 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:34] "GET /tourism HTTP/1.1" 200 -
+2025-05-05 17:17:34,354 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:34] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-05 17:17:34,355 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:34] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:17:34,387 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:34] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-05 17:17:34,405 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:34] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-05 17:17:34,960 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:34] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-05 17:17:37,142 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:37] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-05 17:17:37,180 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:37] "[33mGET /static/img/Хургада.png HTTP/1.1[0m" 404 -
+2025-05-05 17:17:37,190 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:37] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:17:37,195 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:37] "[33mGET /static/img/Анталья.png HTTP/1.1[0m" 404 -
+2025-05-05 17:17:37,224 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:37] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-05 17:17:37,228 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:17:37] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-05 17:25:23,468 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-05 17:25:23,469 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-05 17:25:25,675 ERROR main Exception on /tourism/beach [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 8, in template
+    {% for city in cities_list[{{i}} * 3:{{i}} + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-05 17:25:25,708 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:25:25] "[35m[1mGET /tourism/beach HTTP/1.1[0m" 500 -
+2025-05-05 17:28:59,128 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-05 17:28:59,129 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-05 17:29:00,306 ERROR main Exception on /tourism/beach [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 7, in template
+    {% for city in cities_list[{{i}} * 3:{{i}} + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-05 17:29:00,316 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:29:00] "[35m[1mGET /tourism/beach HTTP/1.1[0m" 500 -
+2025-05-05 17:29:04,613 ERROR main Exception on /tourism/beach [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 7, in template
+    {% for city in cities_list[{{i}} * 3:{{i}} + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-05 17:29:04,620 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:29:04] "[35m[1mGET /tourism/beach HTTP/1.1[0m" 500 -
+2025-05-05 17:30:53,735 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-05 17:30:53,737 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-05 17:30:54,165 ERROR main Exception on /tourism/beach [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 8, in template
+    {% for city in cities_list[{{i}} * 3:{{i}} + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-05 17:30:54,180 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:30:54] "[35m[1mGET /tourism/beach HTTP/1.1[0m" 500 -
+2025-05-05 17:30:55,302 ERROR main Exception on /tourism/beach [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 8, in template
+    {% for city in cities_list[{{i}} * 3:{{i}} + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-05 17:30:55,307 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:30:55] "[35m[1mGET /tourism/beach HTTP/1.1[0m" 500 -
+2025-05-05 17:31:58,719 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-05 17:31:58,720 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-05 17:31:59,085 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:31:59] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-05 17:31:59,203 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:31:59] "[33mGET /static/img/Анталья.png HTTP/1.1[0m" 404 -
+2025-05-05 17:31:59,196 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:31:59] "[33mGET /static/img/Хургада.png HTTP/1.1[0m" 404 -
+2025-05-05 17:31:59,265 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:31:59] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:31:59,273 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:31:59] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-05 17:31:59,284 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:31:59] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:02,224 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:02] "GET /tourism HTTP/1.1" 200 -
+2025-05-05 17:32:02,269 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:02] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:02,278 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:02] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-05 17:32:02,280 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:02] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-05 17:32:02,301 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:02] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-05 17:32:03,274 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:03] "GET /liked HTTP/1.1" 200 -
+2025-05-05 17:32:03,311 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:03] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:07,913 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:07] "GET /my_plans HTTP/1.1" 200 -
+2025-05-05 17:32:07,949 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:07] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:14,809 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:14] "GET /create_plan HTTP/1.1" 200 -
+2025-05-05 17:32:19,454 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-05 17:32:19,500 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,503 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,516 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,552 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,556 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,573 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,593 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,604 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,608 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,622 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,630 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,634 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:19,651 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:19] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:31,536 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:31] "GET /countries HTTP/1.1" 200 -
+2025-05-05 17:32:31,667 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:31] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:31,685 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:31] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:31,702 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:31] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:31,754 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:31] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:33,387 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:33] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-05 17:32:33,454 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:33] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:33,472 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:33] "[33mGET /country/static/img/Анталья.png HTTP/1.1[0m" 404 -
+2025-05-05 17:32:33,489 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:33] "[33mGET /country/static/img/Стамбул.png HTTP/1.1[0m" 404 -
+2025-05-05 17:32:40,551 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:40] "GET /my_plans HTTP/1.1" 200 -
+2025-05-05 17:32:40,587 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:40] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:44,449 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:44] "GET /create_plan HTTP/1.1" 200 -
+2025-05-05 17:32:56,984 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:56] "GET /my_profile HTTP/1.1" 200 -
+2025-05-05 17:32:57,017 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:57] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:32:59,555 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:59] "GET /liked HTTP/1.1" 200 -
+2025-05-05 17:32:59,592 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:32:59] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:33:03,097 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:33:03] "GET / HTTP/1.1" 200 -
+2025-05-05 17:33:03,135 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:33:03] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:29,289 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:29] "GET /advices HTTP/1.1" 200 -
+2025-05-05 17:37:29,339 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:29] "[36mGET /static/css/btn-like.css HTTP/1.1[0m" 304 -
+2025-05-05 17:37:33,041 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:33] "GET /tourism HTTP/1.1" 200 -
+2025-05-05 17:37:33,091 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:33] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:33,093 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:33] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-05 17:37:33,097 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:33] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-05 17:37:33,123 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:33] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-05 17:37:41,945 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:41] "GET /tourism/active HTTP/1.1" 200 -
+2025-05-05 17:37:42,028 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:42] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:42,035 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:42] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:42,042 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:42] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:42,141 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:42] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:52,748 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "GET /tourism/historic HTTP/1.1" 200 -
+2025-05-05 17:37:52,765 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "GET /tourism/historic HTTP/1.1" 200 -
+2025-05-05 17:37:52,822 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "[33mGET /static/img/Стамбул.png HTTP/1.1[0m" 404 -
+2025-05-05 17:37:52,824 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "[33mGET /static/img/Мадрид.png HTTP/1.1[0m" 404 -
+2025-05-05 17:37:52,827 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:52,862 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "[33mGET /static/img/Гиза.png HTTP/1.1[0m" 404 -
+2025-05-05 17:37:52,877 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:52,894 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:52,909 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:52,924 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-05 17:37:52,926 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:37:52] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:00,549 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:00] "GET /countries HTTP/1.1" 200 -
+2025-05-05 17:38:00,595 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:00] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:00,602 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:00] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:00,606 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:00] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:00,621 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:00] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:02,911 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:02] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-05 17:38:02,953 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:02] "[33mGET /country/static/img/Стамбул.png HTTP/1.1[0m" 404 -
+2025-05-05 17:38:02,966 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:02] "[33mGET /country/static/img/Анталья.png HTTP/1.1[0m" 404 -
+2025-05-05 17:38:02,974 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:02] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,082 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-05 17:38:08,122 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,130 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,145 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,169 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,172 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,194 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,197 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,207 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,216 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,262 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,270 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,277 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:08,282 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:08] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:10,466 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:10] "GET /my_plans HTTP/1.1" 200 -
+2025-05-05 17:38:10,585 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:10] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:13,876 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:13] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-05 17:38:13,915 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:13] "GET / HTTP/1.1" 200 -
+2025-05-05 17:38:14,040 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:14] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:19,759 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:19] "GET /login HTTP/1.1" 200 -
+2025-05-05 17:38:19,791 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:19] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:38:22,114 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-05 17:38:22,130 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:22] "GET / HTTP/1.1" 200 -
+2025-05-05 17:38:22,169 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:38:22] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:39:42,871 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-05 17:39:42,872 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-05 17:39:44,036 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:39:44] "GET / HTTP/1.1" 200 -
+2025-05-05 17:39:44,134 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:39:44] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-05 17:39:44,180 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:39:44] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-05 17:39:47,013 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:39:47] "GET /my_profile HTTP/1.1" 200 -
+2025-05-05 17:39:47,047 INFO werkzeug 127.0.0.1 - - [05/May/2025 17:39:47] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 10:59:56,516 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-06 10:59:56,516 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-06 10:59:59,243 INFO werkzeug 127.0.0.1 - - [06/May/2025 10:59:59] "GET /my_profile HTTP/1.1" 200 -
+2025-05-06 10:59:59,307 INFO werkzeug 127.0.0.1 - - [06/May/2025 10:59:59] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 10:59:59,383 INFO werkzeug 127.0.0.1 - - [06/May/2025 10:59:59] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-06 11:00:01,689 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:00:01] "GET /tourism HTTP/1.1" 200 -
+2025-05-06 11:00:01,739 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:00:01] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:00:01,742 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:00:01] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:00:01,762 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:00:01] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:00:01,765 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:00:01] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:00:03,887 ERROR main Exception on /tourism/beach [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 8, in template
+    {% for city in cities_list[{{i}} * 3:{{i}} * 3 + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-06 11:00:03,901 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:00:03] "[35m[1mGET /tourism/beach HTTP/1.1[0m" 500 -
+2025-05-06 11:05:04,244 ERROR main Exception on /tourism/historic [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 8, in template
+    {% for city in cities_list[{{i}} * 3:{{i}} * 3 + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-06 11:05:04,249 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:05:04] "[35m[1mGET /tourism/historic HTTP/1.1[0m" 500 -
+2025-05-06 11:05:27,107 ERROR main Exception on /tourism/active [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 8, in template
+    {% for city in cities_list[{{i}} * 3:{{i}} * 3 + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-06 11:05:27,117 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:05:27] "[35m[1mGET /tourism/active HTTP/1.1[0m" 500 -
+2025-05-06 11:05:27,146 ERROR main Exception on /tourism/active [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 8, in template
+    {% for city in cities_list[{{i}} * 3:{{i}} * 3 + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-06 11:05:27,151 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:05:27] "[35m[1mGET /tourism/active HTTP/1.1[0m" 500 -
+2025-05-06 11:12:17,652 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-06 11:12:17,653 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-06 11:12:24,640 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:12:24] "GET /tourism HTTP/1.1" 200 -
+2025-05-06 11:12:25,869 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:12:25] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:12:25,896 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:12:25] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:12:25,903 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:12:25] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:12:25,907 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:12:25] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:12:25,964 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:12:25] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-06 11:12:30,171 ERROR main Exception on /tourism/active [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 8, in template
+    {% for city in cities_list[{{loop.index0}} * 3:{{loop.index0}} * 3 + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-06 11:12:30,184 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:12:30] "[35m[1mGET /tourism/active HTTP/1.1[0m" 500 -
+2025-05-06 11:13:47,519 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-06 11:13:47,520 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-06 11:13:49,985 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:13:49] "GET /tourism/active HTTP/1.1" 200 -
+2025-05-06 11:13:50,188 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:13:50] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-06 11:13:50,241 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:13:50] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:13:50,254 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:13:50] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-06 11:13:50,299 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:13:50] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-06 11:15:52,105 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-06 11:15:52,106 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-06 11:15:55,673 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:15:55] "GET /tourism HTTP/1.1" 200 -
+2025-05-06 11:15:58,706 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:15:58] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:15:58,756 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:15:58] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:15:58,764 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:15:58] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:15:58,769 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:15:58] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:16:02,948 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:02] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-06 11:16:07,217 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:07] "GET /tourism/active HTTP/1.1" 200 -
+2025-05-06 11:16:07,371 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:07] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:16:07,385 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:07] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-06 11:16:07,402 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:07] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-06 11:16:07,461 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:07] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-06 11:16:25,353 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:25] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-06 11:16:25,401 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:25] "[33mGET /static/img/Хургада.png HTTP/1.1[0m" 404 -
+2025-05-06 11:16:25,430 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:25] "[33mGET /static/img/Анталья.png HTTP/1.1[0m" 404 -
+2025-05-06 11:16:25,434 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:25] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:16:25,449 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:25] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-06 11:16:25,470 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:16:25] "[33mGET /static/img/Хургада.png HTTP/1.1[0m" 404 -
+2025-05-06 11:18:04,477 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-06 11:18:04,478 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-06 11:18:10,760 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:18:10] "GET /tourism HTTP/1.1" 200 -
+2025-05-06 11:18:10,886 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:18:10] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:18:10,912 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:18:10] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:18:10,955 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:18:10] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:18:10,967 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:18:10] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:18:11,504 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:18:11] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-06 11:18:13,465 ERROR main Exception on /tourism/beach [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 8, in template
+    {% set i1 = {{i * 3}} %}
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2025-05-06 11:18:13,475 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:18:13] "[35m[1mGET /tourism/beach HTTP/1.1[0m" 500 -
+2025-05-06 11:33:31,766 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-06 11:33:31,766 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-06 11:33:42,552 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:42] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-06 11:33:42,596 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:42] "[33mGET /static/img/Анталья.png HTTP/1.1[0m" 404 -
+2025-05-06 11:33:42,600 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:42] "[33mGET /static/img/Хургада.png HTTP/1.1[0m" 404 -
+2025-05-06 11:33:42,720 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:42] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-06 11:33:42,725 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:42] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-06 11:33:42,729 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:42] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:33:53,406 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:53] "GET /tourism HTTP/1.1" 200 -
+2025-05-06 11:33:53,458 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:53] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:33:53,467 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:53] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:33:53,494 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:53] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:33:53,498 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:53] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:33:56,358 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:56] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-06 11:33:56,411 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:56] "[33mGET /static/img/Анталья.png HTTP/1.1[0m" 404 -
+2025-05-06 11:33:56,416 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:56] "[33mGET /static/img/Хургада.png HTTP/1.1[0m" 404 -
+2025-05-06 11:33:56,429 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:56] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:33:56,453 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:56] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-06 11:33:56,456 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:33:56] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-06 11:34:06,556 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:34:06] "GET /tourism/active HTTP/1.1" 200 -
+2025-05-06 11:34:06,706 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:34:06] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:35:08,157 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "GET /tourism/historic HTTP/1.1" 200 -
+2025-05-06 11:35:08,180 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "GET /tourism/historic HTTP/1.1" 200 -
+2025-05-06 11:35:08,234 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "[33mGET /static/img/Мадрид.png HTTP/1.1[0m" 404 -
+2025-05-06 11:35:08,238 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "[33mGET /static/img/Стамбул.png HTTP/1.1[0m" 404 -
+2025-05-06 11:35:08,263 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:35:08,291 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-06 11:35:08,294 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-06 11:35:08,309 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-06 11:35:08,296 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "[33mGET /static/img/Гиза.png HTTP/1.1[0m" 404 -
+2025-05-06 11:35:08,320 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-06 11:35:08,323 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:35:08] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-06 11:38:44,341 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-06 11:38:44,341 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-06 11:39:07,061 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:07] "GET /tourism HTTP/1.1" 200 -
+2025-05-06 11:39:07,219 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:07] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:39:07,223 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:07] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:39:07,257 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:07] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:39:07,279 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:07] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:39:14,046 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:14] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-06 11:39:22,146 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:22] "GET /tourism/active HTTP/1.1" 200 -
+2025-05-06 11:39:22,192 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:22] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:39:22,196 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:22] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-06 11:39:22,220 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:22] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-06 11:39:22,226 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:22] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-06 11:39:30,341 ERROR main Exception on /tourism/historic [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 236, in tourism_word
+    return render_template('tourism_type.html', cities=cities, k=k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/base.html", line 57, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/tourism_type.html", line 7, in block 'content'
+    {% for city in cities_list[forloop.counter * 3:forloop.counter * 3 + 3] %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'forloop' is undefined
+2025-05-06 11:39:30,354 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:39:30] "[35m[1mGET /tourism/historic HTTP/1.1[0m" 500 -
+2025-05-06 11:41:07,541 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-06 11:41:07,542 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-06 11:41:19,914 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:19] "GET /tourism/historic HTTP/1.1" 200 -
+2025-05-06 11:41:19,956 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:19] "[33mGET /static/img/Мадрид.png HTTP/1.1[0m" 404 -
+2025-05-06 11:41:19,983 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:19] "[33mGET /static/img/Стамбул.png HTTP/1.1[0m" 404 -
+2025-05-06 11:41:20,006 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:20] "[33mGET /static/img/Гиза.png HTTP/1.1[0m" 404 -
+2025-05-06 11:41:20,018 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:20] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:41:20,023 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:20] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-06 11:41:20,031 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:20] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-06 11:41:20,045 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:20] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-06 11:41:20,063 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:20] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-06 11:41:20,072 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:20] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-06 11:41:33,529 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:33] "GET /tourism HTTP/1.1" 200 -
+2025-05-06 11:41:33,617 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:33] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:41:33,619 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:33] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:41:33,638 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:33] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:41:33,679 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:33] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-06 11:41:36,662 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:36] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-06 11:41:36,726 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:36] "[33mGET /static/img/Анталья.png HTTP/1.1[0m" 404 -
+2025-05-06 11:41:36,732 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:36] "[36mGET /static/img/profile.png HTTP/1.1[0m" 304 -
+2025-05-06 11:41:36,729 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:36] "[33mGET /static/img/Хургада.png HTTP/1.1[0m" 404 -
+2025-05-06 11:41:36,762 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:36] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-06 11:41:36,765 INFO werkzeug 127.0.0.1 - - [06/May/2025 11:41:36] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
