@@ -15,7 +15,8 @@ class User(SqlAlchemyBase, UserMixin):
     email = sqlalchemy.Column(sqlalchemy.String,
                               index=True, unique=True, nullable=True)
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    liked = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    liked_countries = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    liked_cities = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     plans = sqlalchemy.Column(sqlalchemy.String, nullable=True)
 
     def set_password(self, password):
@@ -23,3 +24,5 @@ class User(SqlAlchemyBase, UserMixin):
 
     def check_password(self, password):
         return check_password_hash(self.hashed_password, password)
+
+

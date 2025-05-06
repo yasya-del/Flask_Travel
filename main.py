@@ -109,7 +109,7 @@ def country(name):
     for el in li_cities:
         tourism = db_sess.query(City).filter(City.name == el).first().tourism
         d[tourism] = d.get(tourism, []) + [el]
-    return render_template(f'country.html', title=name,
+    return render_template(f'country.html', title=name, name=name,
                            relax=d.get('Рекреационный', []),
                            culture=d.get('Культурный', ''),
                            active=d.get('Активный', ''))
@@ -165,14 +165,23 @@ def liked():
         db_sess = db_session.create_session()
         users = db_sess.query(User).all()
         liked_countries = None
+        liked_cities = None
         for el in users:
             if el == current_user:
-                liked_countries = el.liked
+                liked_countries = el.liked_countries
+                liked_cities = el.liked_cities
                 break
-        if not liked_countries:
+        if not liked_countries and not liked_cities:
             return render_template('no_liked.html', title='Избранное')
+        li_countries = None
+        li_cities = None
         li = liked_countries.split(',')
-        return render_template('liked.html', title='Избранное', countries=li)
+        if li != ['']:
+            li_countries = li
+        li1 = liked_cities.split(',')
+        if li1 != ['']:
+            li_cities = li1
+        return render_template('liked.html', title='Избранное', countries=li_countries, cities=li_cities)
     return redirect('/login')
 
 
@@ -241,24 +250,64 @@ def advices():
     return render_template('advices.html')
 
 
-@app.route('/add_to_liked/<word>/<country>')
+@app.route('/add_to_liked_country/<word>/<country>')
 def add_to_liked(word, country):
     db_sess = db_session.create_session()
     users = db_sess.query(User).all()
     liked_countries = None
     for el in users:
         if el == current_user:
-            liked_countries = el.liked
+            liked_countries = el.liked_countries
             break
     if not liked_countries:
         liked_countries = country
     else:
         if country not in liked_countries:
             liked_countries += f',{country}'
-    current_user.liked = liked_countries
+    current_user.liked_countries = liked_countries
     db_sess.merge(current_user)
     db_sess.commit()
     return redirect(f'/{word}')
+
+
+@app.route('/add_to_liked_city/<word>/<country>')
+def add_to_liked_city(word, country):
+    db_sess = db_session.create_session()
+    users = db_sess.query(User).all()
+    liked_cities = None
+    for el in users:
+        if el == current_user:
+            liked_cities = el.liked_cities
+            break
+    if not liked_cities:
+        liked_cities = country
+    else:
+        if country not in liked_cities:
+            liked_cities += f',{country}'
+    current_user.liked_cities = liked_cities
+    db_sess.merge(current_user)
+    db_sess.commit()
+    return redirect(f'/{word}')
+
+
+@app.route('/add_to_liked_city/country/<word>/<country>')
+def add_to_liked_city_in_country(word, country):
+    db_sess = db_session.create_session()
+    users = db_sess.query(User).all()
+    liked_cities = None
+    for el in users:
+        if el == current_user:
+            liked_cities = el.liked_cities
+            break
+    if not liked_cities:
+        liked_cities = country
+    else:
+        if country not in liked_cities:
+            liked_cities += f',{country}'
+    current_user.liked_cities = liked_cities
+    db_sess.merge(current_user)
+    db_sess.commit()
+    return redirect(f'/country/{word}')
 
 
 @app.route('/remove_from_liked/<country>')
@@ -266,14 +315,22 @@ def remove_from_liked(country):
     db_sess = db_session.create_session()
     users = db_sess.query(User).all()
     liked_countries = None
+    liked_cities = None
     for el in users:
         if el == current_user:
-            liked_countries = el.liked
+            liked_countries = el.liked_countries
+            liked_cities = el.liked_cities
             break
     liked_countries = liked_countries.split(',')
-    i = liked_countries.index(country)
-    del liked_countries[i]
-    current_user.liked = ','.join(liked_countries)
+    liked_cities = liked_cities.split(',')
+    if country in liked_countries:
+        i = liked_countries.index(country)
+        del liked_countries[i]
+        current_user.liked_countries = ','.join(liked_countries)
+    else:
+        i = liked_cities.index(country)
+        del liked_cities[i]
+        current_user.liked_cities = ','.join(liked_cities)
     db_sess.merge(current_user)
     db_sess.commit()
     return redirect('/liked')
