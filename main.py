@@ -156,7 +156,7 @@ def open_plan(word):
             break
     plans = db_sess.query(Plan.cities).filter(Plan.name == word, Plan.user_id == id).first()
     plans = plans[0].split(',')
-    return render_template("open_plan.html", title=word, plans=plans)
+    return render_template("open_plan.html", title=word, cities=plans, plan=word)
 
 
 @app.route('/liked')
@@ -334,6 +334,26 @@ def remove_from_liked(country):
     db_sess.merge(current_user)
     db_sess.commit()
     return redirect('/liked')
+
+
+@app.route('/delete_from_plan/<name>/<city>')
+def delete_from_plan(name, city):
+    db_sess = db_session.create_session()
+    users = db_sess.query(User).all()
+    plan = None
+    for el in users:
+        if el == current_user:
+            id = el.id
+            break
+    plan = db_sess.query(Plan).filter(Plan.user_id == id, Plan.name == name).first()
+    cities = plan.cities
+    cities = cities.split(',')
+    i = cities.index(city)
+    del cities[i]
+    plan.cities = ','.join(cities)
+    db_sess.merge(plan)
+    db_sess.commit()
+    return redirect(f'/plan/{name}')
 
 
 def main():
