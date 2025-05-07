@@ -92,7 +92,7 @@ def logout():
 
 @app.route('/')
 def title():
-    return render_template('base.html',  title='Главная')
+    return render_template('main.html',  title='Главная')
 
 
 @app.route('/countries')
@@ -243,11 +243,6 @@ def tourism_word(word):
         if len(cities) % 3 != 0:
             k += 1
     return render_template('tourism_type.html', cities=cities, k=k)
-
-
-@app.route('/advices')
-def advices():
-    return render_template('advices.html')
 
 
 @app.route('/add_to_liked_country/<word>/<country>')

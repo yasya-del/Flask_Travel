@@ -7,47 +7,45 @@
            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
            crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="static/css/main.css" />
      <title>{{title}}</title>
  </head>
  <body>
  <header>
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">TravelLife</a>
+  <a class="navbar-brand" href="/"><strong>TravelLife</strong></a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Главная <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/"><strong>Главная</strong> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/countries">Страны</a>
+        <a class="nav-link" href="/countries"><strong>Страны</strong></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/russian_cities">Россия</a>
+        <a class="nav-link" href="/russian_cities"><strong>Россия</strong></a>
       </li>
         <li class="nav-item active">
-        <a class="nav-link" href="/my_plans">Мои маршруты</a>
+        <a class="nav-link" href="/my_plans"><strong>Мои маршруты</strong></a>
       </li>
         <li class="nav-item active">
-        <a class="nav-link" href="/liked">Избранное</a>
+        <a class="nav-link" href="/liked"><strong>Избранное</strong></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/tourism">Туризм</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/advices">Советы</a>
+        <a class="nav-link" href="/tourism"><strong>Туризм</strong></a>
       </li>
     </ul>
        {% if current_user.is_authenticated %}
-            <a class="navbar-brand pull-right">{{ current_user.name }}</a>
+      <a class="navbar-brand pull-right"><strong>{{ current_user.name }}</strong></a>
         {% else %}
             <p>
                 <a class="btn btn-primary " href="/register">Зарегистрироваться</a>
                 <a class="btn btn-success" href="/login">Войти</a>
             </p>
 {% endif %}
-      <a class="navbar-brand pull-right" href="my_profile">
-            <img src="/static/img/profile.png" width="30" height="30" alt="">
+      <a class="navbar-brand pull-right" href="/my_profile">
+            <img src="/static/img/profile2.svg" width="30" height="30" alt="">
         </a>
     <form class="form-inline my-2 my-lg-0"></form>
   </div>
