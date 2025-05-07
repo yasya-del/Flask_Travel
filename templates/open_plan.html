@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% set plans_list = plans %}
-{% for plan in plans_list %}
-<p>{{plan}}</p>
+<link rel="stylesheet" href="/static/css/style_plan.css">
+{% set plans_list = cities %}
+{% for city in plans_list %}
+<figure>
+    <img src='/static/img/{{city}}.png' alt='не нашлось картикни(' width="400" height="200"/>
+    <figcaption>{{city}}</figcaption>
+    <a href="/delete_from_plan/{{plan}}/{{city}}" class="btn btn-danger">Удалить</a>
+</figure>
 {% endfor %}
 {% endblock %}
