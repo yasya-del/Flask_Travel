@@ -187,7 +187,7 @@ def liked():
 
 @app.route('/create_plan')
 def create_plan():
-    return 'Создаю маршрут'
+    return render_template('create_plan.html', title='Создаю маршрут')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -242,7 +242,7 @@ def tourism_word(word):
         k = len(cities) // 3
         if len(cities) % 3 != 0:
             k += 1
-    return render_template('tourism_type.html', cities=cities, k=k)
+    return render_template('tourism_type.html', title="Туризм", cities=cities, k=k)
 
 
 @app.route('/add_to_liked_country/<word>/<country>')
