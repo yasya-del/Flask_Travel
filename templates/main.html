@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
+<body>
 <link rel="stylesheet" type="text/css" href="static/css/main.css" />
-<div class="container">
 <p style="font-size: 100px;" align="center"><strong>TravelLife</strong></p>
 <p style="font-size: 35px;" align="center"><strong>Сайт для путешественников</strong></p>
-<p></p>
 <p style="font-size: 30px;" align="left">Вы можете посмотреть:</p>
 <ul>
-    <li style="font-size: 30px;">Cтраны</li>
+    <li style="font-size: 30px;"><a href="/countries">Страны</a></li>
+    <li style="font-size: 30px;"><a href="/russian_cities">Места России</a></li>
+    <li style="font-size: 30px;"><a href="/tourism">Виды туризма</a></li>
 </ul>
-</div>
+<p style="font-size: 30px;" align="left">Если вам понравился город или страна - добавьте его в <a href="/liked">избранное</a>!</p>
+<p style="font-size: 30px;" align="left">Для этого необходимо <a href="/register">зарегистрироваться</a> и <a href="/login">авторизоваться</a>.</p>
+<p style="font-size: 30px;" align="left">Также можно составлять <a href="/my_plans">маршруты</a> из городов.</p>
 {% endblock %}
