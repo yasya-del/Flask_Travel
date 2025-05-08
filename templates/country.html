@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<a class="btn btn-primary" href="/map/{{title}}">Посмотреть карту</a>
+<a class="btn btn-primary" href="/map/country/{{title}}">Посмотреть на карте</a>
 <p></p>
 {% set relax = relax %}
 {% set culture = culture %}
@@ -19,6 +19,7 @@
     <h5 class="card-title">{{city}}</h5>
     <p class="card-text"></p>
     <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
+    <a href="/map/{{name}}/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
     <a href="/add_to_liked_city/country/{{name}}/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
   </div>
 </div>
@@ -39,6 +40,7 @@
     <h5 class="card-title">{{city}}</h5>
     <p class="card-text"></p>
     <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
+     <a href="/map/{{name}}/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
     <a href="/add_to_liked_city/country/{{name}}/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
   </div>
 </div>
@@ -59,6 +61,7 @@
     <h5 class="card-title">{{city}}</h5>
     <p class="card-text"></p>
     <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
+    <a href="/map/{{name}}/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
     <a href="/add_to_liked_city/country/{{name}}/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
   </div>
 </div>

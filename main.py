@@ -115,11 +115,15 @@ def country(name):
                            active=d.get('Активный', ''))
 
 
-@app.route('/map/<name>')
-def open_map(name):
+@app.route('/map/<word>/<name>')
+def open_map(word, name):
     from search import search_for_map
     search_for_map(name)
-    return redirect(f'/country/{name}')
+    if word == 'country':
+        return redirect(f'/country/{name}')
+    elif word == 'russian_cities':
+        return redirect(f'/russian_cities')
+    return redirect(f'/country/{word}')
 
 
 @app.route('/my_profile', methods=['POST', 'GET'])
@@ -194,26 +198,27 @@ def create_plan():
     russian_cities_new = [x[0] for x in russian_cities]
     list_cities = cities_new + russian_cities_new
     selected_city = []
+    users = db_sess.query(User).all()
+    plans = None
+    id = None
+    for el in users:
+        if el == current_user:
+            plans = el.plans
+            id = el.id
+            break
     if request.method == 'GET':
         return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities)
     elif request.method == 'POST':
         name = request.form['name']
+        plans += f',{name}'
+        current_user.plans = plans
+        db_sess.merge(current_user)
+        db_sess.commit()
         for el in list_cities:
             try:
                 selected_city.append(request.form[el])
             except:
                 continue
-        users = db_sess.query(User).all()
-        id = None
-        for el in users:
-            if el == current_user:
-                plans = el.plans
-                plans += f',{name}'
-                el.plans = plans
-                db_sess.merge(el)
-                db_sess.commit()
-                id = el.id
-                break
         plan = Plan(
             name=name,
             cities=','.join(selected_city),
