@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <form class="login_form" method="post">
+        <p></p>
+        <h1 align="center">Создаем маршрут</h1>
+        <p></p>
+        <input type="name" class="form-control" id="name" placeholder="Введите название маршрута" name="name">
+        <p></p>
+        <div class="form-group">
+            <label for="form-check">Какие города включить в маршрут?</label>
+            {% set cities_list = cities %}
+            {% for city in cities_list %}
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="job" id="engineer" value="engineer">
+                <label class="form-check-label" for="engineer">
+                    {{city}}
+                </label>
+            </div>
+            {% endfor %}
+        <p></p>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+</div>
+{% endblock %}

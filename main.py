@@ -115,11 +115,11 @@ def country(name):
                            active=d.get('Активный', ''))
 
 
-@app.route('/country/map/<name>')
+@app.route('/map/<name>')
 def open_map(name):
     from search import search_for_map
     search_for_map(name)
-    return ''
+    return redirect(f'/country/{name}')
 
 
 @app.route('/my_profile', methods=['POST', 'GET'])
@@ -185,9 +185,17 @@ def liked():
     return redirect('/login')
 
 
-@app.route('/create_plan')
+@app.route('/create_plan', methods=['POST', 'GET'])
 def create_plan():
-    return render_template('create_plan.html', title='Создаю маршрут')
+    db_sess = db_session.create_session()
+    cities = db_sess.query(City.name).all()
+    list_cities = [x[0] for x in cities]
+    return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities)
+
+
+@app.route('/add_to_plan')
+def add_to_plan():
+    return 'Добавляю'
 
 
 @app.route('/register', methods=['GET', 'POST'])
