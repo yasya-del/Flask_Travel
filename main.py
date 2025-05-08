@@ -189,8 +189,39 @@ def liked():
 def create_plan():
     db_sess = db_session.create_session()
     cities = db_sess.query(City.name).all()
-    list_cities = [x[0] for x in cities]
-    return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities)
+    cities_new = [x[0] for x in cities]
+    russian_cities = db_sess.query(RussianCity.city).all()
+    russian_cities_new = [x[0] for x in russian_cities]
+    list_cities = cities_new + russian_cities_new
+    selected_city = []
+    if request.method == 'GET':
+        return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities)
+    elif request.method == 'POST':
+        name = request.form['name']
+        for el in list_cities:
+            try:
+                selected_city.append(request.form[el])
+            except:
+                continue
+        users = db_sess.query(User).all()
+        id = None
+        for el in users:
+            if el == current_user:
+                plans = el.plans
+                plans += f',{name}'
+                el.plans = plans
+                db_sess.merge(el)
+                db_sess.commit()
+                id = el.id
+                break
+        plan = Plan(
+            name=name,
+            cities=','.join(selected_city),
+            user_id = id
+        )
+        db_sess.add(plan)
+        db_sess.commit()
+        return render_template('plan_ready.html', title='Добавлен')
 
 
 @app.route('/add_to_plan')
