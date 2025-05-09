@@ -10,7 +10,9 @@
     <h5 class="card-title">{{country}}</h5>
     <p class="card-text"></p>
     <a href="/country/{{country}}" class="btn btn-primary">Смотреть</a>
-      <a href="/add_to_liked_country/countries/{{country}}" class="btn btn-outline-danger">Добавить в избранное</a>
+          <a href="/add_to_liked_country/countries/{{country}}" class="btn btn-outline-danger">
+        <img src="/static/img/heart.svg" width="30" height="30" alt="">
+    </a>
   </div>
 </div>
     {% endfor %}

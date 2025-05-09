@@ -4,10 +4,25 @@
 <link rel="stylesheet" href="/static/css/style_plan.css">
 {% set plans_list = cities %}
 {% for city in plans_list %}
-<figure>
+<table class="table">
+        <colgroup>
+    <col style="width: 40%" />
+    <col style="width: 40%" />
+  </colgroup>
+        <tbody>
+     <tr>
+       <td width="15" align="left">
+           <figure>
     <img src='/static/img/{{city}}.png' alt='не нашлось картикни(' width="400" height="200"/>
     <figcaption>{{city}}</figcaption>
-    <a href="/delete_from_plan/{{plan}}/{{city}}" class="btn btn-danger">Удалить</a>
 </figure>
+       </td>
+       <td width="15" align="left">  <a href="/delete_from_plan/{{plan}}/{{city}}" class="btn btn-outline-danger">
+        <img src="/static/img/trash.svg" width="30" height="30" alt="">
+    </a></td>
+     </tr>
+   </tbody>
+ </table>
+
 {% endfor %}
 {% endblock %}

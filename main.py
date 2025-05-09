@@ -324,7 +324,7 @@ def tourism_word(word):
         k = len(cities) // 3
         if len(cities) % 3 != 0:
             k += 1
-    return render_template('tourism_type.html', title="Туризм", cities=cities, k=k)
+    return render_template('tourism_type.html', title="Туризм", cities=cities, k=k, type=type)
 
 
 @app.route('/add_to_liked_country/<word>/<country>')
