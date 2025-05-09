@@ -6,10 +6,12 @@ from data import db_session
 from data.cities import City
 from data.plans import Plan
 from data.users import User
+from data.airports import Airport
 from data.russian_cities import RussianCity
 from data.countries import Country
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from forms.user import RegisterForm, LoginForm
+from forms.fly import FlyForm
 
 
 app = Flask(__name__)
@@ -52,10 +54,44 @@ def add_cities():
     con.close()
 
 
+def add_airports():
+    con = sqlite3.connect('db/travel.db')
+    cur = con.cursor()
+    result = cur.execute(f"""SELECT name FROM cities""").fetchall()
+    con.close()
+    result = [i[0] for i in result]
+    russia = ['Москва', 'Санкт-Петербург', 'Казань', 'Сочи', 'Петрозаводск(Карелия)', 'Петропавловск-Камчатский(Камчатка)',
+              'Минеральные воды(Кисловодск)', 'Симферополь(Крым)', 'Владивосток', 'Калининград', 'Махачкала(Дербент)']
+    cities = russia + result
+    names = ['MOW', 'LED', 'KZN', 'AER', 'PES', 'PKC', 'MRV', 'SIP', 'VVO', 'KGD', 'MCX', 'AYT', 'IST', 'MAD', 'BCN',
+             'SPX', 'HRG']
+    db_sess = db_session.create_session()
+    con = sqlite3.connect('db/travel.db')
+    cur = con.cursor()
+    result = cur.execute(f"""SELECT city FROM airports""").fetchone()
+    con.close()
+    if not result:
+        for i in range(len(cities)):
+            airport = Airport(
+                city=cities[i],
+                name=names[i]
+            )
+            db_sess.add(airport)
+    db_sess.commit()
+
+
 @login_manager.user_loader
 def load_user(user_id):
     db_sess = db_session.create_session()
     return db_sess.query(User).get(user_id)
+
+
+@app.route('/fly')
+def fly():
+    form = FlyForm()
+    if form.validate_on_submit():
+        return redirect('/')
+    return render_template('fly.html', title='Авиабилеты', form=form)
 
 
 @app.route('/russian_cities')
@@ -398,6 +434,7 @@ def delete_from_plan(name, city):
 def main():
     db_session.global_init("db/travel.db")
     add_cities()
+    add_airports()
     app.run()
 
 
