@@ -231,7 +231,9 @@ def create_plan():
 
 @app.route('/add_to_plan')
 def add_to_plan():
-    return 'Добавляю'
+    if current_user.is_authenticated:
+        return 'Добавляю'
+    return redirect('/login')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -291,62 +293,68 @@ def tourism_word(word):
 
 @app.route('/add_to_liked_country/<word>/<country>')
 def add_to_liked(word, country):
-    db_sess = db_session.create_session()
-    users = db_sess.query(User).all()
-    liked_countries = None
-    for el in users:
-        if el == current_user:
-            liked_countries = el.liked_countries
-            break
-    if not liked_countries:
-        liked_countries = country
-    else:
-        if country not in liked_countries:
-            liked_countries += f',{country}'
-    current_user.liked_countries = liked_countries
-    db_sess.merge(current_user)
-    db_sess.commit()
-    return redirect(f'/{word}')
+    if current_user.is_authenticated:
+        db_sess = db_session.create_session()
+        users = db_sess.query(User).all()
+        liked_countries = None
+        for el in users:
+            if el == current_user:
+                liked_countries = el.liked_countries
+                break
+        if not liked_countries:
+            liked_countries = country
+        else:
+            if country not in liked_countries:
+                liked_countries += f',{country}'
+        current_user.liked_countries = liked_countries
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect(f'/{word}')
+    return redirect('/login')
 
 
 @app.route('/add_to_liked_city/<word>/<country>')
 def add_to_liked_city(word, country):
-    db_sess = db_session.create_session()
-    users = db_sess.query(User).all()
-    liked_cities = None
-    for el in users:
-        if el == current_user:
-            liked_cities = el.liked_cities
-            break
-    if not liked_cities:
-        liked_cities = country
-    else:
-        if country not in liked_cities:
-            liked_cities += f',{country}'
-    current_user.liked_cities = liked_cities
-    db_sess.merge(current_user)
-    db_sess.commit()
-    return redirect(f'/{word}')
+    if current_user.is_authenticated:
+        db_sess = db_session.create_session()
+        users = db_sess.query(User).all()
+        liked_cities = None
+        for el in users:
+            if el == current_user:
+                liked_cities = el.liked_cities
+                break
+        if not liked_cities:
+            liked_cities = country
+        else:
+            if country not in liked_cities:
+                liked_cities += f',{country}'
+        current_user.liked_cities = liked_cities
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect(f'/{word}')
+    return redirect('/login')
 
 
 @app.route('/add_to_liked_city/country/<word>/<country>')
 def add_to_liked_city_in_country(word, country):
-    db_sess = db_session.create_session()
-    users = db_sess.query(User).all()
-    liked_cities = None
-    for el in users:
-        if el == current_user:
-            liked_cities = el.liked_cities
-            break
-    if not liked_cities:
-        liked_cities = country
-    else:
-        if country not in liked_cities:
-            liked_cities += f',{country}'
-    current_user.liked_cities = liked_cities
-    db_sess.merge(current_user)
-    db_sess.commit()
-    return redirect(f'/country/{word}')
+    if current_user.is_authenticated:
+        db_sess = db_session.create_session()
+        users = db_sess.query(User).all()
+        liked_cities = None
+        for el in users:
+            if el == current_user:
+                liked_cities = el.liked_cities
+                break
+        if not liked_cities:
+            liked_cities = country
+        else:
+            if country not in liked_cities:
+                liked_cities += f',{country}'
+        current_user.liked_cities = liked_cities
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect(f'/country/{word}')
+    return redirect('/login')
 
 
 @app.route('/remove_from_liked/<country>')
@@ -393,6 +401,27 @@ def delete_from_plan(name, city):
     db_sess.merge(plan)
     db_sess.commit()
     return redirect(f'/plan/{name}')
+
+
+@app.route('/delete_plan/<name>')
+def delete_plan(name):
+    db_sess = db_session.create_session()
+    users = db_sess.query(User).all()
+    for el in users:
+        if el == current_user:
+            id = el.id
+            plans = el.plans
+            plans = plans.split(',')
+            i = plans.index(name)
+            del plans[i]
+            el.plans = ','.join(plans)
+            db_sess.merge(el)
+            db_sess.commit()
+            break
+    plan = db_sess.query(Plan).filter(Plan.user_id == id, Plan.name == name).first()
+    db_sess.delete(plan)
+    db_sess.commit()
+    return redirect('/my_plans')
 
 
 def main():

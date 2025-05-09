@@ -28,7 +28,7 @@ def search_for_map(toponym_to_find):
         "ll": ",".join([toponym_longitude, toponym_lattitude]),
         "spn": find_delta(toponym),
         "apikey": apikey,
-        "pt": f'{toponym_longitude},{toponym_lattitude},pm2dom37'
+        "pt": f'{toponym_longitude},{toponym_lattitude},pm2dom'
     }
 
     map_api_server = "https://static-maps.yandex.ru/v1"
