@@ -133,7 +133,10 @@ def title():
 
 @app.route('/countries')
 def choose_countries():
-    return render_template('countries.html',  title='Страны')
+    db_sess = db_session.create_session()
+    li_countries = db_sess.query(Country.name).all()
+    all_countries = [x[0] for x in li_countries]
+    return render_template('countries.html',  title='Страны', countries=all_countries)
 
 
 @app.route(f'/country/<name>')
@@ -143,8 +146,10 @@ def country(name):
     li_cities = li_cities.cities.split(',')
     d = {}
     for el in li_cities:
-        tourism = db_sess.query(City).filter(City.name == el).first().tourism
-        d[tourism] = d.get(tourism, []) + [el]
+        city = db_sess.query(City).filter(City.name == el).first()
+        tourism = city.tourism
+        text = city.text
+        d[tourism] = d.get(tourism, []) + [(el, text)]
     return render_template(f'country.html', title=name, name=name,
                            relax=d.get('Рекреационный', []),
                            culture=d.get('Культурный', ''),
@@ -319,12 +324,7 @@ def tourism_word(word):
     con.close()
     result = result1 + result2
     cities = [x[0] for x in result]
-    k = 0
-    if len(cities) > 3:
-        k = len(cities) // 3
-        if len(cities) % 3 != 0:
-            k += 1
-    return render_template('tourism_type.html', title="Туризм", cities=cities, k=k, type=type)
+    return render_template('tourism_type.html', title="Туризм", cities=cities, type=type)
 
 
 @app.route('/add_to_liked_country/<word>/<country>')

@@ -2,33 +2,18 @@
 {% block content %}
 <h2>{{type}} туризм</h2>
 {% set cities_list = cities %}
-{% if k != 0 %}
-{% for i in range(k) %}
-<div class="card-group">
-{% for city in cities_list[loop.index0 * 3:loop.index0 * 3 + 3] %}
-<div class="card" style="width: 18rem">
-  <img src="/static/img/{{city}}.png" class="card-img-top" >
-  <div class="card-body">
-    <h5 class="card-title">{{city}}</h5>
-    <p class="card-text"></p>
-    <a href='/add_to_plan' class="btn btn-primary">Добавить в маршрут</a>
-  </div>
-</div>
-    {% endfor %}
-</div>
-{% endfor %}
-{% else %}
-<div class="card-group">
+<div class="row row-cols-1 row-cols-md-3 g-4">
 {% for city in cities_list %}
-<div class="card" style="width: 18rem">
-  <img src="/static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
+  <div class="col">
+<div class="card h-100">
+  <img src="/static/img/{{city}}.png" class="card-img-top" height="250">
   <div class="card-body">
     <h5 class="card-title">{{city}}</h5>
     <p class="card-text"></p>
     <a href='/add_to_plan' class="btn btn-primary">Добавить в маршрут</a>
   </div>
 </div>
+    </div>
     {% endfor %}
 </div>
-{% endif %}
 {% endblock %}

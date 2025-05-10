@@ -6,9 +6,10 @@
 <div class="alert alert-info" role="alert" align="center">
   СТРАНЫ
 </div>
-<div class="card-group">
+<div class="row row-cols-1 row-cols-md-3 g-4">
 {% for country in countries_list %}
-<div class="card" style="width: 18rem">
+  <div class="col">
+<div class="card h-100">
   <img src="/static/img/{{country}}.png" class="card-img-top" alt="картинка не нашлась(">
   <div class="card-body">
     <h5 class="card-title">{{country}}</h5>
@@ -19,6 +20,7 @@
     </a>
   </div>
 </div>
+    </div>
     {% endfor %}
 </div>
 {% endif %}
@@ -28,9 +30,10 @@
 <div class="alert alert-info" role="alert" align="center">
   ГОРОДА
 </div>
-<div class="card-group">
+<div class="row row-cols-1 row-cols-md-3 g-4">
 {% for country in cities_list %}
-<div class="card" style="width: 18rem">
+  <div class="col">
+<div class="card h-100">
   <img src="/static/img/{{country}}.png" class="card-img-top" alt="картинка не нашлась(">
   <div class="card-body">
     <h5 class="card-title">{{country}}</h5>
@@ -41,6 +44,7 @@
     </a>
   </div>
 </div>
+    </div>
     {% endfor %}
 </div>
 {% endif %}

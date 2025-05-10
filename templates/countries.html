@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% set countries_list = ['Турция', 'Испания', 'Египет'] %}
-<div class="card-group">
+{% set countries_list = countries %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
     {% for country in countries_list %}
-<div class="card" style="width: 18rem">
-  <img src="static/img/{{country}}.png" class="card-img-top" alt="картинка не нашлась(">
+        <div class="col">
+<div class="card h-100">
+  <img src="static/img/{{country}}.png" class="card-img-top" alt="картинка не нашлась(" height="250">
   <div class="card-body">
     <h5 class="card-title">{{country}}</h5>
     <p class="card-text"></p>
@@ -15,6 +16,7 @@
     </a>
   </div>
 </div>
+        </div>
     {% endfor %}
 </div>
 {% endblock %}
