@@ -1170,3 +1170,559 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='geocode-maps.yande
 2025-05-08 23:47:55,467 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 2025-05-08 23:47:55,467 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:25:23,510 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:25:23,511 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:25:25,366 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:25:25] "GET /fly HTTP/1.1" 200 -
+2025-05-10 14:25:25,722 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:25:25] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:25:25,739 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:25:25] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:25:50,958 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:25:50] "[31m[1mPOST /fly HTTP/1.1[0m" 405 -
+2025-05-10 14:27:48,580 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:27:48,580 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:27:55,435 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:27:55] "[31m[1mPOST /fly HTTP/1.1[0m" 405 -
+2025-05-10 14:29:35,026 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:29:35,027 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:29:41,082 ERROR main Exception on /fly [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 93, in fly
+    start = form.start.date
+            ^^^^^^^^^^^^^^^
+AttributeError: 'SelectField' object has no attribute 'date'. Did you mean: 'data'?
+2025-05-10 14:29:41,092 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:29:41] "[35m[1mPOST /fly HTTP/1.1[0m" 500 -
+2025-05-10 14:30:11,616 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:30:11,617 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:30:13,712 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:30:13] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:30:13,820 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:30:13] "GET /login HTTP/1.1" 200 -
+2025-05-10 14:30:13,936 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:30:13] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:30:13,941 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:30:13] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:37:58,185 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:37:58,186 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:38:02,329 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:02] "GET /login HTTP/1.1" 200 -
+2025-05-10 14:38:02,423 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:02] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:38:02,435 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:02] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:38:02,554 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:02] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-10 14:38:03,715 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:03] "GET /fly HTTP/1.1" 200 -
+2025-05-10 14:38:03,782 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:03] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:38:03,786 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:03] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:38:27,426 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:27] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:38:27,451 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:27] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:38:27,508 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:27] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:38:27,519 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:27] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:38:30,633 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:38:30] "[33mGET /link HTTP/1.1[0m" 404 -
+2025-05-10 14:40:46,636 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:40:46,637 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:40:53,373 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:40:53] "GET /fly HTTP/1.1" 200 -
+2025-05-10 14:40:53,465 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:40:53] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:40:53,468 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:40:53] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:41:13,645 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:41:13] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:41:13,673 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:41:13] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:41:13,731 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:41:13] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:41:13,733 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:41:13] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:42:08,661 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:42:08,662 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:42:10,386 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:42:10] "GET /fly HTTP/1.1" 200 -
+2025-05-10 14:42:10,622 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:42:10] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:42:10,665 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:42:10] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:42:20,778 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:42:20] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:42:20,809 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:42:20] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:42:20,866 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:42:20] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:42:20,869 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:42:20] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:44:19,785 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:44:19,786 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:44:22,447 ERROR main Exception on /find_tickets [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 108, in find_tickets
+    return render_template('find_tickets.html', link=link)
+                                                     ^^^^
+NameError: name 'link' is not defined
+2025-05-10 14:44:22,463 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:22] "[35m[1mGET /find_tickets HTTP/1.1[0m" 500 -
+2025-05-10 14:44:25,996 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:25] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-10 14:44:28,402 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:28] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:44:28,477 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:28] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:44:28,525 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:28] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:44:28,534 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:28] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:44:35,228 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:35] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:44:35,335 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:35] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:44:35,350 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:35] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:44:35,509 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:35] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-10 14:44:40,226 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:40] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:44:40,338 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:40] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:44:40,341 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:40] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:44:40,546 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:44:40] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-10 14:46:17,613 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:46:17,613 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:46:21,216 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:46:21] "GET /fly HTTP/1.1" 200 -
+2025-05-10 14:46:21,293 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:46:21] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:46:21,313 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:46:21] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:46:31,690 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:46:31] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:46:31,727 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:46:31] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:46:31,785 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:46:31] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:46:31,788 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:46:31] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:50:33,734 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:50:33,738 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:50:36,418 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:50:36] "GET /fly HTTP/1.1" 200 -
+2025-05-10 14:50:36,645 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:50:36] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:50:36,657 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:50:36] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:50:44,540 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:50:44] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:50:44,570 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:50:44] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:50:44,634 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:50:44] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:50:44,637 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:50:44] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:53:02,818 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:53:02,819 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:53:07,933 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:07] "GET /fly HTTP/1.1" 200 -
+2025-05-10 14:53:08,024 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:08] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:53:08,049 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:08] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:53:15,466 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:15] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:53:15,494 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:15] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:53:15,549 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:15] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:53:15,561 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:15] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:53:23,966 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:53:23,967 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:53:25,087 ERROR main Exception on /find_tickets [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 108, in find_tickets
+    return render_template('find_tickets.html', link=link)
+                                                     ^^^^
+NameError: name 'link' is not defined
+2025-05-10 14:53:25,102 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:25] "[35m[1mGET /find_tickets HTTP/1.1[0m" 500 -
+2025-05-10 14:53:26,378 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:26] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-10 14:53:35,002 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:35] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:53:35,076 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:35] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:53:35,124 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:35] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:53:35,133 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:35] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:53:59,836 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:59] "GET /fly HTTP/1.1" 200 -
+2025-05-10 14:53:59,896 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:59] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:53:59,909 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:53:59] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:54:15,125 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:54:15] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 14:54:15,165 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:54:15] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 14:54:15,324 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:54:15] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 14:54:15,327 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:54:15] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:59:11,957 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 14:59:11,958 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 14:59:17,493 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:59:17] "GET /fly HTTP/1.1" 200 -
+2025-05-10 14:59:17,820 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:59:17] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 14:59:17,823 INFO werkzeug 127.0.0.1 - - [10/May/2025 14:59:17] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:01:46,294 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 15:01:46,296 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 15:01:47,505 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:01:47] "GET /fly HTTP/1.1" 200 -
+2025-05-10 15:01:47,726 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:01:47] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:01:47,739 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:01:47] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:01:48,029 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:01:48] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-10 15:01:57,558 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:01:57] "POST /fly HTTP/1.1" 200 -
+2025-05-10 15:01:57,600 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:01:57] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:01:57,609 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:01:57] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:02:26,071 ERROR main Exception on /fly [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 100, in fly
+    start_date = form.start_date.date
+                 ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DateField' object has no attribute 'date'. Did you mean: 'data'?
+2025-05-10 15:02:26,081 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:02:26] "[35m[1mPOST /fly HTTP/1.1[0m" 500 -
+2025-05-10 15:02:50,094 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 15:02:50,095 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 15:02:52,700 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:02:52] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 15:02:53,081 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:02:53] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 15:02:53,322 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:02:53] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:02:53,331 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:02:53] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:27:10,843 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:27:10] "GET /fly HTTP/1.1" 200 -
+2025-05-10 15:27:10,891 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:27:10] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:27:10,894 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:27:10] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:27:29,108 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:27:29] "POST /fly HTTP/1.1" 200 -
+2025-05-10 15:27:29,150 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:27:29] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:27:29,169 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:27:29] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:39:46,796 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 15:39:46,797 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 15:39:49,098 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:39:49] "GET /fly HTTP/1.1" 200 -
+2025-05-10 15:39:49,336 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:39:49] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:39:49,344 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:39:49] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:40:03,563 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:40:03] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 15:40:03,647 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:40:03] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 15:40:03,754 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:40:03] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:40:03,760 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:40:03] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:43:19,820 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 15:43:19,822 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 15:43:24,813 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:43:24] "GET /fly HTTP/1.1" 200 -
+2025-05-10 15:43:24,943 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:43:24] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:43:24,962 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:43:24] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:43:25,129 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:43:25] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-10 15:43:37,437 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:43:37] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 15:43:37,555 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:43:37] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 15:43:37,654 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:43:37] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:43:37,671 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:43:37] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:49:49,106 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 15:49:49,107 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 15:49:51,609 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:49:51] "GET /fly HTTP/1.1" 200 -
+2025-05-10 15:49:51,700 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:49:51] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:49:51,703 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:49:51] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:49:51,804 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:49:51] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-10 15:50:07,508 ERROR main Exception on /fly [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 100, in fly
+    start_date = form.start_date.data.split('-')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'datetime.date' object has no attribute 'split'
+2025-05-10 15:50:07,525 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:50:07] "[35m[1mPOST /fly HTTP/1.1[0m" 500 -
+2025-05-10 15:51:02,775 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 15:51:02,775 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 15:51:05,586 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:51:05] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-10 15:51:05,651 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:51:05] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-10 15:51:05,718 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:51:05] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:51:05,746 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:51:05] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:54:54,186 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 15:54:54,186 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 15:55:04,785 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:55:04] "GET /fly HTTP/1.1" 200 -
+2025-05-10 15:55:04,853 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:55:04] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:55:04,875 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:55:04] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:55:41,101 ERROR main Exception on /fly [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 92, in fly
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/wtforms/fields/core.py", line 246, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/wtforms/fields/core.py", line 266, in _run_validation_chain
+    validator(form, self)
+  File "/home/vasya/PycharmProjects/Flask_Travel/forms/fly.py", line 27, in validate_end_date
+    if field.data < form.start_date.data:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'datetime.date' and 'NoneType'
+2025-05-10 15:55:41,112 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:55:41] "[35m[1mPOST /fly HTTP/1.1[0m" 500 -
+2025-05-10 15:56:21,817 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-10 15:56:21,817 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-10 15:56:26,513 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:56:26] "GET /fly HTTP/1.1" 200 -
+2025-05-10 15:56:26,594 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:56:26] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:56:26,596 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:56:26] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:56:26,690 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:56:26] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-10 15:56:39,930 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:56:39] "POST /fly HTTP/1.1" 200 -
+2025-05-10 15:56:40,033 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:56:40] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:56:40,047 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:56:40] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-10 15:57:00,152 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:57:00] "POST /fly HTTP/1.1" 200 -
+2025-05-10 15:57:00,246 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:57:00] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-10 15:57:00,248 INFO werkzeug 127.0.0.1 - - [10/May/2025 15:57:00] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:10:36,924 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:10:36,925 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:10:43,759 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:10:43] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:10:43,846 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:10:43] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:10:43,851 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:10:43] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:10:48,092 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:10:48] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:10:48,163 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:10:48] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:10:48,166 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:10:48] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:11:12,930 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:11:12,931 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:11:13,166 ERROR main Exception on /fly [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 102, in fly
+    now_date = str(datetime.date()).split()
+                   ^^^^^^^^^^^^^^^
+TypeError: function missing required argument 'year' (pos 1)
+2025-05-11 17:11:13,182 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:11:13] "[35m[1mPOST /fly HTTP/1.1[0m" 500 -
+2025-05-11 17:11:15,856 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:11:15] "GET / HTTP/1.1" 200 -
+2025-05-11 17:11:15,955 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:11:15] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:11:15,968 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:11:15] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-11 17:11:15,973 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:11:15] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:11:15,984 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:11:15] "GET /static/img/fon2.jpg HTTP/1.1" 200 -
+2025-05-11 17:11:18,308 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:11:18] "GET /fly HTTP/1.1" 200 -
+2025-05-11 17:11:18,349 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:11:18] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:11:18,359 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:11:18] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:12:12,039 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:12:12,040 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:12:35,238 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:12:35] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:12:35,304 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:12:35] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:12:35,333 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:12:35] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:14:52,289 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:14:52,290 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:15:03,947 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:15:03,948 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:15:09,137 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:09] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:15:09,234 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:09] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:15:09,241 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:09] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:15:09,350 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:09] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-11 17:15:13,366 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:13] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:15:13,411 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:13] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:15:13,420 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:13] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:15:51,993 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:15:51,994 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:15:55,523 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:55] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:15:55,667 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:55] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:15:55,669 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:15:55] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:16:21,439 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:16:21,440 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:16:22,847 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:16:22] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:16:23,039 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:16:23] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:16:23,044 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:16:23] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:19:04,050 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:19:04,051 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:19:07,698 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:19:07] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-11 17:19:07,807 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:19:07] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-11 17:19:08,005 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:19:08] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:19:08,010 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:19:08] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:21:42,621 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:21:42,621 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:21:56,824 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:21:56] "GET /fly HTTP/1.1" 200 -
+2025-05-11 17:21:56,896 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:21:56] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:21:56,913 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:21:56] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:22:12,196 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:22:12] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:22:12,331 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:22:12] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:22:12,347 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:22:12] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:23:04,835 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:23:04] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:23:04,905 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:23:04] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:23:04,909 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:23:04] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:29:35,606 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:29:35,607 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:29:42,469 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:29:42] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:29:42,591 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:29:42] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:29:42,593 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:29:42] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:29:56,051 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:29:56,051 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:30:02,776 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:30:02] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:30:02,861 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:30:02] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:30:02,864 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:30:02] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:33:43,862 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:33:43,862 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:34:07,428 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:34:07] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-11 17:34:07,502 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:34:07] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-11 17:34:07,596 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:34:07] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:34:07,599 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:34:07] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:34:15,205 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:34:15] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:34:15,322 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:34:15] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:34:15,337 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:34:15] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:35:27,234 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:35:27,235 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:35:31,040 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:35:31] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:35:31,122 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:35:31] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 17:35:31,130 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:35:31] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:38:51,237 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 17:38:51,238 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 17:39:05,051 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:39:05] "POST /fly HTTP/1.1" 200 -
+2025-05-11 17:39:05,152 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:39:05] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 17:39:05,159 INFO werkzeug 127.0.0.1 - - [11/May/2025 17:39:05] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:04:17,862 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 18:04:17,863 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 18:04:21,675 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:04:21] "POST /fly HTTP/1.1" 200 -
+2025-05-11 18:04:21,773 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:04:21] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:04:21,775 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:04:21] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:04:33,734 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:04:33] "POST /fly HTTP/1.1" 200 -
+2025-05-11 18:04:33,852 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:04:33] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:04:33,863 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:04:33] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:06:47,277 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 18:06:47,278 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 18:07:04,115 ERROR main Exception on /fly [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 140, in fly
+    elif int(adult) < 0 or int(baby) < 0 or int(child) < 0:
+         ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: "''"
+2025-05-11 18:07:04,124 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:07:04] "[35m[1mPOST /fly HTTP/1.1[0m" 500 -
+2025-05-11 18:08:07,660 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 18:08:07,661 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 18:08:11,904 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:08:11] "POST /fly HTTP/1.1" 200 -
+2025-05-11 18:08:11,995 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:08:11] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:08:11,999 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:08:11] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:08:22,282 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:08:22] "POST /fly HTTP/1.1" 200 -
+2025-05-11 18:08:22,339 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:08:22] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:08:22,347 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:08:22] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:09:03,278 ERROR main Exception on /fly [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 136, in fly
+    if not adult.isnumeric() or not child.isnumeric() or not baby.isnumeric():
+                                                             ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'isnumeric'
+2025-05-11 18:09:03,297 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:09:03] "[35m[1mPOST /fly HTTP/1.1[0m" 500 -
+2025-05-11 18:09:49,930 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 18:09:49,931 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 18:09:55,822 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 18:09:55,824 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 18:09:57,259 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:09:57] "POST /fly HTTP/1.1" 200 -
+2025-05-11 18:09:57,452 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:09:57] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:09:57,465 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:09:57] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:10:04,203 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:10:04] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-11 18:10:04,236 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:10:04] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-11 18:10:04,290 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:10:04] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:10:04,293 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:10:04] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:17:12,109 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 18:17:12,109 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 18:17:14,203 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:17:14] "GET /fly HTTP/1.1" 200 -
+2025-05-11 18:17:14,281 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:17:14] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:17:14,286 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:17:14] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:18:01,408 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 18:18:01,409 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 18:18:14,164 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 18:18:14,169 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 18:18:16,929 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:18:16] "GET /fly HTTP/1.1" 200 -
+2025-05-11 18:18:17,185 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:18:17] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:18:17,242 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:18:17] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:18:17,458 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:18:17] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-11 18:22:16,914 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:22:16] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-11 18:22:16,956 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:22:16] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-11 18:22:17,029 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:22:17] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:22:17,044 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:22:17] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:24:12,151 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 18:24:12,152 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 18:24:14,122 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:24:14] "GET /fly HTTP/1.1" 200 -
+2025-05-11 18:24:14,302 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:24:14] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 18:24:14,312 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:24:14] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:24:30,693 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:24:30] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-11 18:24:30,771 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:24:30] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-11 18:24:30,968 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:24:30] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 18:24:30,998 INFO werkzeug 127.0.0.1 - - [11/May/2025 18:24:30] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -

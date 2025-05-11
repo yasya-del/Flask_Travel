@@ -86,12 +86,89 @@ def load_user(user_id):
     return db_sess.query(User).get(user_id)
 
 
-@app.route('/fly')
+@app.route('/fly', methods=['GET', 'POST'])
 def fly():
     form = FlyForm()
     if form.validate_on_submit():
-        return redirect('/')
+        start = form.start.data
+        finish = form.finish.data
+        con = sqlite3.connect('db/travel.db')
+        cur = con.cursor()
+        start = cur.execute(f"""SELECT name FROM airports WHERE city = ?""", (start,)).fetchone()[0]
+        finish = cur.execute(f"""SELECT name FROM airports WHERE city = ?""", (finish,)).fetchone()[0]
+        con.close()
+        start_date = [int(i) for i in str(form.start_date.data).split('-')]
+        end_date = [int(i) for i in str(form.end_date.data).split('-')]
+        now_date = [int(i) for i in str(datetime.date.today()).split('-')]
+        year_later_date = [int(i) for i in str(datetime.date.today() + datetime.timedelta(days=364)).split('-')]
+        if start == finish:
+            return render_template('fly.html', title='Авиабилеты',
+                                   form=form,
+                                   message="Пункт отправления не может быть равен пункту назначения")
+        elif start_date < now_date:
+            return render_template('fly.html', title='Авиабилеты',
+                                   form=form,
+                                   message="Дата отправления не может быть раньше текущей даты")
+        elif start_date > year_later_date:
+            return render_template('fly.html', title='Авиабилеты',
+                                   form=form,
+                                   message="Дата отправления должна быть в пределах года с текущего дня")
+        elif end_date > year_later_date:
+            return render_template('fly.html', title='Авиабилеты',
+                                   form=form,
+                                   message="Дата возвращения должна быть в пределах года с текущего дня")
+        elif start_date > end_date:
+            return render_template('fly.html', title='Авиабилеты',
+                                   form=form,
+                                   message="Дата возвращения не может быть меньше даты отправления")
+        else:
+            ost1 = '0' * (2 - len(str(start_date[2])))
+            ost2 = '0' * (2 - len(str(start_date[1])))
+            start_date = ost1 + str(start_date[2]) + ost2 + str(start_date[1])
+            ost1 = '0' * (2 - len(str(end_date[2])))
+            ost2 = '0' * (2 - len(str(end_date[1])))
+            end_date = ost1 + str(end_date[2]) + ost2 + str(end_date[1])
+            adult = form.adult.data
+            child = form.child.data
+            baby = form.baby.data
+            if child == '':
+                child = '0'
+            if baby == '':
+                baby = '0'
+            if not adult.isnumeric() or not child.isnumeric() or not baby.isnumeric():
+                return render_template('fly.html', title='Авиабилеты',
+                                       form=form,
+                                       message="Кол-во пассажиров должно быть неотрицательным числом(или пустой строкой)")
+            elif int(adult) < 0 or int(baby) < 0 or int(child) < 0:
+                return render_template('fly.html', title='Авиабилеты',
+                                       form=form,
+                                       message="Кол-во пассажиров должно быть неотрицательным числом(или пустой строкой)")
+            elif int(adult) < 1:
+                return render_template('fly.html', title='Авиабилеты',
+                                       form=form,
+                                       message="Кол-во взрослых не может быть менее одного")
+            if child == '0':
+                child = ''
+            if baby == '0':
+                baby = ''
+            clas = form.clas.data
+            if clas != 'Эконом':
+                if clas == 'Комфорт':
+                    clas = 'w'
+                elif clas == 'Бизнес':
+                    clas = 'c'
+                elif clas == 'Первый класс':
+                    clas = 'f'
+            else:
+                clas = ''
+            global link
+            link = f'https://www.aviasales.ru/search/?params={start}{start_date}{finish}{end_date}{clas}{adult}{child}{baby}'
+            return redirect('/find_tickets')
     return render_template('fly.html', title='Авиабилеты', form=form)
+
+@app.route('/find_tickets')
+def find_tickets():
+    return render_template('find_tickets.html', link=link)
 
 
 @app.route('/russian_cities')

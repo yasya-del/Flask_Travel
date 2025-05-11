@@ -2,6 +2,13 @@
 
 {% block content %}
 <h1>Поиск авиабилетов</h1>
+<p></p>
+{% if message %}
+<div class="alert alert-danger" role="alert">
+{{ message }}
+</div>
+{% endif %}
+<p></p>
 <form action="" method="post">
     {{ form.hidden_tag() }}
     <p>
@@ -77,6 +84,5 @@
         {% endfor %}
     </p>
     <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
-    {{message}}
 </form>
 {% endblock %}
