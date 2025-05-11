@@ -10,3 +10,4 @@ class City(SqlAlchemyBase, UserMixin):
                            primary_key=True, autoincrement=True)
     name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     tourism = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    text = sqlalchemy.Column(sqlalchemy.String, nullable=True)

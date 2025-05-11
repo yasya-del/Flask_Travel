@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<a class="btn btn-primary" href="/map/country/{{title}}">Посмотреть на карте</a>
+          <a href="/map/country/{{title}}" class="btn btn-outline-primary">
+        <img src="/static/img/map.svg" width="30" height="30" alt="">
+    </a>
 <p></p>
 {% set relax = relax %}
 {% set culture = culture %}
@@ -11,20 +13,25 @@
 </div>
 <p></p>
 {% endif %}
-<div class="card-group">
+<div class="row row-cols-1 row-cols-md-2 g-4">
 {% for city in relax %}
-<div class="card" style="width: 18rem">
-  <img src="/static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
+    {% set city_name = city[0] %}
+    {% set city_text = city[1] %}
+    <div class="col">
+<div class="card h-100">
+  <img src="/static/img/{{city_name}}.png" class="card-img-top" alt="картинка не нашлась(" height="250">
   <div class="card-body">
-    <h5 class="card-title">{{city}}</h5>
-    <p class="card-text"></p>
-    <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
+    <h5 class="card-title">{{city_name}}</h5>
+    <p class="card-text">{{city_text}}</p>
+    <a href='/add_to_plan/countries/{{city_name}}' class="btn btn-primary" >Добавить в маршрут</a>
     <p></p>
-     <a href="/map/{{name}}/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
-    <p></p>
-    <a href="/add_to_liked_city/country/{{name}}/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
+     <a href="/map/{{name}}/{{city_name}}" class="btn btn-primary">Посмотреть на карте</a>
+    <a href="/add_to_liked_city/country/{{name}}/{{city_name}}" class="btn btn-outline-danger">
+        <img src="/static/img/heart.svg" width="30" height="30" alt="">
+    </a>
   </div>
 </div>
+    </div>
     {% endfor %}
 </div>
 <p></p><p></p><p></p>
@@ -34,20 +41,25 @@
 </div>
 <p></p>
 {% endif %}
-<div class="card-group">
+<div class="row row-cols-1 row-cols-md-2 g-4">
 {% for city in culture %}
-<div class="card" style="width: 18rem">
-  <img src="/static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
+    {% set city_name = city[0] %}
+    {% set city_text = city[1] %}
+    <div class="col">
+<div class="card h-100">
+  <img src="/static/img/{{city_name}}.png" class="card-img-top" alt="картинка не нашлась(">
   <div class="card-body">
-    <h5 class="card-title">{{city}}</h5>
-    <p class="card-text"></p>
-    <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
+    <h5 class="card-title">{{city_name}}</h5>
+    <p class="card-text">{{city_text}}</p>
+    <a href='/add_to_plan/countries{{city_name}}' class="btn btn-primary" >Добавить в маршрут</a>
     <p></p>
-    <a href="/map/{{name}}/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
-    <p></p>
-    <a href="/add_to_liked_city/country/{{name}}/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
+     <a href="/map/{{name}}/{{city_name}}" class="btn btn-primary">Посмотреть на карте</a>
+    <a href="/add_to_liked_city/country/{{name}}/{{city_name}}" class="btn btn-outline-danger">
+        <img src="/static/img/heart.svg" width="30" height="30" alt="">
+    </a>
   </div>
 </div>
+        </div>
     {% endfor %}
 </div>
 <p></p><p></p><p></p>
@@ -57,19 +69,24 @@
 </div>
 <p></p>
 {% endif %}
-<div class="card-group">
+<div class="row row-cols-1 row-cols-md-2 g-4">
 {% for city in active %}
-<div class="card" style="width: 18rem">
-  <img src="/static/img{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
+{% set city_name = city[0] %}
+    {% set city_text = city[1] %}
+        <div class="col">
+<div class="card h-100">
+  <img src="/static/img/{{city_name}}.png" class="card-img-top" alt="картинка не нашлась(">
   <div class="card-body">
-    <h5 class="card-title">{{city}}</h5>
-    <p class="card-text"></p>
-    <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
+    <h5 class="card-title">{{city_name}}</h5>
+    <p class="card-text">{{city_text}}</p>
+    <a href='/add_to_plan/countries/{{city_name}}' class="btn btn-primary" >Добавить в маршрут</a>
     <p></p>
-    <a href="/map/{{name}}/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
-    <p></p>
-    <a href="/add_to_liked_city/country/{{name}}/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
+     <a href="/map/{{name}}/{{city_name}}" class="btn btn-primary">Посмотреть на карте</a>
+    <a href="/add_to_liked_city/country/{{name}}/{{city_name}}" class="btn btn-outline-danger">
+        <img src="/static/img/heart.svg" width="30" height="30" alt="">
+    </a>
   </div>
+    </div>
 </div>
     {% endfor %}
 </div>

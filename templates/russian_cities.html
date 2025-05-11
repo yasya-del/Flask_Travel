@@ -1,70 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="card-group">
-    {% for city in cities[:3] %}
-<div class="card" style="width: 18rem">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for city in cities %}
+  <div class="col">
+<div class="card h-100">
   <img src="/static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
   <div class="card-body">
     <h5 class="card-title">{{city}}</h5>
     <p class="card-text"></p>
-    <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
+    <a href='/add_to_plan/russian_cities/{{city}}' class="btn btn-primary" >Добавить в маршрут</a>
       <p></p>
       <a href="/map/russian_cities/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
-      <p></p>
-      <a href="/add_to_liked_city/russian_cities/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
+    <a href="/add_to_liked_city/russian_cities/{{city}}" class="btn btn-outline-danger">
+        <img src="/static/img/heart.svg" width="30" height="30" alt="">
+    </a>
+  </div>
   </div>
 </div>
     {% endfor %}
-</div>
-<div class="card-group">
-    {% for city in cities[3:6] %}
-<div class="card" style="width: 18rem">
-  <img src="/static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
-  <div class="card-body">
-    <h5 class="card-title">{{city}}</h5>
-    <p class="card-text"></p>
-    <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
-      <p></p>
-      <a href="/map/russian_cities/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
-      <p></p>
-      <a href="/add_to_liked_city/russian_cities/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
-  </div>
-</div>
-    {% endfor %}
-</div>
-<div class="card-group">
-    {% for city in cities[6:9] %}
-<div class="card" style="width: 18rem">
-  <img src="/static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
-  <div class="card-body">
-    <h5 class="card-title">{{city}}</h5>
-    <p class="card-text"></p>
-    <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
-      <p></p>
-      <a href="/map/russian_cities/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
-      <p></p>
-      <a href="/add_to_liked_city/russian_cities/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
-  </div>
-</div>
-    {% endfor %}
-</div>
-<div class="card-group">
-    {% for city in cities[9:12] %}
-<div class="card" style="width: 18rem">
-  <img src="/static/img/{{city}}.png" class="card-img-top" alt="картинка не нашлась(">
-  <div class="card-body">
-    <h5 class="card-title">{{city}}</h5>
-    <p class="card-text"></p>
-    <a href='/add_to_plan' class="btn btn-primary" >Добавить в маршрут</a>
-      <p></p>
-      <a href="/map/russian_cities/{{city}}" class="btn btn-primary">Посмотреть на карте</a>
-      <p></p>
-      <a href="/add_to_liked_city/russian_cities/{{city}}" class="btn btn-outline-danger">Добавить в избранное</a>
-  </div>
-</div>
-    {% endfor %}
-</div>
 {% endblock %}
 
 

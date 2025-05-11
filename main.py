@@ -210,7 +210,10 @@ def title():
 
 @app.route('/countries')
 def choose_countries():
-    return render_template('countries.html',  title='Страны')
+    db_sess = db_session.create_session()
+    li_countries = db_sess.query(Country.name).all()
+    all_countries = [x[0] for x in li_countries]
+    return render_template('countries.html',  title='Страны', countries=all_countries)
 
 
 @app.route(f'/country/<name>')
@@ -220,8 +223,10 @@ def country(name):
     li_cities = li_cities.cities.split(',')
     d = {}
     for el in li_cities:
-        tourism = db_sess.query(City).filter(City.name == el).first().tourism
-        d[tourism] = d.get(tourism, []) + [el]
+        city = db_sess.query(City).filter(City.name == el).first()
+        tourism = city.tourism
+        text = city.text
+        d[tourism] = d.get(tourism, []) + [(el, text)]
     return render_template(f'country.html', title=name, name=name,
                            relax=d.get('Рекреационный', []),
                            culture=d.get('Культурный', ''),
@@ -249,13 +254,7 @@ def my_profile():
 @app.route('/my_plans')
 def my_plans():
     if current_user.is_authenticated:
-        db_sess = db_session.create_session()
-        users = db_sess.query(User).all()
-        plans = None
-        for el in users:
-            if el == current_user:
-                plans = el.plans
-                break
+        plans = current_user.plans
         if not plans:
             return render_template('no_plans.html', title='Маршруты')
         li = plans.split(',')
@@ -266,11 +265,7 @@ def my_plans():
 @app.route('/plan/<word>')
 def open_plan(word):
     db_sess = db_session.create_session()
-    users = db_sess.query(User).all()
-    for el in users:
-        if el == current_user:
-            id = el.id
-            break
+    id = current_user.id
     plans = db_sess.query(Plan.cities).filter(Plan.name == word, Plan.user_id == id).first()
     plans = plans[0].split(',')
     return render_template("open_plan.html", title=word, cities=plans, plan=word)
@@ -280,14 +275,8 @@ def open_plan(word):
 def liked():
     if current_user.is_authenticated:
         db_sess = db_session.create_session()
-        users = db_sess.query(User).all()
-        liked_countries = None
-        liked_cities = None
-        for el in users:
-            if el == current_user:
-                liked_countries = el.liked_countries
-                liked_cities = el.liked_cities
-                break
+        liked_countries = current_user.liked_countries
+        liked_cities = current_user.liked_cities
         if not liked_countries and not liked_cities:
             return render_template('no_liked.html', title='Избранное')
         li_countries = None
@@ -311,14 +300,8 @@ def create_plan():
     russian_cities_new = [x[0] for x in russian_cities]
     list_cities = cities_new + russian_cities_new
     selected_city = []
-    users = db_sess.query(User).all()
-    plans = None
-    id = None
-    for el in users:
-        if el == current_user:
-            plans = el.plans
-            id = el.id
-            break
+    plans = current_user.plans
+    id = current_user.id
     if request.method == 'GET':
         return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities)
     elif request.method == 'POST':
@@ -342,10 +325,30 @@ def create_plan():
         return render_template('plan_ready.html', title='Добавлен')
 
 
-@app.route('/add_to_plan')
-def add_to_plan():
+@app.route('/add_to_plan/<word>/<city>', methods=['POST', 'GET'])
+def add_to_plan(word, city):
     if current_user.is_authenticated:
-        return 'Добавляю'
+        db_sess = db_session.create_session()
+        id = current_user.id
+        plans = db_sess.query(Plan.name).filter(Plan.user_id == id).all()
+        li_plans = [x[0] for x in plans]
+        selected_plans = []
+        if request.method == 'GET':
+            return render_template('add_to_plan.html', title='Добавляем', plans=li_plans)
+        elif request.method == 'POST':
+            for el in li_plans:
+                try:
+                    selected_plans.append(request.form[el])
+                except:
+                    continue
+            for el in selected_plans:
+                plan = db_sess.query(Plan).filter(Plan.name == el, Plan.user_id == id).first()
+                new_cities = plan.cities
+                new_cities += f',{city}'
+                plan.cities = new_cities
+                db_sess.merge(plan)
+                db_sess.commit()
+            return redirect(f'/{word}')
     return redirect('/login')
 
 
@@ -396,24 +399,14 @@ def tourism_word(word):
     con.close()
     result = result1 + result2
     cities = [x[0] for x in result]
-    k = 0
-    if len(cities) > 3:
-        k = len(cities) // 3
-        if len(cities) % 3 != 0:
-            k += 1
-    return render_template('tourism_type.html', title="Туризм", cities=cities, k=k)
+    return render_template('tourism_type.html', title="Туризм", cities=cities, type=type)
 
 
 @app.route('/add_to_liked_country/<word>/<country>')
 def add_to_liked(word, country):
     if current_user.is_authenticated:
         db_sess = db_session.create_session()
-        users = db_sess.query(User).all()
-        liked_countries = None
-        for el in users:
-            if el == current_user:
-                liked_countries = el.liked_countries
-                break
+        liked_countries = current_user.liked_countries
         if not liked_countries:
             liked_countries = country
         else:
@@ -430,12 +423,7 @@ def add_to_liked(word, country):
 def add_to_liked_city(word, country):
     if current_user.is_authenticated:
         db_sess = db_session.create_session()
-        users = db_sess.query(User).all()
-        liked_cities = None
-        for el in users:
-            if el == current_user:
-                liked_cities = el.liked_cities
-                break
+        liked_cities = current_user.liked_cities
         if not liked_cities:
             liked_cities = country
         else:
@@ -452,12 +440,7 @@ def add_to_liked_city(word, country):
 def add_to_liked_city_in_country(word, country):
     if current_user.is_authenticated:
         db_sess = db_session.create_session()
-        users = db_sess.query(User).all()
-        liked_cities = None
-        for el in users:
-            if el == current_user:
-                liked_cities = el.liked_cities
-                break
+        liked_cities = current_user.liked_cities
         if not liked_cities:
             liked_cities = country
         else:
@@ -473,14 +456,8 @@ def add_to_liked_city_in_country(word, country):
 @app.route('/remove_from_liked/<country>')
 def remove_from_liked(country):
     db_sess = db_session.create_session()
-    users = db_sess.query(User).all()
-    liked_countries = None
-    liked_cities = None
-    for el in users:
-        if el == current_user:
-            liked_countries = el.liked_countries
-            liked_cities = el.liked_cities
-            break
+    liked_countries = current_user.liked_countries
+    liked_cities = current_user.liked_cities
     liked_countries = liked_countries.split(',')
     liked_cities = liked_cities.split(',')
     if country in liked_countries:
@@ -499,12 +476,7 @@ def remove_from_liked(country):
 @app.route('/delete_from_plan/<name>/<city>')
 def delete_from_plan(name, city):
     db_sess = db_session.create_session()
-    users = db_sess.query(User).all()
-    plan = None
-    for el in users:
-        if el == current_user:
-            id = el.id
-            break
+    id = current_user.id
     plan = db_sess.query(Plan).filter(Plan.user_id == id, Plan.name == name).first()
     cities = plan.cities
     cities = cities.split(',')
@@ -519,18 +491,14 @@ def delete_from_plan(name, city):
 @app.route('/delete_plan/<name>')
 def delete_plan(name):
     db_sess = db_session.create_session()
-    users = db_sess.query(User).all()
-    for el in users:
-        if el == current_user:
-            id = el.id
-            plans = el.plans
-            plans = plans.split(',')
-            i = plans.index(name)
-            del plans[i]
-            el.plans = ','.join(plans)
-            db_sess.merge(el)
-            db_sess.commit()
-            break
+    id = current_user.id
+    plans = current_user.plans
+    plans = plans.split(',')
+    i = plans.index(name)
+    del plans[i]
+    current_user.plans = ','.join(plans)
+    db_sess.merge(current_user)
+    db_sess.commit()
     plan = db_sess.query(Plan).filter(Plan.user_id == id, Plan.name == name).first()
     db_sess.delete(plan)
     db_sess.commit()
