@@ -291,19 +291,16 @@ def open_plan(word):
 @app.route('/liked')
 def liked():
     if current_user.is_authenticated:
-        db_sess = db_session.create_session()
         liked_countries = current_user.liked_countries
         liked_cities = current_user.liked_cities
         if not liked_countries and not liked_cities:
             return render_template('no_liked.html', title='Избранное')
-        li_countries = None
-        li_cities = None
-        li = liked_countries.split(',')
-        if li != ['']:
-            li_countries = li
-        li1 = liked_cities.split(',')
-        if li1 != ['']:
-            li_cities = li1
+        li_countries = []
+        li_cities = []
+        if liked_countries:
+            li_countries = liked_countries.split(',')
+        if liked_cities:
+            li_cities = liked_cities.split(',')
         return render_template('liked.html', title='Избранное', countries=li_countries, cities=li_cities)
     return redirect('/login')
 
@@ -327,7 +324,10 @@ def create_plan():
         if db_sess.query(Plan).filter(Plan.name == name, Plan.user_id == id).first():
             return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities,
                                    message="Маршрут с таким именем уже есть")
-        plans += f',{name}'
+        if plans:
+            plans += f',{name}'
+        else:
+            plans = name
         current_user.plans = plans
         db_sess.merge(current_user)
         db_sess.commit()
@@ -353,6 +353,8 @@ def add_to_plan(word, city):
         id = current_user.id
         plans = db_sess.query(Plan.name).filter(Plan.user_id == id).all()
         li_plans = [x[0] for x in plans]
+        if not li_plans:
+            return render_template('no_plans.html', title='Маршруты')
         selected_plans = []
         if request.method == 'GET':
             return render_template('add_to_plan.html', title='Добавляем', plans=li_plans)
@@ -390,7 +392,7 @@ def reqister():
             name=form.name.data,
             surname=form.surname.data,
             age=form.age.data,
-            email=form.email.data
+            email=form.email.data,
         )
         user.set_password(form.password.data)
         db_sess.add(user)
@@ -420,7 +422,7 @@ def tourism_word(word):
     con.close()
     result = result1 + result2
     cities = [x[0] for x in result]
-    return render_template('tourism_type.html', title="Туризм", cities=cities, type=type)
+    return render_template('tourism_type.html', title="Туризм", cities=cities, type=type, word=word)
 
 
 @app.route('/add_to_liked_country/<word>/<country>')
@@ -474,13 +476,36 @@ def add_to_liked_city_in_country(word, country):
     return redirect('/login')
 
 
+@app.route('/add_to_liked_city_from_tourism/tourism/<word>/<country>')
+def add_to_liked_city_from_tourism(word, country):
+    if current_user.is_authenticated:
+        db_sess = db_session.create_session()
+        liked_cities = current_user.liked_cities
+        if not liked_cities:
+            liked_cities = country
+        else:
+            if country not in liked_cities:
+                liked_cities += f',{country}'
+        current_user.liked_cities = liked_cities
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect(f'/tourism/{word}')
+    return redirect('/login')
+
+
 @app.route('/remove_from_liked/<country>')
 def remove_from_liked(country):
     db_sess = db_session.create_session()
     liked_countries = current_user.liked_countries
     liked_cities = current_user.liked_cities
-    liked_countries = liked_countries.split(',')
-    liked_cities = liked_cities.split(',')
+    if liked_countries:
+        liked_countries = liked_countries.split(',')
+    else:
+        liked_countries = []
+    if liked_cities:
+        liked_cities = liked_cities.split(',')
+    else:
+        liked_cities = []
     if country in liked_countries:
         i = liked_countries.index(country)
         del liked_countries[i]
