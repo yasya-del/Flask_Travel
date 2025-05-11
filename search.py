@@ -5,6 +5,7 @@ from PIL import Image
 
 from search_delta import find_delta
 
+
 def search_for_map(toponym_to_find):
     geocoder_api_server = "http://geocode-maps.yandex.ru/1.x/"
 

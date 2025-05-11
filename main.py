@@ -10,7 +10,7 @@ from data.airports import Airport
 from data.russian_cities import RussianCity
 from data.countries import Country
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
-from forms.user import RegisterForm, LoginForm
+from forms.user import RegisterForm, LoginForm, ProfileForm
 from forms.fly import FlyForm
 
 
@@ -169,8 +169,14 @@ def open_map(word, name):
 
 @app.route('/my_profile', methods=['POST', 'GET'])
 def my_profile():
+    form = ProfileForm(
+        email = current_user.email,
+        surname = current_user.surname,
+        name = current_user.name,
+        age = current_user.age
+    )
     if current_user.is_authenticated:
-        return render_template('profile.html', title='Мой профиль')
+        return render_template('profile.html', title='Мой профиль', form=form)
     return redirect("/login")
 
 
@@ -229,6 +235,10 @@ def create_plan():
         return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities)
     elif request.method == 'POST':
         name = request.form['name']
+        db_sess = db_session.create_session()
+        if db_sess.query(Plan).filter(Plan.name == name, Plan.user_id == id).first():
+            return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities,
+                                   message="Маршрут с таким именем уже есть")
         plans += f',{name}'
         current_user.plans = plans
         db_sess.merge(current_user)
