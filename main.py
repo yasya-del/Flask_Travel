@@ -10,6 +10,7 @@ from data.airports import Airport
 from data.russian_cities import RussianCity
 from data.countries import Country
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
+
 from forms.user import RegisterForm, LoginForm, ProfileForm
 from forms.fly import FlyForm
 
@@ -247,13 +248,23 @@ def open_map(word, name):
 @app.route('/my_profile', methods=['POST', 'GET'])
 def my_profile():
     form = ProfileForm(
-        email = current_user.email,
-        surname = current_user.surname,
-        name = current_user.name,
-        age = current_user.age
+        email=current_user.email,
+        surname=current_user.surname,
+        name=current_user.name,
+        age=current_user.age
     )
     if current_user.is_authenticated:
-        return render_template('profile.html', title='Мой профиль', form=form)
+        if request.method == 'GET':
+            return render_template('profile.html', title='Мой профиль', form=form)
+        elif request.method == 'POST':
+            current_user.email = form.email.data
+            current_user.surname = form.surname.data
+            current_user.name = form.name.data
+            current_user.age = form.age.data
+            db_sess = db_session.create_session()
+            db_sess.merge(current_user)
+            db_sess.commit()
+            return redirect('/my_profile')
     return redirect("/login")
 
 

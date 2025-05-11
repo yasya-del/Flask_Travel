@@ -3,11 +3,15 @@
 {% block content %}
 <div class="login_form" method="post">
         <p></p>
-        <h1 align="center">Создаем маршрут</h1>
+        <h1>Создаем маршрут</h1>
         <p></p>
+    {% if message %}
+<div class="alert alert-danger" role="alert">
+{{ message }}
+</div>
+{% endif %}
     <form class="login_form" method="post">
         <input type="name" class="form-control" id="name" placeholder="Введите название маршрута" name="name">
-                {{message}}
         <p></p>
         <div class="form-group">
             <label for="form-check">Какие города включить в маршрут?</label>

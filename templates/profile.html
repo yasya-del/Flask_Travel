@@ -2,6 +2,11 @@
 
 {% block content %}
 <h1>Мои данные</h1>
+{% if message %}
+<div class="alert alert-danger" role="alert">
+{{ message }}
+</div>
+{% endif %}
 <form class="row g-3" action="" method="post">
     {{ form.hidden_tag() }}
     <div class="col-12">
@@ -43,16 +48,22 @@
     <div class="col-12">{{ form.submit(type="submit", class="btn btn-primary") }}</div>
     {{message}}
 </form>
-    <p></p>
+<p></p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
     <a class="btn btn-outline-primary" href="my_plans">
     Мои маршруты
 </a>
-<p></p>
+        </div>
+    <div class="col">
 <a class="btn btn-outline-primary" href="liked">
     Избранное
 </a>
-<p></p>
+        </div>
+    <div class="col">
 <a class="btn btn-outline-primary" href="logout">
     Выйти из аккаунта
 </a>
+        </div>
+</div>
 {% endblock %}

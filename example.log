@@ -1170,3 +1170,1527 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='geocode-maps.yande
 2025-05-08 23:47:55,467 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 2025-05-08 23:47:55,467 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 19:50:55,087 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 19:50:55,088 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 19:51:03,105 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:03] "GET / HTTP/1.1" 200 -
+2025-05-11 19:51:03,142 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:03] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:03,143 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:03,177 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:03] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:03,186 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:03] "[36mGET /static/img/fon2.jpg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:19,781 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:19] "GET /liked HTTP/1.1" 200 -
+2025-05-11 19:51:19,794 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:19] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:19,798 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:19] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:19,798 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:19] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:19,801 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:19] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:19,829 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:19] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:19,830 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:19] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:19,831 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:19] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:19,831 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:19] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:20,472 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:20] "GET /tourism HTTP/1.1" 200 -
+2025-05-11 19:51:20,493 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:20] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:20,497 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:20] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:20,500 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:20] "GET /static/img/beach.jpg HTTP/1.1" 200 -
+2025-05-11 19:51:20,501 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:20] "GET /static/img/mountains.jpg HTTP/1.1" 200 -
+2025-05-11 19:51:20,527 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:20] "GET /static/img/colisey.jpg HTTP/1.1" 200 -
+2025-05-11 19:51:22,587 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:22] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 19:51:22,600 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:22] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 19:51:22,606 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:22] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:22,607 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:22] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:22,635 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:22] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,161 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-11 19:51:23,174 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,176 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,178 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,180 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Санкт-Петербург.png HTTP/1.1" 200 -
+2025-05-11 19:51:23,205 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,205 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Казань.png HTTP/1.1" 200 -
+2025-05-11 19:51:23,211 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Сочи.png HTTP/1.1" 200 -
+2025-05-11 19:51:23,217 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/heart.svg HTTP/1.1" 200 -
+2025-05-11 19:51:23,221 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Камчатка.png HTTP/1.1" 200 -
+2025-05-11 19:51:23,222 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,223 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Кисловодск.png HTTP/1.1" 200 -
+2025-05-11 19:51:23,240 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Крым.png HTTP/1.1" 200 -
+2025-05-11 19:51:23,245 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Владивосток.png HTTP/1.1" 200 -
+2025-05-11 19:51:23,377 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Калининград.png HTTP/1.1" 200 -
+2025-05-11 19:51:23,382 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Дербент.png HTTP/1.1" 200 -
+2025-05-11 19:51:23,684 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /countries HTTP/1.1" 200 -
+2025-05-11 19:51:23,697 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,701 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,703 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,704 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,725 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:23,726 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:23] "GET /static/img/Египет.png HTTP/1.1" 200 -
+2025-05-11 19:51:24,483 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:24] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-11 19:51:24,498 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:24] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:24,499 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:24] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:24,500 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:24] "GET /static/img/Анталья.png HTTP/1.1" 200 -
+2025-05-11 19:51:24,500 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:24] "GET /static/img/Стамбул.png HTTP/1.1" 200 -
+2025-05-11 19:51:24,525 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:24] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:24,526 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:24] "GET /static/img/map.svg HTTP/1.1" 200 -
+2025-05-11 19:51:28,510 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:28] "[32mGET /map/country/Турция HTTP/1.1[0m" 302 -
+2025-05-11 19:51:28,520 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:28] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-11 19:51:28,537 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:28] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:28,539 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:28] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:28,542 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:28] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:28,546 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:28] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:28,566 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:28] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:28,570 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:28] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,619 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-11 19:51:35,635 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,638 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,640 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,642 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,666 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,666 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,669 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,669 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,671 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,671 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,688 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,690 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,692 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,693 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:35,696 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:35] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:36,085 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:36] "GET /countries HTTP/1.1" 200 -
+2025-05-11 19:51:36,100 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:36] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:36,104 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:36] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:36,106 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:36] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:36,107 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:36] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:36,129 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:36] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-11 19:51:36,129 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:36] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:37,046 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:37] "GET /country/Испания HTTP/1.1" 200 -
+2025-05-11 19:51:37,060 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:37] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:37,064 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:37] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:37,066 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:37] "GET /static/img/Мадрид.png HTTP/1.1" 200 -
+2025-05-11 19:51:37,067 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:37] "GET /static/img/Барселона.png HTTP/1.1" 200 -
+2025-05-11 19:51:37,089 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:37] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:37,090 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:37] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:39,364 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:39] "GET /country/Египет HTTP/1.1" 200 -
+2025-05-11 19:51:39,380 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:39] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:39,382 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:39] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:39,384 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:39] "GET /static/img/Гиза.png HTTP/1.1" 200 -
+2025-05-11 19:51:39,386 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:39] "GET /static/img/Хургада.png HTTP/1.1" 200 -
+2025-05-11 19:51:39,406 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:39] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:39,407 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:39] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:51:45,406 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:45] "GET /fly HTTP/1.1" 200 -
+2025-05-11 19:51:45,419 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:45] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:51:45,420 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:51:45] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:52:27,204 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:52:27] "POST /fly HTTP/1.1" 200 -
+2025-05-11 19:52:27,220 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:52:27] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:52:27,224 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:52:27] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:54:31,502 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 19:54:31,502 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 19:54:34,135 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "GET /countries HTTP/1.1" 200 -
+2025-05-11 19:54:34,163 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:54:34,163 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:54:34,172 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 19:54:34,173 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 19:54:34,181 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:54:34,182 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-11 19:54:34,854 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "GET /fly HTTP/1.1" 200 -
+2025-05-11 19:54:34,896 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:54:34,898 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:34] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:54:59,633 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:59] "[32mPOST /fly HTTP/1.1[0m" 302 -
+2025-05-11 19:54:59,645 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:59] "GET /find_tickets HTTP/1.1" 200 -
+2025-05-11 19:54:59,668 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:59] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:54:59,671 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:54:59] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,382 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "GET /liked HTTP/1.1" 200 -
+2025-05-11 19:55:20,396 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,397 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,399 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,400 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,422 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,423 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,429 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,431 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,947 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 19:55:20,958 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 19:55:20,962 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,962 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 19:55:20,987 INFO werkzeug 127.0.0.1 - - [11/May/2025 19:55:20] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:36,353 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 20:53:36,354 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 20:53:46,536 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:46] "GET / HTTP/1.1" 200 -
+2025-05-11 20:53:46,570 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:46] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:46,571 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:46,602 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:46] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:46,611 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:46] "[36mGET /static/img/fon2.jpg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:47,760 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:47] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 20:53:47,783 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:47] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 20:53:47,789 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:47] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:47,790 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:47] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:47,810 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:47] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,512 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-11 20:53:48,527 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,529 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,531 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,535 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,557 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,558 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,560 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,566 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,567 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,581 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,582 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,601 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,616 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,618 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:48,621 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:48] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:49,331 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 20:53:49,342 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 20:53:49,346 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:49,346 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:49,369 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:49,961 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "GET /liked HTTP/1.1" 200 -
+2025-05-11 20:53:49,974 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:49,978 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:49,979 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:49,980 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:49] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:50,002 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:50,002 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:50,003 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:50,007 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:50,666 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "GET /tourism HTTP/1.1" 200 -
+2025-05-11 20:53:50,683 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:50,685 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:50,686 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:50,688 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:50,710 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:50] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:52,682 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:52] "GET /fly HTTP/1.1" 200 -
+2025-05-11 20:53:52,694 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:52] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:52,695 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:52] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:53,121 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:53] "GET /tourism HTTP/1.1" 200 -
+2025-05-11 20:53:53,136 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:53] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:53,137 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:53] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:53,138 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:53] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:53,141 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:53] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:53,164 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:53] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:55,000 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:55] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-11 20:53:55,013 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:55] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 20:53:55,017 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:55] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:55,020 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:55] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 20:53:55,021 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:55] "[36mGET /static/img/Хургада.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:55,044 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:55] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-11 20:53:55,044 INFO werkzeug 127.0.0.1 - - [11/May/2025 20:53:55] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-11 22:16:24,102 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:16:24,102 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:16:29,001 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:29] "GET / HTTP/1.1" 200 -
+2025-05-11 22:16:29,038 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:29] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:16:29,039 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-11 22:16:29,075 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:29] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:16:29,086 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:29] "[36mGET /static/img/fon2.jpg HTTP/1.1[0m" 304 -
+2025-05-11 22:16:30,848 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:30] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 22:16:30,860 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:30] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 22:16:30,864 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:30] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:16:30,864 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:30] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:16:30,897 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:30] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:16:31,790 ERROR main Exception on /create_plan [GET]
+Traceback (most recent call last):
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/main.py", line 315, in create_plan
+    return render_template('create_plan2.html', title='Создаю маршрут', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/templates/create_plan2.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/templates/base.html", line 74, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/templates/create_plan2.html", line 17, in block 'content'
+    {% for error in form.start.errors %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'forms.plan.PlanForm object' has no attribute 'start'
+2025-05-11 22:16:31,796 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:31] "[35m[1mGET /create_plan HTTP/1.1[0m" 500 -
+2025-05-11 22:16:31,897 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-11 22:16:53,874 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:16:53,874 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:16:56,597 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:56] "GET /create_plan HTTP/1.1" 200 -
+2025-05-11 22:16:56,614 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:56] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:16:56,615 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:16:56] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:20:20,535 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:20:20,536 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:20:25,685 ERROR main Exception on /create_plan [GET]
+Traceback (most recent call last):
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/main.py", line 315, in create_plan
+    return render_template('create_plan2.html', title='Создаю маршрут', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/templates/create_plan2.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/templates/base.html", line 74, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mariaturina/PycharmProjects/Flask_Travel1/templates/create_plan2.html", line 23, in block 'content'
+    {% for subfield in form.city %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'BooleanField' object is not iterable
+2025-05-11 22:20:25,688 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:20:25] "[35m[1mGET /create_plan HTTP/1.1[0m" 500 -
+2025-05-11 22:23:43,180 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:23:43,180 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:23:51,379 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:51] "GET / HTTP/1.1" 200 -
+2025-05-11 22:23:51,415 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-11 22:23:51,416 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:51] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:23:51,449 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:51] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:23:51,462 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:51] "[36mGET /static/img/fon2.jpg HTTP/1.1[0m" 304 -
+2025-05-11 22:23:51,695 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:51] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-11 22:23:53,342 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:53] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 22:23:53,353 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:53] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 22:23:53,358 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:53] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:23:53,361 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:53] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:23:53,388 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:53] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:23:54,052 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:54] "GET /create_plan HTTP/1.1" 200 -
+2025-05-11 22:23:54,067 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:54] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:23:54,068 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:23:54] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:24:02,619 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:02] "GET /fly HTTP/1.1" 200 -
+2025-05-11 22:24:02,634 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:02] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:24:02,634 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:02] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:24:03,283 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:03] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 22:24:03,294 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:03] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 22:24:03,298 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:03] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:24:03,298 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:03] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:24:03,322 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:03] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:24:04,829 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:04] "GET /create_plan HTTP/1.1" 200 -
+2025-05-11 22:24:04,841 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:04] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:24:04,843 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:04] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:24:50,533 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:24:50,534 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:24:53,976 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:53] "GET / HTTP/1.1" 200 -
+2025-05-11 22:24:54,026 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:54] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:24:54,029 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-11 22:24:54,053 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:54] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:24:54,066 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:54] "[36mGET /static/img/fon2.jpg HTTP/1.1[0m" 304 -
+2025-05-11 22:24:59,782 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:59] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 22:24:59,792 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:59] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 22:24:59,796 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:59] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:24:59,797 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:59] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:24:59,825 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:24:59] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:25:00,578 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:25:00] "GET /create_plan HTTP/1.1" 200 -
+2025-05-11 22:25:00,590 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:25:00] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:25:00,591 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:25:00] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:25:49,352 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:25:49,353 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:25:50,242 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:25:50] "GET /create_plan HTTP/1.1" 200 -
+2025-05-11 22:25:50,261 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:25:50] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:25:50,261 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:25:50] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:25:50,334 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:25:50] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-11 22:26:03,523 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:26:03,523 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:26:04,254 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:04] "GET /create_plan HTTP/1.1" 200 -
+2025-05-11 22:26:04,274 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:04] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:26:04,274 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:04] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:26:04,318 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:04] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-11 22:26:11,779 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:11] "POST /create_plan HTTP/1.1" 200 -
+2025-05-11 22:26:11,792 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:11] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:26:11,794 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:11] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:26:26,110 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:26] "POST /create_plan HTTP/1.1" 200 -
+2025-05-11 22:26:26,122 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:26] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:26:26,123 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:26] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:26:27,953 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:27] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 22:26:27,965 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:27] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 22:26:27,969 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:27] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:26:27,971 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:27] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:26:28,000 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:28] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:26:29,677 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:29] "[32mGET /delete_plan/Ура%20марршрут HTTP/1.1[0m" 302 -
+2025-05-11 22:26:29,681 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:29] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 22:26:29,696 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:29] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 22:26:29,697 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:29] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:26:29,700 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:29] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:26:29,726 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:26:29] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:43,144 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:29:43,145 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:29:46,147 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 22:29:46,157 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 22:29:46,165 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:29:46,167 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:46,189 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:46,243 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:46,800 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "GET / HTTP/1.1" 200 -
+2025-05-11 22:29:46,811 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:29:46,814 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:46,815 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-11 22:29:46,843 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:46] "[36mGET /static/img/fon2.jpg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:48,417 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:48] "GET /countries HTTP/1.1" 200 -
+2025-05-11 22:29:48,430 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:48] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:29:48,433 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:48] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:48,436 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:48] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:48,437 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:48] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:48,457 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:48] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:48,458 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:48] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:49,815 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:49] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-11 22:29:49,831 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:49] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:29:49,833 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:49] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:49,834 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:49] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:49,836 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:49] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:49,856 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:49] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:49,856 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:49] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:52,230 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:52] "GET /countries HTTP/1.1" 200 -
+2025-05-11 22:29:52,246 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:52] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:29:52,247 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:52] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:52,252 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:52] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:52,254 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:52] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:52,277 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:52] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:52,277 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:52] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:53,736 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:53] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-11 22:29:53,748 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:53] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:29:53,750 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:53] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:53,754 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:53] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:53,755 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:53] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-11 22:29:53,775 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:53] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:53,776 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:53] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:29:54,389 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:54] "GET /add_to_plan/countries/Анталья HTTP/1.1" 200 -
+2025-05-11 22:29:54,400 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:54] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:29:54,402 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:29:54] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:08,395 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:08] "[32mPOST /add_to_plan/countries/Анталья HTTP/1.1[0m" 302 -
+2025-05-11 22:30:08,403 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:08] "GET /countries HTTP/1.1" 200 -
+2025-05-11 22:30:08,433 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:08] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:08,440 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:08] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:08,449 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:08] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:08,451 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:08] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:08,458 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:08] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:08,460 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:08] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:10,710 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:10] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 22:30:10,721 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:10] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 22:30:10,724 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:10] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:10,726 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:10] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:10,750 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:10] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:11,753 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:11] "GET /plan/Маршрут2 HTTP/1.1" 200 -
+2025-05-11 22:30:11,767 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:11] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:11,770 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:11] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:11,772 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:11] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:11,773 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:11] "GET /static/css/style_plan.css HTTP/1.1" 200 -
+2025-05-11 22:30:11,795 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:11] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:11,796 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:11] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:11,797 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:11] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:14,036 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:14] "GET /plan/Супер%20маршрут HTTP/1.1" 200 -
+2025-05-11 22:30:14,052 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:14] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:14,053 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:14] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:14,055 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:14] "[36mGET /static/css/style_plan.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:14,056 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:14] "[36mGET /static/img/Мадрид.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:14,083 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:14] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:14,083 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:14] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:14,085 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:14] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:14,086 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:14] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,158 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "GET /plan/Маршрут%201 HTTP/1.1" 200 -
+2025-05-11 22:30:16,175 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/css/style_plan.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,179 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,182 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,184 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,206 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/img/Мадрид.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,207 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,208 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,218 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,223 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:16,224 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:16] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:24,576 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[32mGET /delete_from_plan/Маршрут%201/Мадрид HTTP/1.1[0m" 302 -
+2025-05-11 22:30:24,581 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "GET /plan/Маршрут%201 HTTP/1.1" 200 -
+2025-05-11 22:30:24,597 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:24,598 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:24,600 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[36mGET /static/css/style_plan.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:24,601 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:24,626 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:24,629 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:24,630 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:24,643 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:24,646 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:24] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:25,758 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:25] "GET /liked HTTP/1.1" 200 -
+2025-05-11 22:30:25,774 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:25] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:25,776 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:25] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:25,778 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:25] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:25,781 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:25] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:25,804 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:25] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:25,805 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:25] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:25,806 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:25] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:25,807 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:25] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:27,480 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:27] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-11 22:30:27,497 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:27] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:27,500 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:27] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:27,502 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:27] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:27,505 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:27] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:27,523 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:27] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:27,523 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:27] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:29,923 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:29] "GET /add_to_plan/liked/Москва HTTP/1.1" 200 -
+2025-05-11 22:30:29,935 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:29] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:29,938 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:29] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:32,880 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:32] "GET /tourism HTTP/1.1" 200 -
+2025-05-11 22:30:32,896 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:32] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:32,899 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:32] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:32,902 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:32] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:32,903 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:32] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:32,923 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:32] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:34,117 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:34] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-11 22:30:34,135 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:34] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:34,137 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:34] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:34,138 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:34] "[36mGET /static/img/Хургада.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:34,138 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:34] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:34,162 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:34] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:34,163 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:34] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-11 22:30:37,230 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:37] "GET /fly HTTP/1.1" 200 -
+2025-05-11 22:30:37,241 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:37] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:37,243 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:37] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:30:39,214 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:39] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:30:39,226 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:39] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:30:39,227 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:30:39] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:31:01,544 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:31:01,544 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:31:03,267 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:03] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:31:03,285 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:03] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:31:03,286 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:03] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:31:03,346 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:03] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,414 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-11 22:31:13,430 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,433 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,436 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,436 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,462 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,464 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,464 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,466 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,467 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,468 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,479 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,488 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,488 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,528 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:13,538 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:13] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-11 22:31:14,380 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:14] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:31:14,394 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:14] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:31:14,396 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:14] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:31:20,061 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:20] "[32mPOST /my_profile HTTP/1.1[0m" 302 -
+2025-05-11 22:31:20,070 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:20] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:31:20,081 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:20] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:31:20,082 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:20] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:31:22,815 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:22] "GET /my_plans HTTP/1.1" 200 -
+2025-05-11 22:31:22,829 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:22] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-11 22:31:22,834 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:22] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:31:22,835 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:22] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:31:22,859 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:22] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:31:23,721 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:23] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:31:23,734 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:23] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:31:23,734 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:31:23] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:32:35,831 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:32:35,831 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:32:40,286 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:32:40] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:32:40,305 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:32:40] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:32:40,306 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:32:40] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:32:40,365 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:32:40] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-11 22:32:45,009 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:32:45] "[32mPOST /my_profile HTTP/1.1[0m" 302 -
+2025-05-11 22:32:45,015 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:32:45] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:32:45,029 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:32:45] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:32:45,030 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:32:45] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:33:30,225 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-11 22:33:30,226 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-11 22:33:31,681 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:31] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:33:31,697 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:31] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:33:31,700 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:31] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:33:31,759 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:31] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:34,953 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:34] "[32mPOST /my_profile HTTP/1.1[0m" 302 -
+2025-05-11 22:33:34,959 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:34] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:33:34,970 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:34] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:33:34,971 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:34] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,088 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-11 22:33:40,105 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,108 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,109 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,109 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,135 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,136 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,138 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,139 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,140 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,147 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,148 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,156 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,158 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,159 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,169 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-11 22:33:40,987 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:40] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:33:41,001 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:41] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:33:41,002 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:41] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-11 22:33:43,241 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:43] "[32mPOST /my_profile HTTP/1.1[0m" 302 -
+2025-05-11 22:33:43,250 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:43] "GET /my_profile HTTP/1.1" 200 -
+2025-05-11 22:33:43,285 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:43] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-11 22:33:43,292 INFO werkzeug 127.0.0.1 - - [11/May/2025 22:33:43] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:06:51,860 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:06:51,861 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:06:56,614 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:56] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:06:56,636 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:56] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:06:56,637 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:56] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:06:56,696 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:56] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:06:59,435 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:59] "GET /liked HTTP/1.1" 200 -
+2025-05-12 00:06:59,446 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:59] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:06:59,450 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:59] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:06:59,452 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:59] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:06:59,453 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:59] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:06:59,472 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:59] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:06:59,474 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:59] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:06:59,475 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:59] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:06:59,487 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:06:59] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:07:01,195 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:01] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:07:01,207 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:01] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:07:01,212 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:01] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:07:01,213 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:01] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:07:01,233 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:01] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:07:24,063 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:07:24,063 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:07:27,138 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:27] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:07:27,158 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:27] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:07:27,159 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:27] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:07:27,193 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:27] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:07:55,002 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:07:55,002 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:07:57,006 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:57] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:07:57,033 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:57] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:07:57,033 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:57] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:07:57,072 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:07:57] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:07,519 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:07] "GET /liked HTTP/1.1" 200 -
+2025-05-12 00:08:07,537 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:07] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:07,538 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:07] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:08:07,540 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:07] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:07,542 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:07] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:07,564 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:07] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:07,566 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:07] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:07,571 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:07] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:07,574 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:07] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:09,364 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:09] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:08:09,378 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:09] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:08:09,379 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:09] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:09,380 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:09] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:09,382 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:09] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:09,402 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:09] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:09,404 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:09] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:13,826 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:13] "GET /fly HTTP/1.1" 200 -
+2025-05-12 00:08:13,839 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:13] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:08:13,839 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:13] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:14,437 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:14] "GET /tourism HTTP/1.1" 200 -
+2025-05-12 00:08:14,452 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:14] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:08:14,454 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:14] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:14,456 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:14] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:14,457 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:14] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:14,478 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:14] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:15,080 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:15] "GET /fly HTTP/1.1" 200 -
+2025-05-12 00:08:15,092 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:15] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:08:15,093 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:15] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:18,339 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:18] "GET /tourism HTTP/1.1" 200 -
+2025-05-12 00:08:18,354 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:18] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:18,355 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:18] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:18,356 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:18] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:08:18,358 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:18] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:18,378 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:18] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:19,620 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:19] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-12 00:08:19,637 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:19] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:08:19,638 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:19] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:19,639 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:19] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:08:19,640 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:19] "[36mGET /static/img/Хургада.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:19,665 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:19] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:08:19,666 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:08:19] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:06,603 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:12:06,603 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:12:09,460 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:09] "GET /tourism HTTP/1.1" 200 -
+2025-05-12 00:12:09,488 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:09] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:12:09,489 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:09] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:09,490 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:09] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:09,491 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:09] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:09,501 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:09] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:09,556 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:09] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:11,014 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:11] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:12:11,032 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:11] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:11,033 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:11] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:12:11,034 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:11] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:11,035 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:11] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:11,055 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:11] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:11,056 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:11] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:12,299 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:12] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:12:12,314 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:12] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:12,316 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:12] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:12:12,317 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:12] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:12,319 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:12] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:12,339 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:12] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:12,340 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:12] "GET /static/img/map.svg HTTP/1.1" 200 -
+2025-05-12 00:12:18,060 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:18] "GET /tourism HTTP/1.1" 200 -
+2025-05-12 00:12:18,074 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:18] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:12:18,079 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:18] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:18,081 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:18] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:18,082 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:18] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:18,102 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:18] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:20,113 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:20] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-12 00:12:20,128 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:20] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:12:20,129 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:20] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:20,132 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:20] "[36mGET /static/img/Хургада.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:20,133 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:20] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:20,158 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:20] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:20,159 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:20] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:12:20,160 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:20] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:20,163 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:20] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:12:23,513 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:12:23] "[33mGET /map// HTTP/1.1[0m" 404 -
+2025-05-12 00:14:12,956 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:14:12,956 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:14:14,840 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:14] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:14:14,862 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:14] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:14:14,863 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:14] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:14,866 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:14] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:14,870 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:14] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:14,878 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:14] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:14,880 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:14] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:15,864 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:15] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:14:15,879 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:15] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:14:15,882 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:15] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:15,884 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:15] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:15,886 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:15] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:15,904 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:15] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:15,905 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:15] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:18,010 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:18] "[32mGET /map/Турция/Анталья HTTP/1.1[0m" 302 -
+2025-05-12 00:14:18,022 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:18] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:14:18,041 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:18] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:14:18,048 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:18] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:18,049 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:18] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:18,054 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:18] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:18,069 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:18] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:18,070 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:18] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:39,164 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:14:39,164 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:14:40,798 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:14:40,827 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,830 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,831 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,832 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,846 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,847 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,848 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,850 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,850 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,863 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,871 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,898 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,906 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,918 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,927 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:40,928 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:40] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:41,363 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:41] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:14:41,382 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:41] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:14:41,387 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:41] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:41,391 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:41] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:41,391 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:41] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:41,415 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:41] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:41,415 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:41] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,168 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:14:42,185 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,185 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,186 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,188 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,215 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,216 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,216 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,218 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,221 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,223 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,229 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,234 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,235 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,274 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,276 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:42,280 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:42] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:53,455 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:14:53,455 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:14:54,370 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:54] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:14:54,382 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:54] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:14:54,394 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:54] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:14:54,396 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:54] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:54,410 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:54] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,480 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:14:55,495 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,496 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,499 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,501 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,527 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,528 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,529 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,529 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,531 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,533 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,535 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,538 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,561 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,564 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,564 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:55,567 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:55] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,497 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:14:57,513 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,517 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,517 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,519 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,547 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,547 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,549 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,551 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,559 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,563 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,567 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,568 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,569 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,577 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,578 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,579 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:14:57,620 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:14:57] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:15,931 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:15:15,931 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:15:16,741 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:15:16,765 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,767 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,770 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,772 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,785 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,786 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,790 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,791 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,793 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,797 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,798 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,799 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,801 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,804 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,806 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,807 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:16,852 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:16] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,261 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[32mGET /map/russian_cities/Камчатка HTTP/1.1[0m" 302 -
+2025-05-12 00:15:20,268 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:15:20,286 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,288 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,297 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,298 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,323 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,325 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,327 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,335 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,340 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,344 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,348 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,349 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,354 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,356 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,359 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:20,360 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:20] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,772 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[32mGET /map/russian_cities/Кавказ HTTP/1.1[0m" 302 -
+2025-05-12 00:15:27,781 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:15:27,798 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,802 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,806 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,807 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,835 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,836 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,839 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,849 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,850 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,853 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,856 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,858 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,864 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,868 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,869 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:27,871 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:27] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:35,917 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:35] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:15:35,929 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:35] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:15:35,933 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:35] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:35,935 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:35] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:35,956 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:35] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,395 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:15:36,409 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,409 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,410 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,414 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,442 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,443 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,444 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,445 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,448 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,455 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,456 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,456 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,463 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,467 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,512 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:36,516 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:36] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:37,633 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:37] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:15:37,648 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:37] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:37,652 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:37] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:37,653 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:37] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:37,654 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:37] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:37,676 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:37] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:37,677 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:37] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:39,300 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:39] "GET /country/Испания HTTP/1.1" 200 -
+2025-05-12 00:15:39,315 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:39] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:39,316 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:39] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:39,317 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:39] "[36mGET /static/img/Мадрид.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:39,319 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:39] "[36mGET /static/img/Барселона.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:39,341 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:39] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:39,343 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:39] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,714 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:15:42,729 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,734 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,734 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,735 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,762 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,765 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,766 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,766 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,767 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,772 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,780 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,782 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,782 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,799 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,800 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:42,826 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:42] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:44,384 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:44] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:15:44,400 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:44] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:44,404 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:44] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:44,406 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:44] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:44,407 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:44] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:44,429 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:44] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:44,430 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:44] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:45,220 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:45] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:15:45,236 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:45] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:15:45,239 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:45] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:45,240 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:45] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:45,240 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:45] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:15:45,264 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:45] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:15:45,264 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:15:45] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:16:58,644 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:16:58,644 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:17:00,470 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:17:00,498 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,500 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,506 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,510 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,519 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,520 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,520 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,520 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,524 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,534 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,539 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,542 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,543 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,545 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,564 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:00,566 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:00] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:01,051 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:01] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:17:01,065 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:01] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:17:01,069 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:01] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:01,071 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:01] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:01,073 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:01] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:01,092 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:01] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:01,093 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:01] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:02,863 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:02] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:17:02,878 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:02] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:17:02,879 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:02] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:02,880 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:02] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:02,881 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:02] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:02,902 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:02] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:02,903 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:02] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:49,279 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:17:49,279 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:17:50,958 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:50] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:17:50,980 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:50] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:17:50,989 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:50] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:50,990 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:50] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:50,990 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:50] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,002 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,004 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,011 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,014 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,015 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,016 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,018 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,021 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,022 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,039 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,068 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,073 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,449 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:17:51,464 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,466 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,468 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,470 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,491 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:51,491 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:51] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:52,394 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:52] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:17:52,410 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:52] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:52,410 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:52] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:17:52,414 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:52] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:52,415 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:52] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:52,434 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:52] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:52,434 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:52] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:53,912 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:53] "[32mGET /map/Турция/Анталья HTTP/1.1[0m" 302 -
+2025-05-12 00:17:53,923 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:53] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:17:53,945 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:53] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:17:53,949 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:53] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:53,952 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:53] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:53,953 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:53] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:17:53,976 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:53] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:53,978 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:53] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:17:59,983 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:59] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:17:59,997 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:17:59] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:18:00,004 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:00] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:18:00,005 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:00] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:00,025 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:00] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:00,952 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:00] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:18:00,966 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:00] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:18:00,967 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:00] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:00,970 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:00] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:00,970 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:00] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:00,998 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:00] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,000 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,000 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,001 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,001 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,001 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,017 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,018 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,021 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,025 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,026 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,028 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,871 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:18:01,886 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,894 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,895 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,897 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,916 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:01,916 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:01] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:02,800 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:02] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:18:02,814 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:02] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:18:02,816 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:02] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:02,818 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:02] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:02,820 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:02] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:02,841 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:02] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:02,842 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:02] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:05,740 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:05] "GET /country/Испания HTTP/1.1" 200 -
+2025-05-12 00:18:05,755 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:05] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:18:05,759 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:05] "[36mGET /static/img/Мадрид.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:05,761 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:05] "[36mGET /static/img/Барселона.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:05,762 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:05] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:05,784 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:05] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:05,785 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:05] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:12,297 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:12] "GET /tourism HTTP/1.1" 200 -
+2025-05-12 00:18:12,314 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:12] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:18:12,316 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:12] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:12,317 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:12] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:12,320 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:12] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:12,341 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:12] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:14,513 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:14] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-12 00:18:14,529 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:14] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:14,532 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:14] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:18:14,534 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:14] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:14,535 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:14] "[36mGET /static/img/Хургада.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:14,560 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:14] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:14,561 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:14] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:18:14,562 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:14] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:18:18,876 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:18:18] "[33mGET /add_to_plan HTTP/1.1[0m" 404 -
+2025-05-12 00:19:09,884 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:19:09,885 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:19:11,013 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:19:11,036 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,044 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,044 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,045 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,055 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,057 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,060 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,062 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,071 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,077 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,077 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,098 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,100 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,101 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,141 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,143 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,453 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:19:11,466 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:19:11,471 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,472 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:11,494 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:11] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:12,669 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:12] "GET /liked HTTP/1.1" 200 -
+2025-05-12 00:19:12,685 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:12] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:12,687 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:12] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:12,688 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:12] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:12,689 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:12] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:12,711 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:12] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:12,712 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:12] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:12,714 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:12] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:12,714 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:12] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:13,971 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:13] "GET /tourism HTTP/1.1" 200 -
+2025-05-12 00:19:13,984 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:13] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:13,989 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:13] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:13,990 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:13] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:13,991 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:13] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:14,010 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:14] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:15,528 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:15] "GET /tourism/beach HTTP/1.1" 200 -
+2025-05-12 00:19:15,566 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:15] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:15,568 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:15] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:15,571 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:15] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:15,573 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:15] "[36mGET /static/img/Хургада.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:15,592 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:15] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:15,593 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:15] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:15,594 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:15] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:16,497 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:16] "GET /add_to_plan/tourism/Анталья HTTP/1.1" 200 -
+2025-05-12 00:19:16,512 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:16] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:16,514 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:16] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:19,538 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:19] "[32mPOST /add_to_plan/tourism/Анталья HTTP/1.1[0m" 302 -
+2025-05-12 00:19:19,542 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:19] "GET /tourism HTTP/1.1" 200 -
+2025-05-12 00:19:19,560 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:19] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:19,562 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:19] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:19,564 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:19] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:19,566 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:19] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:19,584 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:19] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:21,089 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:21] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:19:21,102 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:21] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:19:21,106 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:21] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:21,107 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:21] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:21,130 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:21] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:22,272 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:22] "GET /plan/Маршрут2 HTTP/1.1" 200 -
+2025-05-12 00:19:22,289 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:22] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:22,292 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:22] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:22,295 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:22] "[36mGET /static/css/style_plan.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:22,296 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:22] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:22,316 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:22] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:22,317 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:22] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:22,321 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:22] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,152 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:19:33,168 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,169 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,174 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,176 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,201 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,201 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,203 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,207 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,208 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,210 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,220 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,221 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,225 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,237 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,269 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:33,277 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:33] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:34,928 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:34] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:19:34,943 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:34] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:19:34,947 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:34] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:34,948 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:34] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:34,970 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:34] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:36,018 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:36] "GET /plan/Супер%20маршрут HTTP/1.1" 200 -
+2025-05-12 00:19:36,034 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:36] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:36,036 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:36] "[36mGET /static/css/style_plan.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:36,039 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:36] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:36,041 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:36] "[36mGET /static/img/Мадрид.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:36,064 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:36] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:36,066 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:36] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:36,067 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:36] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:36,068 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:36] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:41,929 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:41] "GET /plan/Маршрут2 HTTP/1.1" 200 -
+2025-05-12 00:19:41,944 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:41] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:41,947 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:41] "[36mGET /static/css/style_plan.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:41,949 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:41] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:41,951 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:41] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:41,969 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:41] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:41,970 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:41] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:41,971 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:41] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:45,693 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "GET /plan/Маршрут%201 HTTP/1.1" 200 -
+2025-05-12 00:19:45,709 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:45,714 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "[36mGET /static/css/style_plan.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:45,715 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:45,717 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:45,741 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:45,742 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:45,743 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:45,744 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:19:45,746 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:45] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:48,972 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:48] "GET / HTTP/1.1" 200 -
+2025-05-12 00:19:48,985 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:48] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:48,986 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:48] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:48,988 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:48] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:49,017 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:49] "[36mGET /static/img/fon2.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:49,388 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:49] "GET / HTTP/1.1" 200 -
+2025-05-12 00:19:49,403 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:49,404 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:49] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:49,405 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:49] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:19:51,104 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:51] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:19:51,127 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:51] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:19:51,127 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:19:51] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:21:45,842 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:21:45,842 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:21:47,275 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:21:47] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:21:47,293 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:21:47] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:21:47,294 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:21:47] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:21:47,349 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:21:47] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:21:56,860 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:21:56,861 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:21:58,186 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:21:58] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:21:58,206 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:21:58] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:21:58,208 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:21:58] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:21:58,246 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:21:58] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:22:21,361 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:22:21,361 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:22:22,429 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:22:22] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:22:22,451 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:22:22] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:22:22,451 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:22:22] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:22:22,493 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:22:22] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:22:43,050 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:22:43,051 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:22:43,749 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:22:43] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:22:43,768 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:22:43] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:22:43,769 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:22:43] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:22:43,809 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:22:43] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:23:13,298 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:23:13,298 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:23:14,084 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:14] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:23:14,101 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:14] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:23:14,102 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:14] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:23:14,143 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:14] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:23:41,618 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:23:41,618 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:23:43,477 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:43] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:23:43,498 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:43] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:23:43,499 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:43] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:23:43,558 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:43] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:23:44,860 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:44] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:23:44,875 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:44] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:23:44,876 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:44] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:23:44,942 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:44] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:23:54,167 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:23:54,167 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:23:54,688 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:54] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:23:54,707 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:54] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:23:54,708 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:54] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:23:54,765 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:54] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:23:55,578 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:55] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:23:55,591 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:55] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:23:55,591 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:55] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:23:55,642 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:23:55] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:24:09,259 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:24:09,260 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:24:10,187 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:10] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:24:10,205 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:10] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:24:10,206 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:10] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:24:10,245 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:10] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:24:36,748 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:24:36,748 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:24:37,186 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:37] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:24:37,204 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:37] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:24:37,204 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:37] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:24:37,244 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:37] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:24:47,959 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:24:47,959 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:24:48,390 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:48] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:24:48,412 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:48] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:24:48,414 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:48] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:24:48,454 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:48] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:24:58,532 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:24:58,532 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:24:58,622 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:58] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:24:58,642 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:58] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:24:58,642 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:58] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:24:58,683 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:24:58] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:21,685 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:25:21,685 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:25:22,714 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:22] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:25:22,732 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:22] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:22,733 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:22] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:22,774 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:22] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:23,940 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:23] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:25:23,955 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:23] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:25:23,959 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:23] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:23,962 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:23] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:23,987 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:23] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,393 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:25:24,411 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,411 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,412 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,416 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,441 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,443 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,444 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,445 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,446 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,447 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,479 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,480 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,481 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,482 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,482 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,485 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,944 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:25:24,958 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:25:24,963 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,965 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:24,987 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:24] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:25,568 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:25] "GET /liked HTTP/1.1" 200 -
+2025-05-12 00:25:25,584 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:25] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:25,585 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:25] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:25,587 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:25] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:25,588 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:25] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:25,610 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:25] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:25,613 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:25] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:25,614 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:25] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:25,616 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:25] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:26,283 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:26] "GET /tourism HTTP/1.1" 200 -
+2025-05-12 00:25:26,297 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:26] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:26,301 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:26] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:26,302 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:26] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:26,302 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:26] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:26,323 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:26] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,328 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "GET /liked HTTP/1.1" 200 -
+2025-05-12 00:25:27,343 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,345 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,347 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,348 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,370 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,372 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,374 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,375 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,908 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "GET /fly HTTP/1.1" 200 -
+2025-05-12 00:25:27,920 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:27,922 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:27] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:28,791 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:28] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:25:28,806 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:28] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:25:28,809 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:28] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:28,812 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:28] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:28,834 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:28] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,486 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:25:29,501 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,505 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,506 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,507 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,532 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,534 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,536 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,538 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,546 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,549 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,551 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,552 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,559 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,568 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,573 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,574 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,922 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:25:29,934 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:25:29,939 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,940 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:29,965 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:29] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:30,585 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:30] "GET /create_plan HTTP/1.1" 200 -
+2025-05-12 00:25:30,598 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:30] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:30,599 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:30] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:33,508 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:33] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:25:33,525 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:33] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:33,528 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:33] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:33,529 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:33] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:33,532 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:33] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:33,554 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:33] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:33,555 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:33] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:34,339 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:34] "GET /country/Турция HTTP/1.1" 200 -
+2025-05-12 00:25:34,351 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:34] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:34,352 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:34] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:34,356 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:34] "[36mGET /static/img/Анталья.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:34,357 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:34] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:34,382 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:34] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:34,383 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:34] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:36,072 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:36] "GET / HTTP/1.1" 200 -
+2025-05-12 00:25:36,087 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:36] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:36,088 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:36] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:36,089 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,113 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:25:37,128 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,130 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,135 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,135 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,162 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,164 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,832 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:25:37,853 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,858 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,861 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,871 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,883 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,890 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,903 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,904 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,914 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,927 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,932 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,937 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,942 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,962 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,969 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:37,971 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:37] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:38,399 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:38] "GET /countries HTTP/1.1" 200 -
+2025-05-12 00:25:38,412 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:38] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:38,416 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:38] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:38,417 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:38] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:38,419 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:38] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:38,442 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:38] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:38,443 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:38] "[36mGET /static/img/Египет.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,082 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:25:39,097 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,100 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,101 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,104 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,130 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,131 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,132 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,133 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,133 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,134 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,145 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,147 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,149 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,170 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,207 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,207 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,745 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "GET /add_to_plan/russian_cities/Москва HTTP/1.1" 200 -
+2025-05-12 00:25:39,763 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:39,763 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:39] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:41,948 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:41] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:25:41,961 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:41] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:25:41,966 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:41] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:25:41,966 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:41] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:25:41,993 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:25:41] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:40,679 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 00:26:40,679 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-12 00:26:42,295 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:42] "GET /create_plan HTTP/1.1" 200 -
+2025-05-12 00:26:42,325 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:42] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:26:42,327 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:42] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:44,437 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:44] "GET /my_plans HTTP/1.1" 200 -
+2025-05-12 00:26:44,449 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:44] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-12 00:26:44,454 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:44] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:26:44,455 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:44] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:44,480 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:44] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,460 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "GET /russian_cities HTTP/1.1" 200 -
+2025-05-12 00:26:45,478 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,479 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,480 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,482 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Санкт-Петербург.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,505 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Сочи.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,506 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Казань.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,507 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/map.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,507 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,516 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Камчатка.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,518 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/heart.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,523 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Кисловодск.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,526 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,528 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Владивосток.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,537 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Крым.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,550 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:45,554 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:45] "[36mGET /static/img/Дербент.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:46,771 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:46] "GET /add_to_plan/russian_cities/Москва HTTP/1.1" 200 -
+2025-05-12 00:26:46,785 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:46] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:26:46,787 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:46] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:50,425 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:50] "GET /my_profile HTTP/1.1" 200 -
+2025-05-12 00:26:50,439 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:50] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:26:50,440 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:50] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:52,579 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:52] "GET /liked HTTP/1.1" 200 -
+2025-05-12 00:26:52,610 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:52] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:26:52,612 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:52] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:52,614 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:52] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:52,616 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:52] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:52,638 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:52] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:52,638 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:52] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:52,638 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:52] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:52,641 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:52] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,114 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "GET /tourism HTTP/1.1" 200 -
+2025-05-12 00:26:53,129 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,130 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,134 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/mountains.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,135 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/beach.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,155 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/colisey.jpg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,913 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "GET /liked HTTP/1.1" 200 -
+2025-05-12 00:26:53,928 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,931 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/Испания.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,934 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,936 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/Турция.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,959 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/Москва.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,960 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/Карелия.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,961 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/Кавказ.png HTTP/1.1[0m" 304 -
+2025-05-12 00:26:53,962 INFO werkzeug 127.0.0.1 - - [12/May/2025 00:26:53] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
