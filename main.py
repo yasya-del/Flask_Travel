@@ -94,8 +94,8 @@ def fly():
         finish = form.finish.data
         con = sqlite3.connect('db/travel.db')
         cur = con.cursor()
-        start = cur.execute(f"""SELECT name FROM airports WHERE city = ?""", (start,)).fetchone()[0]
-        finish = cur.execute(f"""SELECT name FROM airports WHERE city = ?""", (finish,)).fetchone()[0]
+        start_link = cur.execute(f"""SELECT name FROM airports WHERE city = ?""", (start,)).fetchone()[0]
+        finish_link = cur.execute(f"""SELECT name FROM airports WHERE city = ?""", (finish,)).fetchone()[0]
         con.close()
         start_date = [int(i) for i in str(form.start_date.data).split('-')]
         end_date = [int(i) for i in str(form.end_date.data).split('-')]
@@ -124,10 +124,14 @@ def fly():
         else:
             ost1 = '0' * (2 - len(str(start_date[2])))
             ost2 = '0' * (2 - len(str(start_date[1])))
-            start_date = ost1 + str(start_date[2]) + ost2 + str(start_date[1])
+            start_date_link = ost1 + str(start_date[2]) + ost2 + str(start_date[1])
             ost1 = '0' * (2 - len(str(end_date[2])))
             ost2 = '0' * (2 - len(str(end_date[1])))
-            end_date = ost1 + str(end_date[2]) + ost2 + str(end_date[1])
+            end_date_link = ost1 + str(end_date[2]) + ost2 + str(end_date[1])
+            start_date_new = [str(start_date[0])] + ['0' * (2 - len(str(i))) + str(i) for i in start_date if len(str(i)) <= 2]
+            end_date_new = [str(end_date[0])] + ['0' * (2 - len(str(i))) + str(i) for i in end_date if len(str(i)) <= 2]
+            start_date_new = '.'.join(start_date_new[::-1])
+            end_date_new = '.'.join(end_date_new[::-1])
             adult = form.adult.data
             child = form.child.data
             baby = form.baby.data
@@ -148,27 +152,33 @@ def fly():
                                        form=form,
                                        message="Кол-во взрослых не может быть менее одного")
             if child == '0':
-                child = ''
+                child_link = ''
+            else:
+                child_link = child
             if baby == '0':
-                baby = ''
+                baby_link = ''
+            else:
+                baby_link = baby
             clas = form.clas.data
             if clas != 'Эконом':
                 if clas == 'Комфорт':
-                    clas = 'w'
+                    clas_link = 'w'
                 elif clas == 'Бизнес':
-                    clas = 'c'
+                    clas_link = 'c'
                 elif clas == 'Первый класс':
-                    clas = 'f'
+                    clas_link = 'f'
             else:
-                clas = ''
+                clas_link = ''
             global link
-            link = f'https://www.aviasales.ru/search/?params={start}{start_date}{finish}{end_date}{clas}{adult}{child}{baby}'
-            return redirect('/find_tickets')
+            link = f'https://www.aviasales.ru/search/?params={start_link}{start_date_link}{finish_link}{end_date_link}{clas_link}{adult}{child_link}{baby_link}'
+            return redirect(f'/find_tickets/{start}--{finish}--{start_date_new}--{end_date_new}--{adult}--{child}--{baby}--{clas}')
     return render_template('fly.html', title='Авиабилеты', form=form)
 
-@app.route('/find_tickets')
-def find_tickets():
-    return render_template('find_tickets.html', link=link)
+@app.route('/find_tickets/<start>--<finish>--<start_date>--<end_date>--<adult>--<child>--<baby>--<clas>')
+def find_tickets(start, finish, start_date, end_date, adult, child, baby, clas):
+    print(start)
+    return render_template('find_tickets.html', title='Смотреть билеты', link=link, start=start, finish=finish, start_date=start_date,
+                           end_date=end_date, adult=adult, child=child, baby=baby, clas=clas)
 
 
 @app.route('/russian_cities')
@@ -178,7 +188,7 @@ def russian_cities():
     result = cur.execute(f"""SELECT city FROM russian_cities""").fetchall()
     con.close()
     cities = [i[0] for i in result]
-    return render_template('russian_cities.html', title='Города России', cities=cities)
+    return render_template('russian_cities.html', title='России', cities=cities)
 
 
 @app.route('/login', methods=['GET', 'POST'])

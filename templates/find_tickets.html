@@ -2,8 +2,26 @@
 
 {% block content %}
 {% set link = link %}
-<p>{{link}}</p>
+{% set start=start %}
+{% set finish = finish %}
+{% set start_date = start_date %}
+{% set end_date = end_date %}
+{% set adult = adult %}
+{% set child = child %}
+{% set baby = baby %}
+{% set clas = clas%}
+<p style="font-size: 35px;" align="center"><strong>Ваш выбор:</strong></p>
+<ul>
+	<li style="font-size: 30px;"><strong>Откуда</strong> - {{start}}</li>
+	<li style="font-size: 30px;"><strong>Куда</strong> - {{finish}}</li>
+	<li style="font-size: 30px;"><strong>Когда</strong> - {{start_date}}</li>
+	<li style="font-size: 30px;"><strong>Обратно</strong> - {{end_date}}</li>
+	<li style="font-size: 30px;"><strong>Кол-во взрослых(12 лет и старше)</strong> - {{adult}}</li>
+	<li style="font-size: 30px;"><strong>Кол-во детей(от 2 до 11 лет)</strong> - {{child}}</li>
+	<li style="font-size: 30px;"><strong>Кол-во младенцев(до 2 лет, без места)</strong> - {{baby}}</li>
+	<li style="font-size: 30px;"><strong>Класс обслуживания</strong> - {{clas}}</li>
+</ul>
 <body>
-	<a href= {{link}} target="_blank" class="btn btn-primary">Смотреть</a>
+	<a href= {{link}} target="_blank" class="btn btn-primary" align="center">Смотреть билеты</a>
 </body>
 {% endblock %}
