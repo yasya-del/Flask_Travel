@@ -1,18 +1,69 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-    <a class="icon-link icon-link-hover" href="my_plans">
-    Мои маршруты
-  <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
-</a>
+<h1>Мои данные</h1>
+{% if message %}
+<div class="alert alert-danger" role="alert">
+{{ message }}
 </div>
-<a class="icon-link icon-link-hover" href="liked">
+{% endif %}
+<form class="row g-3" action="" method="post">
+    {{ form.hidden_tag() }}
+    <div class="col-12">
+        {{ form.email.label }}<br>
+        {{ form.email(class="form-control", type="email") }}<br>
+        {% for error in form.email.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        {{ form.surname.label }}<br>
+        {{ form.surname(class="form-control") }}<br>
+        {% for error in form.surname.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        {{ form.name.label }}<br>
+        {{ form.name(class="form-control") }}<br>
+        {% for error in form.name.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </div>
+    <div class="col-12">
+        {{ form.age.label }}<br>
+        {{ form.age(class="form-control") }}<br>
+        {% for error in form.age.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </div>
+    <div class="col-12">{{ form.submit(type="submit", class="btn btn-primary") }}</div>
+    {{message}}
+</form>
+<p></p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+    <a class="btn btn-outline-primary" href="my_plans">
+    Мои маршруты
+</a>
+        </div>
+    <div class="col">
+<a class="btn btn-outline-primary" href="liked">
     Избранное
-  <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
 </a>
-<a class="icon-link icon-link-hover" href="logout">
-    Выйти
-  <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+        </div>
+    <div class="col">
+<a class="btn btn-outline-primary" href="logout">
+    Выйти из аккаунта
 </a>
+        </div>
+</div>
 {% endblock %}

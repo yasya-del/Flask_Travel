@@ -4,17 +4,25 @@ from wtforms.validators import DataRequired
 
 
 class RegisterForm(FlaskForm):
-    email = EmailField('Login/email', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    password_again = PasswordField('Repeat password', validators=[DataRequired()])
-    surname = StringField('Surname')
-    name = StringField('Name', validators=[DataRequired()])
-    age = StringField('Age')
-    submit = SubmitField('Submit')
+    email = EmailField('Логин/Email', validators=[DataRequired()])
+    password = PasswordField('Пароль', validators=[DataRequired()])
+    password_again = PasswordField('Повторите пароль', validators=[DataRequired()])
+    surname = StringField('Фамилия')
+    name = StringField('Имя', validators=[DataRequired()])
+    age = StringField('Возраст')
+    submit = SubmitField('Зарегистрироваться')
+
+
+class ProfileForm(FlaskForm):
+    email = EmailField('Логин/Email', validators=[DataRequired()])
+    surname = StringField('Фамилия')
+    name = StringField('Имя', validators=[DataRequired()])
+    age = StringField('Возраст')
+    submit = SubmitField('Подтвердить изменения')
 
 
 class LoginForm(FlaskForm):
-    email = EmailField('E-mail', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    remember_me = BooleanField('Remember me')
-    submit = SubmitField('Enter')
+    email = EmailField('Логин/Email', validators=[DataRequired()])
+    password = PasswordField('Пароль', validators=[DataRequired()])
+    remember_me = BooleanField('Запомнить меня')
+    submit = SubmitField('Войти')

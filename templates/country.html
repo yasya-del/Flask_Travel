@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
           <a href="/map/country/{{title}}" class="btn btn-outline-primary">
-        <img src="/static/img/map.svg" width="30" height="30" alt="">
+        <img src="/static/img/map.svg" width="30" height="30" alt=""> Посмотреть на карте
     </a>
 <p></p>
 {% set relax = relax %}
@@ -24,8 +24,9 @@
     <h5 class="card-title">{{city_name}}</h5>
     <p class="card-text">{{city_text}}</p>
     <a href='/add_to_plan/countries/{{city_name}}' class="btn btn-primary" >Добавить в маршрут</a>
-    <p></p>
-     <a href="/map/{{name}}/{{city_name}}" class="btn btn-primary">Посмотреть на карте</a>
+      <a href="/map/{{name}}/{{city_name}}" class="btn btn-outline-primary">
+          <img src="/static/img/map.svg" width="30" height="30" alt="">
+      </a>
     <a href="/add_to_liked_city/country/{{name}}/{{city_name}}" class="btn btn-outline-danger">
         <img src="/static/img/heart.svg" width="30" height="30" alt="">
     </a>
@@ -52,8 +53,9 @@
     <h5 class="card-title">{{city_name}}</h5>
     <p class="card-text">{{city_text}}</p>
     <a href='/add_to_plan/countries{{city_name}}' class="btn btn-primary" >Добавить в маршрут</a>
-    <p></p>
-     <a href="/map/{{name}}/{{city_name}}" class="btn btn-primary">Посмотреть на карте</a>
+     <a href="/map/{{name}}/{{city_name}}" class="btn btn-outline-primary">
+         <img src="/static/img/map.svg" width="30" height="30" alt="">
+     </a>
     <a href="/add_to_liked_city/country/{{name}}/{{city_name}}" class="btn btn-outline-danger">
         <img src="/static/img/heart.svg" width="30" height="30" alt="">
     </a>
@@ -80,8 +82,9 @@
     <h5 class="card-title">{{city_name}}</h5>
     <p class="card-text">{{city_text}}</p>
     <a href='/add_to_plan/countries/{{city_name}}' class="btn btn-primary" >Добавить в маршрут</a>
-    <p></p>
-     <a href="/map/{{name}}/{{city_name}}" class="btn btn-primary">Посмотреть на карте</a>
+     <a href="/map/{{name}}/{{city_name}}" class="btn btn-outline-primary">
+         <img src="/static/img/map.svg" width="30" height="30" alt="">
+     </a>
     <a href="/add_to_liked_city/country/{{name}}/{{city_name}}" class="btn btn-outline-danger">
         <img src="/static/img/heart.svg" width="30" height="30" alt="">
     </a>
