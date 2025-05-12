@@ -175,6 +175,7 @@ def fly():
             return redirect(f'/find_tickets/{start}--{finish}--{start_date_new}--{end_date_new}--{adult}--{child}--{baby}--{clas}')
     return render_template('fly.html', title='Авиабилеты', form=form)
 
+
 @app.route('/find_tickets/<start>--<finish>--<start_date>--<end_date>--<adult>--<child>--<baby>--<clas>')
 def find_tickets(start, finish, start_date, end_date, adult, child, baby, clas):
     print(start)
@@ -189,7 +190,7 @@ def russian_cities():
     result = cur.execute(f"""SELECT city FROM russian_cities""").fetchall()
     con.close()
     cities = [i[0] for i in result]
-    return render_template('russian_cities.html', title='России', cities=cities)
+    return render_template('russian_cities.html', title='Россия', cities=cities)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -251,8 +252,17 @@ def open_map(word, name):
     if word == 'country':
         return redirect(f'/country/{name}')
     elif word == 'russian_cities':
-        return redirect(f'/russian_cities')
+        return redirect('/russian_cities')
+    elif word == 'tourism':
+        return redirect('/tourism')
     return redirect(f'/country/{word}')
+
+
+@app.route('/map/tourism/<word>/<name>')
+def open_map_tourism(word, name):
+    from search import search_for_map
+    search_for_map(name)
+    return redirect(f'/tourism/{word}')
 
 
 @app.route('/my_profile', methods=['POST', 'GET'])
@@ -330,6 +340,10 @@ def create_plan():
         return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities)
     elif request.method == 'POST':
         name = request.form['name']
+        name = name.strip()
+        if not name:
+            return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities,
+                                   message="Имя не должно быть пустым")
         db_sess = db_session.create_session()
         if db_sess.query(Plan).filter(Plan.name == name, Plan.user_id == id).first():
             return render_template('create_plan.html', title='Создаю маршрут', cities=list_cities,
@@ -377,7 +391,8 @@ def add_to_plan(word, city):
             for el in selected_plans:
                 plan = db_sess.query(Plan).filter(Plan.name == el, Plan.user_id == id).first()
                 new_cities = plan.cities
-                new_cities += f',{city}'
+                if city not in new_cities:
+                    new_cities += f',{city}'
                 plan.cities = new_cities
                 db_sess.merge(plan)
                 db_sess.commit()
