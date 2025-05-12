@@ -1,7 +1,4 @@
-SQLAlchemy
-Flask-Login
-Werkzeug
-WTForms
-Flask
-requests
-pillow
+sqlalchemy
+flask
+flask_login
+flask_wtf
