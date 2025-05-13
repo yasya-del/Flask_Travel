@@ -1,5 +1,6 @@
 import datetime
 import logging
+import os
 import sqlite3
 from flask import Flask, render_template, redirect, request
 from data import db_session
@@ -254,24 +255,22 @@ def country(name):
 
 
 @app.route('/map/<word>/<name>')
-def open_map(word, name):
+def download_map(word, name):
     from search import search_for_map
-    im = search_for_map(name)
-    if word == 'country':
-        return redirect(f'/country/{name}')
-    elif word == 'russian_cities':
-        return redirect('/russian_cities')
-    elif word == 'tourism':
-        return redirect('/tourism')
-    return redirect(f'/country/{word}')
+    search_for_map(name)
+    return redirect(f'/opened_map/{name}')
 
+
+@app.route('/opened_map/<name>')
+def open_map(name):
+    return render_template('opened_map.html', name=name,  title='Карта')
 
 
 @app.route('/map/tourism/<word>/<name>')
 def open_map_tourism(word, name):
     from search import search_for_map
     search_for_map(name)
-    return redirect(f'/tourism/{word}')
+    return redirect(f'/opened_map/{name}')
 
 
 @app.route('/my_profile', methods=['POST', 'GET'])

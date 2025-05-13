@@ -34,7 +34,6 @@ def search_for_map(toponym_to_find):
 
     map_api_server = "https://static-maps.yandex.ru/v1"
     response = requests.get(map_api_server, params=map_params)
-    im = BytesIO(response.content)
-    opened_image = Image.open(im)
-    opened_image.show()
+    with open(f'static/img/{toponym_to_find}_map.png', 'wb') as f:
+        f.write(response.content)
     return None
