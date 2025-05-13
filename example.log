@@ -1796,3 +1796,8 @@ AttributeError: 'AnonymousUserMixin' object has no attribute 'email'
 2025-05-13 15:57:18,423 INFO werkzeug 127.0.0.1 - - [13/May/2025 15:57:18] "[36mGET /static/img/Калининград.png HTTP/1.1[0m" 304 -
 2025-05-13 15:57:23,573 INFO werkzeug 127.0.0.1 - - [13/May/2025 15:57:23] "GET /map/russian_cities/Москва HTTP/1.1" 200 -
 2025-05-13 15:57:24,504 INFO werkzeug 127.0.0.1 - - [13/May/2025 15:57:24] "GET /map/russian_cities/<_io.BytesIO HTTP/1.1" 200 -
+2025-05-13 16:37:01,406 INFO werkzeug 127.0.0.1 - - [13/May/2025 16:37:01] "GET /my_plans HTTP/1.1" 200 -
+2025-05-13 16:37:01,453 INFO werkzeug 127.0.0.1 - - [13/May/2025 16:37:01] "[33mGET /static/css/table.css HTTP/1.1[0m" 404 -
+2025-05-13 16:37:01,466 INFO werkzeug 127.0.0.1 - - [13/May/2025 16:37:01] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-13 16:37:01,469 INFO werkzeug 127.0.0.1 - - [13/May/2025 16:37:01] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-13 16:37:01,492 INFO werkzeug 127.0.0.1 - - [13/May/2025 16:37:01] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
