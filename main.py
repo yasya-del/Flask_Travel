@@ -256,7 +256,7 @@ def country(name):
 @app.route('/map/<word>/<name>')
 def open_map(word, name):
     from search import search_for_map
-    search_for_map(name)
+    im = search_for_map(name)
     if word == 'country':
         return redirect(f'/country/{name}')
     elif word == 'russian_cities':
@@ -264,6 +264,7 @@ def open_map(word, name):
     elif word == 'tourism':
         return redirect('/tourism')
     return redirect(f'/country/{word}')
+
 
 
 @app.route('/map/tourism/<word>/<name>')
@@ -275,13 +276,13 @@ def open_map_tourism(word, name):
 
 @app.route('/my_profile', methods=['POST', 'GET'])
 def my_profile():
-    form = ProfileForm(
-        email=current_user.email,
-        surname=current_user.surname,
-        name=current_user.name,
-        age=current_user.age
-    )
     if current_user.is_authenticated:
+        form = ProfileForm(
+            email=current_user.email,
+            surname=current_user.surname,
+            name=current_user.name,
+            age=current_user.age
+        )
         if request.method == 'GET':
             return render_template('profile.html', title='Мой профиль', form=form)
         elif request.method == 'POST':
