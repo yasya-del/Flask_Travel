@@ -11,7 +11,7 @@ from data.russian_cities import RussianCity
 from data.countries import Country
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
-from forms.user import RegisterForm, LoginForm, ProfileForm
+from forms.user import RegisterForm, LoginForm, ProfileForm, AvatarForm
 from forms.fly import FlyForm
 
 
@@ -86,6 +86,15 @@ def load_user(user_id):
     db_sess = db_session.create_session()
     return db_sess.query(User).get(user_id)
 
+@app.route('/choose_avatar', methods=['POST', 'GET'])
+def choose_avatar():
+    form = AvatarForm()
+    if form.validate_on_submit():
+        global img
+        img = form.img.data
+        return redirect('/my_profile')
+    else:
+        return render_template('choose_avatar.html', title='Сенить аватарку', form=form)
 
 @app.route('/fly', methods=['GET', 'POST'])
 def fly():
@@ -178,7 +187,6 @@ def fly():
 
 @app.route('/find_tickets/<start>--<finish>--<start_date>--<end_date>--<adult>--<child>--<baby>--<clas>')
 def find_tickets(start, finish, start_date, end_date, adult, child, baby, clas):
-    print(start)
     return render_template('find_tickets.html', title='Смотреть билеты', link=link, start=start, finish=finish, start_date=start_date,
                            end_date=end_date, adult=adult, child=child, baby=baby, clas=clas)
 

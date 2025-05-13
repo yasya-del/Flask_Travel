@@ -1,4 +1,5 @@
 from flask_wtf import FlaskForm
+from flask_wtf.file import FileField, FileRequired, FileAllowed
 from wtforms import PasswordField, StringField, SubmitField, EmailField, BooleanField, FieldList
 from wtforms.validators import DataRequired
 
@@ -26,3 +27,8 @@ class LoginForm(FlaskForm):
     password = PasswordField('Пароль', validators=[DataRequired()])
     remember_me = BooleanField('Запомнить меня')
     submit = SubmitField('Войти')
+
+
+class AvatarForm(FlaskForm):
+    img = FileField('Выберите аватар', validators=[FileRequired(), FileAllowed(['jpg', 'png'], 'ТОлько картинки!')])
+    submit = SubmitField('Изменить аватар')

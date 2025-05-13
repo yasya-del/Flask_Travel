@@ -1307,3 +1307,99 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='geocode-maps.yande
 2025-05-12 21:23:08,245 INFO werkzeug 127.0.0.1 - - [12/May/2025 21:23:08] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
 2025-05-12 21:23:08,251 INFO werkzeug 127.0.0.1 - - [12/May/2025 21:23:08] "[36mGET /static/img/Стамбул.png HTTP/1.1[0m" 304 -
 2025-05-12 21:23:08,259 INFO werkzeug 127.0.0.1 - - [12/May/2025 21:23:08] "[36mGET /static/img/trash.svg HTTP/1.1[0m" 304 -
+2025-05-13 11:09:06,101 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 11:09:06,102 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-13 11:09:08,225 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:09:08] "GET /my_profile HTTP/1.1" 200 -
+2025-05-13 11:09:08,612 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:09:08] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-13 11:09:08,630 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:09:08] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-13 11:09:09,233 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:09:09] "[36mGET /static/img/icon_plane.png HTTP/1.1[0m" 304 -
+2025-05-13 11:13:55,418 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 11:13:55,419 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-13 11:14:13,407 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:14:13] "GET /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:14:47,623 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:14:47] "POST /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:15:56,026 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 11:15:56,027 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-13 11:15:58,817 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:15:58] "GET /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:16:00,756 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:16:00] "POST /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:16:22,767 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 11:16:22,769 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-13 11:16:27,057 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:16:27] "GET /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:16:28,313 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:16:28] "POST /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:19:19,736 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 11:19:19,737 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-13 11:19:41,243 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:19:41] "GET /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:19:45,235 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:19:45] "POST /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:35:23,627 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 11:35:23,629 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-13 11:35:27,651 ERROR main Exception on /choose_avatar [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/main.py", line 95, in choose_avatar
+    return render_template('choose_avatar.html', title='Сенить аватарку', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/choose_avatar.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/base.html", line 74, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vasya/PycharmProjects/Flask_Travel/templates/choose_avatar.html", line 4, in block 'content'
+    {% from "_form_helpers.tpl" import render_field %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: _form_helpers.tpl
+2025-05-13 11:35:27,669 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:35:27] "[35m[1mGET /choose_avatar HTTP/1.1[0m" 500 -
+2025-05-13 11:36:51,810 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 11:36:51,811 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-05-13 11:36:53,447 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:36:53] "GET /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:36:53,692 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:36:53] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-13 11:36:53,741 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:36:53] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
+2025-05-13 11:37:13,569 ERROR main Exception on /choose_avatar [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 873, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 892, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1164, in make_response
+    raise TypeError(
+TypeError: The view function for 'choose_avatar' did not return a valid response. The function either returned None or ended without a return statement.
+2025-05-13 11:37:13,588 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:37:13] "[35m[1mPOST /choose_avatar HTTP/1.1[0m" 500 -
+2025-05-13 11:37:50,054 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:37:50] "POST /choose_avatar HTTP/1.1" 200 -
+2025-05-13 11:37:50,099 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:37:50] "[36mGET /static/css/base.css HTTP/1.1[0m" 304 -
+2025-05-13 11:37:50,103 INFO werkzeug 127.0.0.1 - - [13/May/2025 11:37:50] "[36mGET /static/img/profile2.svg HTTP/1.1[0m" 304 -
