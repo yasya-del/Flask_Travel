@@ -1,4 +1,7 @@
 sqlalchemy
-flask
-flask_login
+flask-Login
+werkzeug
 flask_wtf
+flask
+requests
+pillow
