@@ -5,3 +5,4 @@ flask_wtf
 flask
 requests
 pillow
+urllib3==1.26.6
