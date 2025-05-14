@@ -324,7 +324,9 @@ def open_photos(word):
     else:
         os.mkdir(f'static/img/{word}_{current_user.id}')
         photos = None
-    return render_template("open_photos.html", title='Мои фото', photos=photos, word=word, id=id)
+    if photos:
+        return render_template("open_photos.html", title='Мои фото', photos=photos, word=word, id=id)
+    return redirect(f'/add_photo/{word}')
 
 
 @app.route('/add_photo/<word>', methods=['POST', 'GET'])
