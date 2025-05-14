@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h1 align="center">Добавьте сюда яркие воспоминания</h1>
+</div>
+<form method="post" enctype="multipart/form-data">
+                                   <div class="form-group">
+                                        <label for="photo">Выберите файл</label>
+                                        <p></p>
+                                        <input type="file" class="form-control-file" id="photo" name="file">
+                                    </div>
+                                    <p></p>
+                                    <button type="submit" class="btn btn-primary">Отправить</button>
+
+</form>
+{% endblock %}

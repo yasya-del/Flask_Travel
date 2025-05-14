@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h1 align="center">Ваши фото</h1>
+</div>
+{% set photos_list = photos %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for photo in photos_list %}
+        <div class="col">
+<div>
+  <img src="/static/img/{{word}}_{{id}}/{{photo}}" alt="картинка не нашлась(" height="250">
+</div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

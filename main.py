@@ -316,6 +316,35 @@ def open_plan(word):
     return render_template("open_plan.html", title=word, cities=plans, plan=word)
 
 
+@app.route('/photos/<word>')
+def open_photos(word):
+    id = current_user.id
+    if os.path.exists(f'static/img/{word}_{current_user.id}'):
+        photos = os.listdir(f'static/img/{word}_{current_user.id}')
+    else:
+        os.mkdir(f'static/img/{word}_{current_user.id}')
+        photos = None
+    return render_template("open_photos.html", title='Мои фото', photos=photos, word=word, id=id)
+
+
+@app.route('/add_photo/<word>', methods=['POST', 'GET'])
+def add_photos(word):
+    if request.method == 'GET':
+        return render_template("add_photos.html", title='Мои фото')
+    elif request.method == 'POST':
+        if os.path.exists(f'static/img/{word}_{current_user.id}'):
+            photos = os.listdir(f'static/img/{word}_{current_user.id}')
+            k = len(photos) + 1
+        else:
+            k = 1
+        f = request.files['file']
+
+        with open(f'static/img/{word}_{current_user.id}/{k}.png', 'wb') as file_in:
+            data = f.read()
+            file_in.write(data)
+        return redirect(f'/photos/{word}')
+
+
 @app.route('/liked')
 def liked():
     if current_user.is_authenticated:
