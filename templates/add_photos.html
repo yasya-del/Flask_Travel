@@ -4,14 +4,17 @@
 <div>
     <h1 align="center">Добавьте сюда яркие воспоминания</h1>
 </div>
-<form method="post" enctype="multipart/form-data">
-                                   <div class="form-group">
-                                        <label for="photo">Выберите файл</label>
-                                        <p></p>
-                                        <input type="file" class="form-control-file" id="photo" name="file">
-                                    </div>
-                                    <p></p>
-                                    <button type="submit" class="btn btn-primary">Отправить</button>
-
+<form method="post" action="" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+  <p>
+        {{ form.img.label }}<br>
+        {{ form.img(class="form-control") }}<br>
+        {% for error in form.img.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
 </form>
 {% endblock %}

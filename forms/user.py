@@ -29,6 +29,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Войти')
 
 
-class AvatarForm(FlaskForm):
-    img = FileField('Выберите аватар', validators=[FileRequired(), FileAllowed(['jpg', 'png'], 'ТОлько картинки!')])
-    submit = SubmitField('Изменить аватар')
+class AddPhotoForm(FlaskForm):
+    img = FileField('Выберите фото', validators=[FileRequired(), FileAllowed(['jpg', 'png', 'jpeg', 'webp',
+                                                                              'tiff', 'svg'], 'ТОлько картинки!')])
+    submit = SubmitField('Добавить')

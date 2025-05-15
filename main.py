@@ -12,7 +12,7 @@ from data.russian_cities import RussianCity
 from data.countries import Country
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
-from forms.user import RegisterForm, LoginForm, ProfileForm, AvatarForm
+from forms.user import RegisterForm, LoginForm, ProfileForm, AddPhotoForm
 from forms.fly import FlyForm
 
 
@@ -87,15 +87,6 @@ def load_user(user_id):
     db_sess = db_session.create_session()
     return db_sess.query(User).get(user_id)
 
-@app.route('/choose_avatar', methods=['POST', 'GET'])
-def choose_avatar():
-    form = AvatarForm()
-    if form.validate_on_submit():
-        global img
-        img = form.img.data
-        return redirect('/my_profile')
-    else:
-        return render_template('choose_avatar.html', title='Сенить аватарку', form=form)
 
 @app.route('/fly', methods=['GET', 'POST'])
 def fly():
@@ -331,21 +322,20 @@ def open_photos(word):
 
 @app.route('/add_photo/<word>', methods=['POST', 'GET'])
 def add_photos(word):
-    if request.method == 'GET':
-        return render_template("add_photos.html", title='Мои фото')
-    elif request.method == 'POST':
+    form = AddPhotoForm()
+    if form.validate_on_submit():
         if os.path.exists(f'static/img/{word}_{current_user.id}'):
             photos = os.listdir(f'static/img/{word}_{current_user.id}')
             k = len(photos) + 1
         else:
+            os.mkdir(f'static/img/{word}_{current_user.id}')
             k = 1
-        f = request.files['file']
-
+        f = form.img.data
         with open(f'static/img/{word}_{current_user.id}/{k}.png', 'wb') as file_in:
             data = f.read()
             file_in.write(data)
         return redirect(f'/photos/{word}')
-
+    return render_template('add_photos.html', form=form, title='Выберите фото')
 
 @app.route('/liked')
 def liked():
