@@ -26,14 +26,14 @@
  
 Для реализации сайта использовались функции и html-файлы(отдельные для каждой страницы). Главный файл - main.py, в нем находятся все основные функции. Файлы search.py и search_delta.py в корневом каталоге используются для открытия карты страны или города. Для html файлов использовались шаблоны(base.html - базовый шаблон), расположенные в папке templates. Информация о пользователях, странах, городах в этих странах, местах России, планах и аэропортах хранится в базе данных(travel.db в папке db), созданной с помощью sqlalchemy. Для этого использовались файлы формата py в папке data. Файлы формата py с формами для регистрации, авторизации, изменения профиля и выбора авиабилетов хранятся в папке forms. В корневом каталоге также находяться фалы, необходимые для запуска сайта на хостинге(Glitch).
 
-    	Вася:
+    Вася:
 
-авторизация и регистрация пользователей(/register и /login); создание бд(__all_models.py и db_session.py); таблицы russian_cities, users и airports в бд; страничка туризма и страница городов по виду туризма(/tourism и /tourism/<word>); страничка мест России(/russian_cities); главная страница(/); странички авиабилетов(/fly и /find_tickets/<params>); выход из аккаунта(техническая: /logout).
+авторизация и регистрация пользователей(/register и /login); создание бд(__all_models.py и db_session.py); таблицы russian_cities, users и airports в бд; страничка туризма и страница городов по виду туризма(/tourism и /tourism/{word}); страничка мест России(/russian_cities); главная страница(/); странички авиабилетов(/fly и /find_tickets/{params}); выход из аккаунта(техническая: /logout).
 
 	Соня:
 
-страничка со странами и конкретной страной(/countries и /country/<name>); возможность добавлять в избранное и удалять оттуда(/liked, технические: /add_to_liked_country/<word>/<county>, /add_to_liked_city/<word>/<country>, /add_to_liked_city_from_tourism/<word>/<country>, /remove_from_liked/<country>); таблицы cities, countries в бд; возможность посмотреть город или страну на карте(/opened_map/<name>, технические: /map/tourism/<word>/<name>, 
-/map/<word>/<name>); маршруты пользователей(/my_plans, /create_plan, /add_to_plan/<word>/<city>, технические: /delete_from_plan/<name>/<city>, /delete_plan/<name>); личный кабинет(/my_profile).
+страничка со странами и конкретной страной(/countries и /country/{name}); возможность добавлять в избранное и удалять оттуда(/liked, технические: /add_to_liked_country/{word}/{county}, /add_to_liked_city/{word}/{country}, /add_to_liked_city_from_tourism/{word}/{country}, /remove_from_liked/{country}); таблицы cities, countries в бд; возможность посмотреть город или страну на карте(/opened_map/{name}, технические: /map/tourism/{word}/{name}, 
+/map/{word}/{name}); маршруты пользователей(/my_plans, /create_plan, /add_to_plan/{word}/{city}, технические: /delete_from_plan/{name}/{city}, /delete_plan/{name}); личный кабинет(/my_profile).
 
 
 Использованные библиотеки: datetime, logging, sqlite3, flask, flask_login, flask_wtf, sqlalchemy, werkzeug.security, sqlalchemy.orm, requests, PIL, io, 
