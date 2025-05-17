@@ -39,3 +39,5 @@
 Использованные библиотеки: datetime, logging, sqlite3, flask, flask_login, flask_wtf, sqlalchemy, werkzeug.security, sqlalchemy.orm, requests, PIL, io, 
 
 Импортированные: sqlalchemy, flask-login, werkzeug, flask_wtf, flask, requests, pillow, urllib3==1.26.6
+
+ссылка на сайт: https://travel--life.glitch.me/
